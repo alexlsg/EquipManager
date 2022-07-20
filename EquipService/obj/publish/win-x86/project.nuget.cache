@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZmeFEsqNI1iZ6jE5BACPatyMdoM50HmRaBgDSHScST/uTVzJfY/2X92//sBdbEg6bmwKxYW8eTKVcPrR8T61oA==",
+  "dgSpecHash": "3pfZaZH1SdHy168phyZlwfnZMIn2sFjrwBGxGRl/7GlLSOT4OfV4Ljs55nXtEI5B/mok6DWwxrlGXit++605Uw==",
   "success": true,
-  "projectFilePath": "D:\\MyWork\\设备管理\\设备管理\\EquipService\\EquipService.csproj",
+  "projectFilePath": "D:\\git\\EquipManager\\EquipService\\EquipService.csproj",
   "expectedPackageFiles": [
     "D:\\User\\Nuget\\awssdk.core\\3.7.12.3\\awssdk.core.3.7.12.3.nupkg.sha512",
     "D:\\User\\Nuget\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",

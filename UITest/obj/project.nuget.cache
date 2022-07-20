@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FzYeH1MDfXPOHd0c88WJVX1FQk0CtZXZh6AaGzsb2JaWEB1MXXPhNbJvSLs2q77yfr9xILX4i1xcls7Xp8JBAA==",
+  "dgSpecHash": "qb5T57mKTcE2qnYe/c/WXdv53u1SfN84OzvyCo7sT0RXnQFs6pP/hZpmSOyzCoJ8xN8e/6l2rHp+TjAZi3V78w==",
   "success": true,
-  "projectFilePath": "D:\\MyWork\\设备管理\\设备管理\\UITest\\UITest.csproj",
+  "projectFilePath": "D:\\git\\EquipManager\\UITest\\UITest.csproj",
   "expectedPackageFiles": [
     "D:\\User\\Nuget\\awssdk.core\\3.7.12.3\\awssdk.core.3.7.12.3.nupkg.sha512",
     "D:\\User\\Nuget\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",

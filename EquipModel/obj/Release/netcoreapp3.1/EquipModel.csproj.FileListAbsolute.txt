@@ -8,3 +8,13 @@ D:\MyWork\设备管理\设备管理\EquipModel\obj\Release\netcoreapp3.1\EquipMo
 D:\MyWork\设备管理\设备管理\EquipModel\obj\Release\netcoreapp3.1\EquipModel.csproj.CoreCompileInputs.cache
 D:\MyWork\设备管理\设备管理\EquipModel\obj\Release\netcoreapp3.1\EquipModel.dll
 D:\MyWork\设备管理\设备管理\EquipModel\obj\Release\netcoreapp3.1\EquipModel.pdb
+D:\git\EquipManager\EquipModel\bin\Release\netcoreapp3.1\EquipModel.deps.json
+D:\git\EquipManager\EquipModel\bin\Release\netcoreapp3.1\EquipModel.dll
+D:\git\EquipManager\EquipModel\bin\Release\netcoreapp3.1\EquipModel.pdb
+D:\git\EquipManager\EquipModel\obj\Release\netcoreapp3.1\EquipModel.csproj.AssemblyReference.cache
+D:\git\EquipManager\EquipModel\obj\Release\netcoreapp3.1\EquipModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\EquipManager\EquipModel\obj\Release\netcoreapp3.1\EquipModel.AssemblyInfoInputs.cache
+D:\git\EquipManager\EquipModel\obj\Release\netcoreapp3.1\EquipModel.AssemblyInfo.cs
+D:\git\EquipManager\EquipModel\obj\Release\netcoreapp3.1\EquipModel.csproj.CoreCompileInputs.cache
+D:\git\EquipManager\EquipModel\obj\Release\netcoreapp3.1\EquipModel.dll
+D:\git\EquipManager\EquipModel\obj\Release\netcoreapp3.1\EquipModel.pdb

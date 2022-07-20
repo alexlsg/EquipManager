@@ -6888,11 +6888,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyWork\\设备管理\\设备管理\\AntistaticApi\\AntistaticApi.csproj",
+      "projectUniqueName": "D:\\git\\EquipManager\\AntistaticApi\\AntistaticApi.csproj",
       "projectName": "AntistaticApi",
-      "projectPath": "D:\\MyWork\\设备管理\\设备管理\\AntistaticApi\\AntistaticApi.csproj",
+      "projectPath": "D:\\git\\EquipManager\\AntistaticApi\\AntistaticApi.csproj",
       "packagesPath": "D:\\User\\Nuget",
-      "outputPath": "D:\\MyWork\\设备管理\\设备管理\\AntistaticApi\\obj\\",
+      "outputPath": "D:\\git\\EquipManager\\AntistaticApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6913,17 +6913,17 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\MyWork\\设备管理\\设备管理\\EquipDataManager\\EquipDataManager.csproj": {
-              "projectPath": "D:\\MyWork\\设备管理\\设备管理\\EquipDataManager\\EquipDataManager.csproj"
+            "D:\\git\\EquipManager\\EquipDataManager\\EquipDataManager.csproj": {
+              "projectPath": "D:\\git\\EquipManager\\EquipDataManager\\EquipDataManager.csproj"
             },
-            "D:\\MyWork\\设备管理\\设备管理\\SystemSet\\SystemSet.csproj": {
-              "projectPath": "D:\\MyWork\\设备管理\\设备管理\\SystemSet\\SystemSet.csproj"
+            "D:\\git\\EquipManager\\SystemSet\\SystemSet.csproj": {
+              "projectPath": "D:\\git\\EquipManager\\SystemSet\\SystemSet.csproj"
             },
-            "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj": {
-              "projectPath": "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj"
+            "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
+              "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj"
             },
-            "D:\\MyWork\\设备管理\\设备管理\\UserManagement\\UserManagement\\UserManagement.csproj": {
-              "projectPath": "D:\\MyWork\\设备管理\\设备管理\\UserManagement\\UserManagement\\UserManagement.csproj"
+            "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj": {
+              "projectPath": "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj"
             }
           }
         }

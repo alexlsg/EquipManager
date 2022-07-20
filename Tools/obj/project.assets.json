@@ -1635,11 +1635,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj",
+      "projectUniqueName": "D:\\git\\EquipManager\\Tools\\Tools.csproj",
       "projectName": "Tools",
-      "projectPath": "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj",
+      "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj",
       "packagesPath": "D:\\User\\Nuget",
-      "outputPath": "D:\\MyWork\\设备管理\\设备管理\\Tools\\obj\\",
+      "outputPath": "D:\\git\\EquipManager\\Tools\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

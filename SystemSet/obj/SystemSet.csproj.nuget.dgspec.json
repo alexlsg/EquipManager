@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyWork\\设备管理\\设备管理\\SystemSet\\SystemSet.csproj": {}
+    "D:\\git\\EquipManager\\SystemSet\\SystemSet.csproj": {}
   },
   "projects": {
-    "D:\\MyWork\\设备管理\\设备管理\\SystemSet\\SystemSet.csproj": {
+    "D:\\git\\EquipManager\\SystemSet\\SystemSet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyWork\\设备管理\\设备管理\\SystemSet\\SystemSet.csproj",
+        "projectUniqueName": "D:\\git\\EquipManager\\SystemSet\\SystemSet.csproj",
         "projectName": "SystemSet",
-        "projectPath": "D:\\MyWork\\设备管理\\设备管理\\SystemSet\\SystemSet.csproj",
+        "projectPath": "D:\\git\\EquipManager\\SystemSet\\SystemSet.csproj",
         "packagesPath": "D:\\User\\Nuget",
-        "outputPath": "D:\\MyWork\\设备管理\\设备管理\\SystemSet\\obj\\",
+        "outputPath": "D:\\git\\EquipManager\\SystemSet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -32,8 +32,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj": {
-                "projectPath": "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj"
+              "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj"
               }
             }
           }
@@ -91,14 +91,14 @@
         }
       }
     },
-    "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj": {
+    "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj",
+        "projectUniqueName": "D:\\git\\EquipManager\\Tools\\Tools.csproj",
         "projectName": "Tools",
-        "projectPath": "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj",
+        "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj",
         "packagesPath": "D:\\User\\Nuget",
-        "outputPath": "D:\\MyWork\\设备管理\\设备管理\\Tools\\obj\\",
+        "outputPath": "D:\\git\\EquipManager\\Tools\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

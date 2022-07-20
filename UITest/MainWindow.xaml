@@ -21,8 +21,13 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
             <Button Click="Button_Click" MinWidth="75" Height="25" Margin="2">启动轮询服务</Button>
             <Button Click="Button_Click_4" MinWidth="75" Height="25" Margin="2">打开TCP监听</Button>
+            <Label>产线ID</Label>
+            <TextBox Width="50" Name="tb_cxid"></TextBox>
+            <Label>类型ID</Label>
+            <TextBox Width="50" Name="tb_lxid"></TextBox>
             <Button Margin="2" Click="Button_Click_1">实时统计</Button>
             <Button Width="75" Height="25" Click="Button_Click_3">加载缓存</Button>
+            <Button Width="75" Height="25" Click="Button_Click_9">保存缓存</Button>
             <Button Width="75" Height="25" Click="Button_Click_2">刷新缓存</Button>
             <Button Width="75" Height="25" Click="Button_Click_6">执行补丁</Button>
         </StackPanel>
@@ -81,6 +86,8 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <Label>设备组ID</Label>
+                        <TextBox x:Name="tb_group" Width="50" Margin="2"></TextBox>
                         <Label>开始日期</Label>
                         <DatePicker Name="ksrq"></DatePicker>
                         <Label>结束日期</Label>
@@ -112,7 +119,14 @@
                 </Grid>
             </TabItem>
             <TabItem Header="缓存查看">
-                <DataGrid x:Name="dg_hc"></DataGrid>
+                <TabControl>
+                    <TabItem Header="class">
+                        <DataGrid x:Name="dg_hc"></DataGrid>
+                    </TabItem>
+                    <TabItem Header="json">
+                        <RichTextBox x:Name="rtb_hc"></RichTextBox>
+                    </TabItem>
+                </TabControl>
             </TabItem>
             <TabItem Header="产线实时统计">
                 <Grid>
@@ -126,6 +140,28 @@
                         <Button Click="Button_Click_8">统计</Button>
                     </StackPanel>
                     <RichTextBox Grid.Row="1" Name="rtb_1"></RichTextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="事件查询">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <Label>产线</Label>
+                        <TextBox Width="50" Name="sj_cx"></TextBox>
+                        <Label>类型</Label>
+                        <TextBox Width="50" Name="sj_lx"></TextBox>
+                        <DatePicker Name="sj_ks"></DatePicker>
+                        <DatePicker Name="sj_js"></DatePicker>
+                        <Label>数据类型</Label>
+                        <TextBox Width="50" Name="sj_sjlx"></TextBox>
+                        <Label>关键字</Label>
+                        <TextBox Width="50" Name="sj_gjz"></TextBox>
+                        <Button Width="75" Height="25" Click="Button_Click_10">查询</Button>
+                    </StackPanel>
+                    <DataGrid Grid.Row="1" x:Name="dg_sj" ItemsSource="{Binding}"></DataGrid>
                 </Grid>
             </TabItem>
         </TabControl>

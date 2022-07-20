@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyWork\\设备管理\\设备管理\\UserManagement\\UserManagement\\UserManagement.csproj": {}
+    "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj": {}
   },
   "projects": {
-    "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj": {
+    "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj",
+        "projectUniqueName": "D:\\git\\EquipManager\\Tools\\Tools.csproj",
         "projectName": "Tools",
-        "projectPath": "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj",
+        "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj",
         "packagesPath": "D:\\User\\Nuget",
-        "outputPath": "D:\\MyWork\\设备管理\\设备管理\\Tools\\obj\\",
+        "outputPath": "D:\\git\\EquipManager\\Tools\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -95,14 +95,14 @@
         }
       }
     },
-    "D:\\MyWork\\设备管理\\设备管理\\UserManagement\\UserManagement\\UserManagement.csproj": {
+    "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyWork\\设备管理\\设备管理\\UserManagement\\UserManagement\\UserManagement.csproj",
+        "projectUniqueName": "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj",
         "projectName": "UserManagement",
-        "projectPath": "D:\\MyWork\\设备管理\\设备管理\\UserManagement\\UserManagement\\UserManagement.csproj",
+        "projectPath": "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj",
         "packagesPath": "D:\\User\\Nuget",
-        "outputPath": "D:\\MyWork\\设备管理\\设备管理\\UserManagement\\UserManagement\\obj\\",
+        "outputPath": "D:\\git\\EquipManager\\UserManagement\\UserManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -123,8 +123,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj": {
-                "projectPath": "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj"
+              "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj"
               }
             }
           }

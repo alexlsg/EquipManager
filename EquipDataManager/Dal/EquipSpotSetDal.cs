@@ -27,7 +27,7 @@ namespace EquipDataManager.Dal
 
         internal static List<EquipTjSet> GetAllTjSets()
         {
-            DataTable _dt = DBHelper.GetDataTable("select a.*,b.equiptypename tname from EquipTjSet a,equiptype b where a.EquipType = b.EquipTypeId");
+            DataTable _dt = DBHelper.GetDataTable("select a.*,b.equiptypename tname,b.equiptypeid typeid from EquipTjSet a,equiptype b where a.EquipType = b.EquipTypeId");
             var _temp = from a in _dt.AsEnumerable()
                         select new EquipTjSet
                         {
@@ -36,11 +36,13 @@ namespace EquipDataManager.Dal
                             Cyzshj = Convert.ToBoolean(a["Cyzshj"]),
                             Data = a.Field<string>("Data"),
                             DataType = a.Field<string>("DataType"),
-                            EquipType = a.Field<string>("tname"),
+                            EquipTypeName = a.Field<string>("tname"),
                             SpotNO = a.Field<string>("SpotNO"),
                             Tjlx = a.Field<string>("Tjlx"),
                             Tjtj = a.Field<string>("Tjtj"),
-                            Tjzt = a.Field<string>("Tjzt")
+                            Tjzt = a.Field<string>("Tjzt"),
+                            EquipType = a.Field<int>("typeid").ToString(),
+
                         };
             if (_temp.Count() == 0)
             {
@@ -56,7 +58,7 @@ namespace EquipDataManager.Dal
         private static List<EquipTjSet> MoniData()
         {
             List<EquipTjSet> _sets = new List<EquipTjSet>();
-            _sets.Add(new EquipTjSet(0,"静电监测设备", "A-11,A-13,A-15,A-17", "腕带", "正常", "3", "Data"));
+            _sets.Add(new EquipTjSet(0, "静电监测设备", "A-11,A-13,A-15,A-17", "腕带", "正常", "3", "Data"));
             _sets.Add(new EquipTjSet(0, "静电监测设备", "A-11,A-13,A-15,A-17", "腕带", "未插", "13", "Data"));
             _sets.Add(new EquipTjSet(0, "静电监测设备", "A-11,A-13,A-15,A-17", "腕带", "异常", "4", "Data"));
             _sets.Add(new EquipTjSet(0, "静电监测设备", "A-11,A-13,A-15,A-17", "设备", "正常", "9", "Data"));

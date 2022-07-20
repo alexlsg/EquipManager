@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyWork\\设备管理\\设备管理\\EquipModel\\EquipModel.csproj",
+      "projectUniqueName": "D:\\git\\EquipManager\\EquipModel\\EquipModel.csproj",
       "projectName": "EquipModel",
-      "projectPath": "D:\\MyWork\\设备管理\\设备管理\\EquipModel\\EquipModel.csproj",
+      "projectPath": "D:\\git\\EquipManager\\EquipModel\\EquipModel.csproj",
       "packagesPath": "D:\\User\\Nuget",
-      "outputPath": "D:\\MyWork\\设备管理\\设备管理\\EquipModel\\obj\\",
+      "outputPath": "D:\\git\\EquipManager\\EquipModel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

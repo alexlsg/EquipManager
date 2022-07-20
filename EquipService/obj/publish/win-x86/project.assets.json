@@ -8373,11 +8373,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyWork\\设备管理\\设备管理\\EquipService\\EquipService.csproj",
+      "projectUniqueName": "D:\\git\\EquipManager\\EquipService\\EquipService.csproj",
       "projectName": "EquipService",
-      "projectPath": "D:\\MyWork\\设备管理\\设备管理\\EquipService\\EquipService.csproj",
+      "projectPath": "D:\\git\\EquipManager\\EquipService\\EquipService.csproj",
       "packagesPath": "D:\\User\\Nuget",
-      "outputPath": "D:\\MyWork\\设备管理\\设备管理\\EquipService\\obj\\publish\\win-x86\\",
+      "outputPath": "D:\\git\\EquipManager\\EquipService\\obj\\publish\\win-x86\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8398,11 +8398,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\MyWork\\设备管理\\设备管理\\AntistaticApi\\AntistaticApi.csproj": {
-              "projectPath": "D:\\MyWork\\设备管理\\设备管理\\AntistaticApi\\AntistaticApi.csproj"
+            "D:\\git\\EquipManager\\AntistaticApi\\AntistaticApi.csproj": {
+              "projectPath": "D:\\git\\EquipManager\\AntistaticApi\\AntistaticApi.csproj"
             },
-            "D:\\MyWork\\设备管理\\设备管理\\EquipDataManager\\EquipDataManager.csproj": {
-              "projectPath": "D:\\MyWork\\设备管理\\设备管理\\EquipDataManager\\EquipDataManager.csproj"
+            "D:\\git\\EquipManager\\EquipDataManager\\EquipDataManager.csproj": {
+              "projectPath": "D:\\git\\EquipManager\\EquipDataManager\\EquipDataManager.csproj"
             }
           }
         }

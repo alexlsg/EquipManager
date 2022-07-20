@@ -15,8 +15,16 @@ namespace UserManagement
         /// </summary>
         public int RoleId { get; set; }
         /// <summary>
+        /// 角色名称
+        /// </summary>
+        public string RoleName { get; set; }
+        /// <summary>
         /// 功能ID
         /// </summary>
         public int FunctionId { get; set; }
+        /// <summary>
+        /// 功能名称
+        /// </summary>
+        public string FunctionName { get; set; }
     }
 }

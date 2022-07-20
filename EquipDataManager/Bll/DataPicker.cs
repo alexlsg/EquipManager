@@ -27,7 +27,7 @@ namespace EquipDataManager.Bll
         Dictionary<string, EquipData> datas = new Dictionary<string, EquipData>();
         Dictionary<string, DateTime> dataSaveTime = new Dictionary<string, DateTime>();
         //设备配置
-        List<Equip> equips;
+        public List<Equip> equips;
         //测点配置
         List<EquipSpotSet> equipsSpotSets;
         List<EquipTjSet> equipTjSets;
@@ -137,7 +137,7 @@ namespace EquipDataManager.Bll
             AddTestLog("数据解析完成，开始保存数据!");
             foreach (var data in _edataes)
             {
-                EquipTjSet _tjset = equipTjSets.Find(n => n.EquipType == item.EquipType && n.SpotNO.Contains($"{data.DataType}-{data.SpotNO}"));
+                EquipTjSet _tjset = equipTjSets.Find(n => n.EquipTypeName == item.EquipType && n.SpotNO.Contains($"{data.DataType}-{data.SpotNO}"));
                 if (_tjset != null)
                 {
                     data.Event = _tjset.Tjlx + _tjset.Tjzt;
@@ -181,8 +181,11 @@ namespace EquipDataManager.Bll
         /// <exception cref="NotImplementedException"></exception>
         private void SaveCache(EquipData data)
         {
-            dataCache.RemoveAll(n => n.EquipID == data.EquipID && n.EquipNO == data.EquipNO && n.DataType == data.DataType && n.SpotNO == data.SpotNO);
-            dataCache.Add(data);
+            lock (dataCache)
+            {
+                dataCache.RemoveAll(n => n.EquipID == data.EquipID && n.EquipNO == data.EquipNO && n.DataType == data.DataType && n.SpotNO == data.SpotNO);
+                dataCache.Add(data);
+            }
             datas[GetKey(data)] = data;
         }
         string GetKey(EquipData data)
@@ -278,18 +281,26 @@ namespace EquipDataManager.Bll
         /// 获取历史数据左边列表
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Lscdlb> GetLssjcdlb()
+        public IEnumerable<object> GetLssjcdlb(string groupid)
         {
             var _temp = from a in equips
                         from b in equipsSpotSets
-                        where a.EquipTypeName == b.EquipTypeName && b.SaveType == 3
-                        select new Lscdlb
+                        where
+                        a.EquipTypeName == b.EquipTypeName
+                        && b.SaveType == 3
+                        && a.GroupID == groupid
+                        group new { a, b } by a.Name into g
+                        select new
                         {
-                            Name = a.GroupName + a.Name + b.SpotName,
-                            IsSelected = false,
-                            SpotNO = a.ID + b.DataType + b.SpotNO
+                            Name = g.Key,
+                            Spots = (from c in g
+                                     select new
+                                     {
+                                         Name = g.Key + c.b.SpotName,
+                                         Code = c.a.ID + c.b.DataType + c.b.SpotNO
+                                     }).ToList()
                         };
-            return _temp;
+            return _temp.ToList();
         }
         /// <summary>
         /// 查询历史数据
@@ -306,207 +317,202 @@ namespace EquipDataManager.Bll
         /// 获取设备实时统计数据,按类型
         /// </summary>
         /// <returns></returns>
-        public List<EquipSstjData> GetEquipSstjDataByType()
+        public List<EquipSstjData> GetEquipSstjDataByType(string typeid)
         {
-            var _temp = from a in dataCache
-                        from b in equipTjSets
-                        from c in equips
-                        where a.EquipID == c.ID && c.EquipTypeName == b.EquipType && GetSjdb(a, b)
-                        group a by new { b.EquipType, b.Tjlx, b.Tjzt, b.Cyhj, b.Cyzshj } into g
-                        select new EquipSstjData
-                        {
-                            TypeName = g.Key.EquipType,
-                            Tjlx = g.Key.Tjlx,
-                            Tjzt = g.Key.Tjzt,
-                            Count = g.Count(),
-                            Cyhj = g.Key.Cyhj,
-                            Cyzshj = g.Key.Cyzshj,
-                            TjType = "明细",
-                            Px = 0
-                        };
-            var _temp2 = from a in equipTjSets
-                         where !_temp.ToList().Exists(n => n.TypeName == a.EquipType && n.Tjlx == a.Tjlx && n.Tjzt == a.Tjzt)
-                         select new EquipSstjData
-                         {
-                             TypeName = a.EquipType,
-                             Tjlx = a.Tjlx,
-                             Tjzt = a.Tjzt,
-                             Count = 0,
-                             Cyhj = a.Cyhj,
-                             Cyzshj = a.Cyzshj,
-                             TjType = "明细",
-                             Px = 0
-                         };
-            List<EquipSstjData> _temp3 = new List<EquipSstjData>(_temp);
-            _temp3.AddRange(_temp2);
-            var _temp1 = from a in _temp3
-                         where a.Cyhj
-                         group a by new { a.TypeName, a.Tjlx, a.Cyzshj } into g
-                         select new EquipSstjData
-                         {
-                             TjType = g.Key.Cyzshj ? "总计" : "合计",
-                             TypeName = g.Key.TypeName,
-                             Tjlx = g.Key.Tjlx,
-                             Tjzt = "总数",
-                             Count = g.Sum(n => n.Count),
-                             Cyzshj = g.Key.Cyzshj,
-                             Px = 99
-                         };
-            List<EquipSstjData> _result = new List<EquipSstjData>();
-            _result.AddRange(_temp3);
-            _result.AddRange(_temp1);
-            //_result.AddRange(_temp2);
-            return _result.OrderBy(n => n.TypeName + n.Cyzshj.ToString() + n.Tjlx + n.Px.ToString() + n.Tjzt).ToList();
+            lock (dataCache)
+            {
+                var _temp = (from a in dataCache
+                             from b in equipTjSets
+                             from c in equips
+                             where a.EquipID == c.ID && c.EquipType == typeid && c.EquipTypeName == b.EquipTypeName && GetSjdb(a, b)
+                             group a by new { b.EquipTypeName, b.Tjlx, b.Tjzt, b.Cyhj, b.Cyzshj } into g
+                             select new EquipSstjData
+                             {
+                                 TypeName = g.Key.EquipTypeName,
+                                 Tjlx = g.Key.Tjlx,
+                                 Tjzt = g.Key.Tjzt,
+                                 Count = g.Count(),
+                                 Cyhj = g.Key.Cyhj,
+                                 Cyzshj = g.Key.Cyzshj,
+                                 TjType = "明细",
+                                 Px = 0
+                             }).ToList();
+
+                var _temp2 = from a in equipTjSets
+                             where a.EquipType == typeid &&
+                             !_temp.Exists((Predicate<EquipSstjData>)(n => n.TypeName == a.EquipTypeName && n.Tjlx == a.Tjlx && n.Tjzt == a.Tjzt))
+                             select new EquipSstjData
+                             {
+                                 TypeName = a.EquipTypeName,
+                                 Tjlx = a.Tjlx,
+                                 Tjzt = a.Tjzt,
+                                 Count = 0,
+                                 Cyhj = a.Cyhj,
+                                 Cyzshj = a.Cyzshj,
+                                 TjType = "明细",
+                                 Px = 0
+                             };
+                List<EquipSstjData> _temp3 = new List<EquipSstjData>(_temp);
+                _temp3.AddRange(_temp2);
+                var _temp1 = from a in _temp3
+                             where a.Cyhj
+                             group a by new { a.TypeName, a.Tjlx, a.Cyzshj } into g
+                             select new EquipSstjData
+                             {
+                                 TjType = g.Key.Cyzshj ? "总计" : "合计",
+                                 TypeName = g.Key.TypeName,
+                                 Tjlx = g.Key.Tjlx,
+                                 Tjzt = "总数",
+                                 Count = g.Sum(n => n.Count),
+                                 Cyzshj = g.Key.Cyzshj,
+                                 Px = 99
+                             };
+                List<EquipSstjData> _result = new List<EquipSstjData>();
+                _result.AddRange(_temp3);
+                _result.AddRange(_temp1);
+                return _result.OrderBy(n => n.TypeName + n.Cyzshj.ToString() + n.Tjlx + n.Px.ToString() + n.Tjzt).ToList();
+            }
         }
 
         /// <summary>
         /// 获取设备实时统计数据,按产线
         /// </summary>
         /// <returns></returns>
-        public List<EquipSstjData> GetEquipSstjDataByGroup()
+        public List<EquipSstjData> GetEquipSstjDataByGroup(string groupid)
         {
-            var _temp = from a in dataCache
-                        from b in equipTjSets
-                        from c in equips
-                        where a.EquipID == c.ID && c.EquipTypeName == b.EquipType && GetSjdb(a, b)
-                        group a by new { c.GroupName, b.Tjlx, b.Tjzt, b.Cyhj, b.Cyzshj } into g
-                        select new EquipSstjData
-                        {
-                            TjType = "明细",
-                            TypeName = g.Key.GroupName,
-                            Tjlx = g.Key.Tjlx,
-                            Tjzt = g.Key.Tjzt,
-                            Count = g.Count(),
-                            Cyhj = g.Key.Cyhj,
-                            Cyzshj = g.Key.Cyzshj,
-                            Px = 0
-                        };
-            var _temp2 = from a in equipTjSets
-                         join b in equips on a.EquipType equals b.EquipTypeName
-                         where !_temp.ToList().Exists(n => n.TypeName == b.GroupName && n.Tjlx == a.Tjlx && n.Tjzt == a.Tjzt)
-                         group new { a, b } by new { b.GroupName, a.Tjlx, a.Tjzt, a.Cyhj, a.Cyzshj } into g
-                         select new EquipSstjData
-                         {
-                             TjType = "明细",
-                             TypeName = g.Key.GroupName,
-                             Tjlx = g.Key.Tjlx,
-                             Tjzt = g.Key.Tjzt,
-                             Count = 0,
-                             Cyhj = g.Key.Cyhj,
-                             Cyzshj = g.Key.Cyzshj,
-                             Px = 0
-                         };
-            List<EquipSstjData> _temp3 = new List<EquipSstjData>(_temp);
-            _temp3.AddRange(_temp2);
-            var _temp1 = from a in _temp3
-                         where a.Cyhj
-                         group a by new { a.TypeName, a.Tjlx, a.Cyzshj } into g
-                         select new EquipSstjData
-                         {
-                             TjType = g.Key.Cyzshj ? "总计" : "合计",
-                             TypeName = g.Key.TypeName,
-                             Tjlx = g.Key.Tjlx,
-                             Tjzt = "总数",
-                             Count = g.Sum(n => n.Count),
-                             Cyzshj = g.Key.Cyzshj,
-                             Px = 99
-                         };
-            List<EquipSstjData> _result = new List<EquipSstjData>();
-            _result.AddRange(_temp3);
-            _result.AddRange(_temp1);
-            //_result.AddRange(_temp2);
-            return _result.OrderBy(n => n.TypeName + n.Cyzshj.ToString() + n.Tjlx + n.Px.ToString() + n.Tjzt).ToList();
+            lock (dataCache)
+            {
+                var _temp = (from a in dataCache
+                            from b in equipTjSets
+                            from c in equips
+                            where a.EquipID == c.ID && c.GroupID == groupid && c.EquipTypeName == b.EquipTypeName && GetSjdb(a, b)
+                            group a by new { c.GroupName, b.Tjlx, b.Tjzt, b.Cyhj, b.Cyzshj } into g
+                            select new EquipSstjData
+                            {
+                                TjType = "明细",
+                                TypeName = g.Key.GroupName,
+                                Tjlx = g.Key.Tjlx,
+                                Tjzt = g.Key.Tjzt,
+                                Count = g.Count(),
+                                Cyhj = g.Key.Cyhj,
+                                Cyzshj = g.Key.Cyzshj,
+                                Px = 0
+                            }).ToList();
+                var _temp2 = from a in equipTjSets
+                             join b in equips on a.EquipTypeName equals b.EquipTypeName
+                             where b.GroupID == groupid &&
+                             !_temp.Exists(n => n.TypeName == b.GroupName && n.Tjlx == a.Tjlx && n.Tjzt == a.Tjzt)
+                             group new { a, b } by new { b.GroupName, a.Tjlx, a.Tjzt, a.Cyhj, a.Cyzshj } into g
+                             select new EquipSstjData
+                             {
+                                 TjType = "明细",
+                                 TypeName = g.Key.GroupName,
+                                 Tjlx = g.Key.Tjlx,
+                                 Tjzt = g.Key.Tjzt,
+                                 Count = 0,
+                                 Cyhj = g.Key.Cyhj,
+                                 Cyzshj = g.Key.Cyzshj,
+                                 Px = 0
+                             };
+                List<EquipSstjData> _temp3 = new List<EquipSstjData>(_temp);
+                _temp3.AddRange(_temp2);
+                var _temp1 = from a in _temp3
+                             where a.Cyhj
+                             group a by new { a.TypeName, a.Tjlx, a.Cyzshj } into g
+                             select new EquipSstjData
+                             {
+                                 TjType = g.Key.Cyzshj ? "总计" : "合计",
+                                 TypeName = g.Key.TypeName,
+                                 Tjlx = g.Key.Tjlx,
+                                 Tjzt = "总数",
+                                 Count = g.Sum(n => n.Count),
+                                 Cyzshj = g.Key.Cyzshj,
+                                 Px = 99
+                             };
+                List<EquipSstjData> _result = new List<EquipSstjData>();
+                _result.AddRange(_temp3);
+                _result.AddRange(_temp1);
+                //_result.AddRange(_temp2);
+                return _result.OrderBy(n => n.TypeName + n.Cyzshj.ToString() + n.Tjlx + n.Px.ToString() + n.Tjzt).ToList();
+            }
         }
-
-
-        //public object GetDataByGroup(string groupid)
-        //{
-        //    var _temp = from a in dataCache
-        //                from b in equips
-        //                where a.EquipNO == b.NO && b.GroupID == groupid
-        //                select new
-        //                {
-        //                    TypeName = b.EquipTypeName,
-        //                    Name = b.Name,
-        //                    Data = a.Data,
-        //                    DataType = "1"
-        //                };
-        //    return _temp;
-        //}
 
         public object GetDataByGroup(string groupid)
         {
-            var _jdsh = from a in dataCache
-                        from b in equips
-                        where
-                        a.EquipID == b.ID
-                        && b.EquipType == Config.Jdsblx
-                        && b.GroupID == groupid
-                        && a.DataType == "A"
-                        && Config.Jdsbspots.Contains(a.SpotNO)
-                        && Config.Jdsbjcz.Contains(a.Data)
-                        group a by a.EquipName into g
-                        select new
-                        {
-                            Name = g.Key,
-                            Images = g.Select(n => GetSbzt(n.Data))
-                        };
-            var _wsd = from a in dataCache
-                       from b in equips
-                       where
-                        a.EquipID == b.ID
-                       && b.EquipType == Config.Wsdlx
-                       && b.GroupID == groupid
-                       && a.DataType == "A"
-                       && Config.Jdsbspots.Contains(a.SpotNO)
-                       group a by a.EquipName into g
-                       select new
-                       {
-                           Name = g.Key,
-                           Wd = g.Where(n => n.SpotNO == "51").First().Data,
-                           Sd = g.Where(n => n.SpotNO == "52").First().Data,
-                       };
-
-            var _jdsbhz = from a in dataCache
-                          from b in equips
-                          from c in equipTjSets
-                          where
-                        a.EquipID == b.ID
-                     && b.EquipType == Config.Jdsblx
-                     && b.GroupID == groupid
-                     && a.DataType == "A"
-                     && Config.Jdsbspots.Contains(a.SpotNO)
-                     && c.EquipType == Config.Jdsblx
-                     && GetSjdb(a, c)
-                          group new { a, c } by c.Tjlx into g
-                          select new
-                          {
-                              Name = g.Key,
-                              Zs = g.Count(),
-                              Bjs = g.Where(n => Config.Jdsbbjz.Contains(n.a.Data)).Count()
-                          };
-            var _lzfjtj = from a in dataCache
-                          from b in equipTjSets
-                          from c in equips
-                          where
-                          a.EquipID == c.ID
-                          && c.EquipType == Config.Fjlx
-                          && c.EquipTypeName == b.EquipType
-                          && GetSjdb(a, b)
-                          group a by new { b.Tjzt } into g
-                          select new
-                          {
-                              Name = g.Key,
-                              Count = g.Count()
-                          };
-            var _result = new
+            lock (dataCache)
             {
-                Jdsb = _jdsh,
-                Wsd = _wsd,
-                Jdsbhz = _jdsbhz,
-                Lzfjhz = _lzfjtj
-            };
-            return _result;
+                var _jdsh = from a in dataCache
+                            from b in equips
+                            where
+                            a.EquipID == b.ID
+                            && b.EquipType == Config.Jdsblx
+                            && b.GroupID == groupid
+                            && a.DataType == "A"
+                            && Config.Jdsbspots.Contains(a.SpotNO)
+                            && Config.Jdsbjcz.Contains(a.Data)
+                            group a by a.EquipName into g
+                            select new
+                            {
+                                Name = g.Key,
+                                Images = g.Select(n => GetSbzt(n.Data))
+                            };
+                var _wsd = from a in dataCache
+                           from b in equips
+                           where
+                            a.EquipID == b.ID
+                           && b.EquipType == Config.Wsdlx
+                           && b.GroupID == groupid
+                           && a.DataType == "A"
+                           && Config.Jdsbspots.Contains(a.SpotNO)
+                           group a by a.EquipName into g
+                           select new
+                           {
+                               Name = g.Key,
+                               Wd = g.Where(n => n.SpotNO == "51").First().Data,
+                               Sd = g.Where(n => n.SpotNO == "52").First().Data,
+                           };
+
+                var _jdsbhz = from a in dataCache
+                              from b in equips
+                              from c in equipTjSets
+                              where
+                            a.EquipID == b.ID
+                         && b.EquipType == Config.Jdsblx
+                         && b.GroupID == groupid
+                         && a.DataType == "A"
+                         && Config.Jdsbspots.Contains(a.SpotNO)
+                         && c.EquipTypeName == Config.Jdsblx
+                         && GetSjdb(a, c)
+                              group new { a, c } by c.Tjlx into g
+                              select new
+                              {
+                                  Name = g.Key,
+                                  Zs = g.Count(),
+                                  Bjs = g.Where(n => Config.Jdsbbjz.Contains(n.a.Data)).Count()
+                              };
+                var _lzfjtj = from a in dataCache
+                              from b in equipTjSets
+                              from c in equips
+                              where
+                              a.EquipID == c.ID
+                              && c.EquipType == Config.Fjlx
+                              && c.EquipTypeName == b.EquipTypeName
+                              && GetSjdb(a, b)
+                              group a by new { b.Tjzt } into g
+                              select new
+                              {
+                                  Name = g.Key,
+                                  Count = g.Count()
+                              };
+                var _result = new
+                {
+                    Jdsb = _jdsh,
+                    Wsd = _wsd,
+                    Jdsbhz = _jdsbhz,
+                    Lzfjhz = _lzfjtj
+                };
+                return _result;
+            }
         }
 
         private string GetSbzt(string data)

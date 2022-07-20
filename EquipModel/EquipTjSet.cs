@@ -11,10 +11,10 @@ namespace EquipModel
     {
         public EquipTjSet()
         { }
-        public EquipTjSet(int id, string equiptype, string spotno, string tjlx, string tjzt, string data, string tjtj, bool cyhj = true, bool cyzshj = false)
+        public EquipTjSet(int id, string equiptypename, string spotno, string tjlx, string tjzt, string data, string tjtj, bool cyhj = true, bool cyzshj = false)
         {
             ID = id;
-            EquipType = equiptype;
+            EquipTypeName = equiptypename;
             SpotNO = spotno;
             Tjlx = tjlx;
             Tjzt = tjzt;
@@ -25,9 +25,14 @@ namespace EquipModel
         }
         public int ID { get; set; }
         /// <summary>
+        /// 设备类型名称
+        /// </summary>
+        public string EquipTypeName { get; set; }
+        /// <summary>
         /// 设备类型
         /// </summary>
         public string EquipType { get; set; }
+        
         /// <summary>
         /// 数据类型
         /// </summary>

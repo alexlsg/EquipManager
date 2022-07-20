@@ -113,14 +113,21 @@ DELETE RoleFunction WHERE RoleId=@RoleId
         /// </summary>
 
         /// <returns></returns>
-        public HttpResult GetRoleList()
+        public HttpResult GetRoleList(string text)
         {
             HttpResult httpResult = new HttpResult();
             try
             {
                 List<Role> Roles = new List<Role>();
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append(@"SELECT * FROM Role");
+                if (string.IsNullOrWhiteSpace(text))
+                {
+                    stringBuilder.Append(@"SELECT * FROM Role");
+                }
+                else
+                {
+                    stringBuilder.Append(@"SELECT * FROM Role WHERE RoleName LIKE '%" + text + "%'");
+                }
                 DataTable _ds = Tools.DBHelper.GetDataTable(stringBuilder.ToString());
                 RoleFunctionService roleFunctionService = new RoleFunctionService();
                 List<RoleFunction> roleFunctions = roleFunctionService.GetList();

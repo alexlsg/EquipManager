@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ekf/5qe5nHmdOFLiYSbShEGMsC9ZBV3iB/tEXypRudiuT+hFhJEWG7HQPXGZNa3+t4XoOf53YeIgMBtpk3J8bg==",
+  "dgSpecHash": "v2a1HmJ4zowPi0vdHTS/WXgVxQyuD4kwn7V7aVCKS+ZNEne/hEmM30UEyrwQL/twA/OGDfhtD/1OcYz25Gvbwg==",
   "success": true,
-  "projectFilePath": "D:\\MyWork\\设备管理\\设备管理\\SystemSet\\SystemSet.csproj",
+  "projectFilePath": "D:\\git\\EquipManager\\SystemSet\\SystemSet.csproj",
   "expectedPackageFiles": [
     "D:\\User\\Nuget\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "D:\\User\\Nuget\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",

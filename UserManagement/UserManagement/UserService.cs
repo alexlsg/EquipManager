@@ -19,7 +19,7 @@ namespace UserManagement
 
         /// <param name="user">用户对象</param>
         /// <returns></returns>
-       public HttpResult AddUser(User user)
+        public HttpResult AddUser(User user)
         {
             HttpResult httpResult = new HttpResult();
             try
@@ -53,7 +53,7 @@ VALUES(@UserName,@RoleGroup,@PassWord,@ThemeColor,@LastLoginTime,@Remarks,@ZoneB
         /// </summary>
         /// <param name="user">用户对象</param>
         /// <returns></returns>
-       public HttpResult ModUser(User user)
+        public HttpResult ModUser(User user)
         {
             HttpResult httpResult = new HttpResult();
             try
@@ -88,7 +88,7 @@ WHERE UserName=@UserName
 
         /// <param name="user">用户对象</param>
         /// <returns></returns>
-       public HttpResult DelUser(User user)
+        public HttpResult DelUser(User user)
         {
             HttpResult httpResult = new HttpResult();
             try
@@ -121,21 +121,29 @@ DELETE User WHERE UserName=@UserName
         /// </summary>
 
         /// <returns></returns>
-       public HttpResult GetUserList()
+        public HttpResult GetUserList(string username)
         {
             HttpResult httpResult = new HttpResult();
             try
             {
                 List<User> users = new List<User>();
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append(@"SELECT * FROM USER");
+                if (string.IsNullOrWhiteSpace(username))
+                {
+                    stringBuilder.Append(@"SELECT * FROM USER");
+                }
+                else
+                {
+                    stringBuilder.Append(@"SELECT * FROM USER WHERE UserName Like '%" + username + "%'");
+                }
                 DataTable _ds = Tools.DBHelper.GetDataTable(stringBuilder.ToString());
                 for (int i = 0; i < _ds.Rows.Count; i++)
                 {
                     User user = new User();
+                    user.Id = (int)_ds.Rows[i]["Id"];
                     user.UserName = _ds.Rows[i]["UserName"].ToString();
                     user.RoleGroup = _ds.Rows[i]["RoleGroup"].ToString();
-                    user.PassWord = DES.MD5Dencrypt(_ds.Rows[i]["PassWord"].ToString());
+                    user.PassWord = _ds.Rows[i]["PassWord"].ToString();
                     user.ThemeColor = _ds.Rows[i]["ThemeColor"].ToString();
                     user.LastLoginTime = (DateTime?)_ds.Rows[i]["LastLoginTime"];
                     user.Remarks = _ds.Rows[i]["Remarks"].ToString();
@@ -156,7 +164,7 @@ DELETE User WHERE UserName=@UserName
         /// </summary>
         /// <param name="username"></param>
         /// <returns></returns>
-       public HttpResult GetUser(string username)
+        public HttpResult GetUser(string username)
         {
             HttpResult httpResult = new HttpResult();
             try

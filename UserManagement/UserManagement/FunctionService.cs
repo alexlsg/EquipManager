@@ -19,7 +19,7 @@ namespace UserManagement
         /// <returns></returns>
         public HttpResult AddFunction(Function Function)
         {
-            HttpResult httpResult=new HttpResult();
+            HttpResult httpResult = new HttpResult();
             try
             {
                 StringBuilder stringBuilder = new StringBuilder();
@@ -29,7 +29,7 @@ VALUES(@FunctionName)
 ");
                 MySqlParameter[] mySqlParameters = new MySqlParameter[1];
                 mySqlParameters[0] = new MySqlParameter("FunctionName", Function.FunctionName);
-                int _res =Tools.DBHelper.ExecuteCommand(stringBuilder.ToString(), mySqlParameters);
+                int _res = Tools.DBHelper.ExecuteCommand(stringBuilder.ToString(), mySqlParameters);
                 httpResult = HttpResult.GetJsonResult(_res == 1, "添加功能成功", "添加功能失败");
             }
             catch (Exception ex)
@@ -99,14 +99,21 @@ DELETE Function WHERE FunctionId=@FunctionId
         /// 查询功能列表
         /// </summary>
         /// <returns></returns>
-        public HttpResult GetFunctionList()
+        public HttpResult GetFunctionList(string text)
         {
             HttpResult httpResult = new HttpResult();
             try
             {
                 List<Function> Functions = new List<Function>();
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append(@"SELECT * FROM Function");
+                if (string.IsNullOrWhiteSpace(text))
+                {
+                    stringBuilder.Append(@"SELECT * FROM Function");
+                }
+                else
+                {
+                    stringBuilder.Append(@"SELECT * FROM Function WHERE FunctionName like '%" + text + "%'");
+                }
                 DataTable _ds = Tools.DBHelper.GetDataTable(stringBuilder.ToString());
                 for (int i = 0; i < _ds.Rows.Count; i++)
                 {

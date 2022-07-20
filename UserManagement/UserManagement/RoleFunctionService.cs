@@ -130,13 +130,20 @@ DELETE RoleFunction WHERE Id=@Id
         {
             List<RoleFunction> RoleFunctions = new List<RoleFunction>();
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(@"SELECT * FROM RoleFunction");
+            stringBuilder.Append(@"
+SELECT A.*,B.RoleName,C.FunctionName FROM RoleFunction A 
+JOIN Role B ON A.RoleId=B.RoleId
+JOIN Function C ON A.FunctionId=C.FunctionId
+");
             DataTable _ds = Tools.DBHelper.GetDataTable(stringBuilder.ToString());
             for (int i = 0; i < _ds.Rows.Count; i++)
             {
                 RoleFunction RoleFunction = new RoleFunction();
+                RoleFunction.Id = (int)_ds.Rows[i]["Id"];
                 RoleFunction.FunctionId = (int)_ds.Rows[i]["FunctionId"];
                 RoleFunction.RoleId = (int)_ds.Rows[i]["RoleId"];
+                RoleFunction.RoleName = _ds.Rows[i]["RoleName"].ToString();
+                RoleFunction.FunctionName = _ds.Rows[i]["FunctionName"].ToString();
                 RoleFunctions.Add(RoleFunction);
             }
             return RoleFunctions;
@@ -154,15 +161,22 @@ DELETE RoleFunction WHERE Id=@Id
             {
                 List<RoleFunction> RoleFunctions = new List<RoleFunction>();
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append(@"SELECT * FROM RoleFunction WHERE ROLEID=@ROLEID");
+                stringBuilder.Append(@"
+SELECT A.*,B.RoleName,C.FunctionName FROM RoleFunction A 
+JOIN Role B ON A.RoleId=B.RoleId
+JOIN Function C ON A.FunctionId=C.FunctionId
+WHERE A.ROLEID=@ROLEID");
                 MySqlParameter[] mySqlParameters = new MySqlParameter[1];
                 mySqlParameters[0] = new MySqlParameter("ROLEID", roleid);
                 DataTable _ds = Tools.DBHelper.GetDataTable(stringBuilder.ToString(), mySqlParameters);
                 for (int i = 0; i < _ds.Rows.Count; i++)
                 {
                     RoleFunction RoleFunction = new RoleFunction();
+                    RoleFunction.Id = (int)_ds.Rows[i]["Id"];
                     RoleFunction.FunctionId = (int)_ds.Rows[i]["FunctionId"];
                     RoleFunction.RoleId = (int)_ds.Rows[i]["RoleId"];
+                    RoleFunction.RoleName = _ds.Rows[i]["RoleName"].ToString();
+                    RoleFunction.FunctionName = _ds.Rows[i]["FunctionName"].ToString();
                     RoleFunctions.Add(RoleFunction);
                 }
                 httpResult = HttpResult.GetJsonResult(true, "根据角色ID查询角色功能列表成功", string.Empty, RoleFunctions);

@@ -46,3 +46,4 @@ D:\MyWork\设备管理\设备管理\UITest\obj\Release\netcoreapp3.1\UITest.cspr
 D:\MyWork\设备管理\设备管理\UITest\obj\Release\netcoreapp3.1\UITest.dll
 D:\MyWork\设备管理\设备管理\UITest\obj\Release\netcoreapp3.1\UITest.pdb
 D:\MyWork\设备管理\设备管理\UITest\obj\Release\netcoreapp3.1\UITest.genruntimeconfig.cache
+D:\MyWork\设备管理\设备管理\UITest\bin\Release\netcoreapp3.1\Data.dat

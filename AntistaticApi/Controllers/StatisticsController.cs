@@ -1,10 +1,12 @@
 ﻿using AntistaticApi.IdentityService;
 using EquipDataManager.Bll;
+using EquipDataManager.Dal;
 using EquipModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Tools;
 
 namespace AntistaticApi.Controllers
@@ -25,11 +27,11 @@ namespace AntistaticApi.Controllers
         /// <param name="Equip"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetEquipStatusByType()
+        public IActionResult GetEquipStatusByType(string typeid)
         {
             try
             {
-                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType();
+                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType(typeid);
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = _datas;
                 _httpResult.Status = true;
@@ -48,11 +50,11 @@ namespace AntistaticApi.Controllers
         /// <param name="Equip"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetEquipStatusByGroup()
+        public IActionResult GetEquipStatusByGroup(string groupid)
         {
             try
             {
-                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByGroup();
+                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByGroup(groupid);
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = _datas;
                 _httpResult.Status = true;
@@ -70,11 +72,11 @@ namespace AntistaticApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetLscdlb()
+        public IActionResult GetLscdlb(string groupid)
         {
             try
             {
-                IEnumerable<object> _cds = DataPicker.Instance.GetLssjcdlb();
+                IEnumerable<object> _cds = DataPicker.Instance.GetLssjcdlb(groupid);
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = _cds;
                 _httpResult.Status = true;
@@ -96,7 +98,7 @@ namespace AntistaticApi.Controllers
         {
             try
             {
-                IEnumerable<object> _cds = DataPicker.Instance.GetLssj(spotno,begintime,endtime);
+                IEnumerable<object> _cds = DataPicker.Instance.GetLssj(spotno, begintime, endtime);
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = _cds;
                 _httpResult.Status = true;
@@ -135,8 +137,8 @@ namespace AntistaticApi.Controllers
                     for (DateTime time = Convert.ToDateTime("2022-07-05"); time <= DateTime.Now; time = time.AddDays(1))
                     {
                         Random _random = new Random();
-                        int _int = _random.Next(1,100);
-                        _data.Add((i + _int) *25);
+                        int _int = _random.Next(1, 100);
+                        _data.Add((i + _int) * 25);
                         _ser.Data = _data;
                     }
                     _ser.Type = "line";
@@ -158,19 +160,104 @@ namespace AntistaticApi.Controllers
             HttpResult _httpResult = HttpResult.GetJsonResult(true, "线组列表查询成功", string.Empty, _vbight);
             return new JsonResult(_httpResult);
         }
+
+        /// <summary>
+        /// 获取历史数据
+        /// </summary>
+        /// <param name="equipid">设备id</param>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult GetLsjlByEquipID(string equipid)
+        {
+            try
+            {
+                HttpResult _httpResult = new HttpResult();
+                _httpResult.Data = DataPicker.Instance.dataCache.FindAll(n => n.EquipID.ToString() == equipid);
+                _httpResult.Status = true;
+                return new JsonResult(_httpResult);
+            }
+            catch (Exception ex)
+            {
+                Log.Add(ex);
+                return new JsonResult(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 获取历史数据
+        /// </summary>
+        /// <param name="equipid">产线id</param>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult GetLsjlByGroupID(string groupid)
+        {
+            try
+            {
+                HttpResult _httpResult = new HttpResult();
+                _httpResult.Data = from a in DataPicker.Instance.dataCache
+                                   join b in DataPicker.Instance.equips on a.EquipID equals b.ID
+                                   where b.GroupID == groupid
+                                   select a;
+                _httpResult.Status = true;
+                return new JsonResult(_httpResult);
+            }
+            catch (Exception ex)
+            {
+                Log.Add(ex);
+                return new JsonResult(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 获取历史数据
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult GetAllLsjl()
+        {
+            try
+            {
+                HttpResult _httpResult = new HttpResult();
+                _httpResult.Data = DataPicker.Instance.dataCache;
+                _httpResult.Status = true;
+                return new JsonResult(_httpResult);
+            }
+            catch (Exception ex)
+            {
+                Log.Add(ex);
+                return new JsonResult(ex.Message);
+            }
+        }
         /// <summary>
         /// 查询历史曲线
         /// </summary>
         /// <param name="Equip"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetLsjl([FromBody] string spotno, DateTime ksrq,DateTime jsrq)
+        public IActionResult GetLsjl([FromBody] string spotno, DateTime ksrq, DateTime jsrq)
         {
             try
             {
                 List<EquipData_Ls> _datas = DataPicker.Instance.GetLssj(spotno, ksrq, jsrq);
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = _datas;
+                _httpResult.Status = true;
+                return new JsonResult(_httpResult);
+            }
+            catch (Exception ex)
+            {
+                Log.Add(ex);
+                return new JsonResult(ex.Message);
+            }
+        }
+
+        public IActionResult GetEvent(string groupid, string equiptypeid, DateTime ksrq, DateTime jsrq, string datatype, string eventkey)
+        {
+            try
+            {
+                object data = EquipDataDal.GetEvent(groupid, equiptypeid, ksrq, jsrq, datatype, eventkey);
+                HttpResult _httpResult = new HttpResult();
+                _httpResult.Data = data;
                 _httpResult.Status = true;
                 return new JsonResult(_httpResult);
             }

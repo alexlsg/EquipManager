@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mtzdc+a3iVE5JRj/AtCb2jCoVlX0wI6ER0DocmhtuYFU5l8MT1INPRG1xB1fRtVxduqEL2xPDp3dr1f90abnrg==",
+  "dgSpecHash": "junjaHfblJl/3eA880lOx+GYuq9XeXXt1Wx8wZ6V4XVM8qAVqCRNnkyytce3decgXAohzcR5YQotxEaHcgHvsg==",
   "success": true,
-  "projectFilePath": "D:\\MyWork\\设备管理\\设备管理\\EquipDataManagerTests\\EquipDataManagerTests.csproj",
+  "projectFilePath": "D:\\git\\EquipManager\\EquipDataManagerTests\\EquipDataManagerTests.csproj",
   "expectedPackageFiles": [
     "D:\\User\\Nuget\\awssdk.core\\3.7.12.3\\awssdk.core.3.7.12.3.nupkg.sha512",
     "D:\\User\\Nuget\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",

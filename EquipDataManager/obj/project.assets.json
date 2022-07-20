@@ -1738,11 +1738,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyWork\\设备管理\\设备管理\\EquipDataManager\\EquipDataManager.csproj",
+      "projectUniqueName": "D:\\git\\EquipManager\\EquipDataManager\\EquipDataManager.csproj",
       "projectName": "EquipDataManager",
-      "projectPath": "D:\\MyWork\\设备管理\\设备管理\\EquipDataManager\\EquipDataManager.csproj",
+      "projectPath": "D:\\git\\EquipManager\\EquipDataManager\\EquipDataManager.csproj",
       "packagesPath": "D:\\User\\Nuget",
-      "outputPath": "D:\\MyWork\\设备管理\\设备管理\\EquipDataManager\\obj\\",
+      "outputPath": "D:\\git\\EquipManager\\EquipDataManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1763,11 +1763,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\MyWork\\设备管理\\设备管理\\EquipModel\\EquipModel.csproj": {
-              "projectPath": "D:\\MyWork\\设备管理\\设备管理\\EquipModel\\EquipModel.csproj"
+            "D:\\git\\EquipManager\\EquipModel\\EquipModel.csproj": {
+              "projectPath": "D:\\git\\EquipManager\\EquipModel\\EquipModel.csproj"
             },
-            "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj": {
-              "projectPath": "D:\\MyWork\\设备管理\\设备管理\\Tools\\Tools.csproj"
+            "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
+              "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj"
             }
           }
         }

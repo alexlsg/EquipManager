@@ -1,8 +1,10 @@
 ﻿using EquipDataManager.Bll;
 using EquipDataManager.Relealise;
 using EquipModel;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,18 +50,24 @@ namespace UITest
         {
             try
             {
+                Stopwatch _sw = new Stopwatch();
+                _sw.Start();
                 dg.ItemsSource = null;
-                List<EquipSstjData> data = DataPicker.Instance.GetEquipSstjDataByType();
+                List<EquipSstjData> data = DataPicker.Instance.GetEquipSstjDataByType(tb_lxid.Text);
                 rtb_lx.Document.Blocks.Clear();
                 rtb_lx.AppendText(JsonMapper.ToJson(data));
                 dg.ItemsSource = data;
-
+                _sw.Stop();
+                MessageBox.Show("获取按类型实时统计用时:"+_sw.ElapsedMilliseconds+"毫秒");
+                _sw.Restart();
 
                 dg1.ItemsSource = null;
-                List<EquipSstjData> data1 = DataPicker.Instance.GetEquipSstjDataByGroup();
+                List<EquipSstjData> data1 = DataPicker.Instance.GetEquipSstjDataByGroup(tb_cxid.Text);
                 rtb_g.Document.Blocks.Clear();
                 rtb_g.AppendText(JsonMapper.ToJson(data1));
                 dg1.ItemsSource = data1;
+                _sw.Stop();
+                MessageBox.Show("获取按产线实时统计用时:" + _sw.ElapsedMilliseconds + "毫秒");
             }
             catch (Exception ex)
             {
@@ -71,6 +79,8 @@ namespace UITest
         {
             dg_hc.ItemsSource = null;
             dg_hc.ItemsSource = DataPicker.Instance.dataCache;
+            rtb_hc.Document.Blocks.Clear();
+            rtb_hc.AppendText(JsonMapper.ToJson(DataPicker.Instance.dataCache));
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -242,7 +252,7 @@ CREATE TABLE `EquipTjSet`  (
         {
             try
             {
-                IEnumerable<Lscdlb> _lb = DataPicker.Instance.GetLssjcdlb();
+                IEnumerable<object> _lb = DataPicker.Instance.GetLssjcdlb(tb_group.Text);
                 db_cdlb.ItemsSource = _lb;
                 rtb_ls.Document.Blocks.Clear();
                 rtb_ls.AppendText(JsonMapper.ToJson(_lb.ToList()));
@@ -260,6 +270,27 @@ CREATE TABLE `EquipTjSet`  (
             string _json = JsonMapper.ToJson(_obj);
             rtb_1.Document.Blocks.Clear();
             rtb_1.AppendText(_json);
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog _sfd = new SaveFileDialog();
+            if (_sfd.ShowDialog() == true)
+            {
+                Tools.XmlHelper.SaveListToXml(_sfd.FileName, DataPicker.Instance.dataCache);
+            }
+        }
+
+        private void Button_Click_10(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dg_sj.DataContext = EquipDataManager.Dal.EquipDataDal.GetEvent(sj_cx.Text, sj_lx.Text, sj_ks.SelectedDate.Value, sj_js.SelectedDate.Value, sj_sjlx.Text, sj_gjz.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

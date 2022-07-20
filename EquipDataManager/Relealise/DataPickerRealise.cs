@@ -13,7 +13,6 @@ namespace EquipDataManager.Relealise
     public class DataPickerRealise : IDataPicker
     {
         string tokenurl = "http://{0}:{1}/cgi-bin/login1.cgi?user={2}&password={3}";
-        //string dataurl = "http://{0}:{1}/cgi-bin/api3.cgi?json={\"type\":\"EquipAllSpotValueState\",\"data\":[{\"equipNo\":\"{2}\"}]}";
         string GetValue(JsonData json, string listname, int row, string column)
         {
             try

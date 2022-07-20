@@ -1317,11 +1317,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyWork\\设备管理\\设备管理\\SystemSetClient\\SystemSetClient.csproj",
+      "projectUniqueName": "D:\\git\\EquipManager\\SystemSetClient\\SystemSetClient.csproj",
       "projectName": "SystemSetClient",
-      "projectPath": "D:\\MyWork\\设备管理\\设备管理\\SystemSetClient\\SystemSetClient.csproj",
+      "projectPath": "D:\\git\\EquipManager\\SystemSetClient\\SystemSetClient.csproj",
       "packagesPath": "D:\\User\\Nuget",
-      "outputPath": "D:\\MyWork\\设备管理\\设备管理\\SystemSetClient\\obj\\",
+      "outputPath": "D:\\git\\EquipManager\\SystemSetClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1342,11 +1342,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\MyWork\\设备管理\\设备管理\\SystemSet\\SystemSet.csproj": {
-              "projectPath": "D:\\MyWork\\设备管理\\设备管理\\SystemSet\\SystemSet.csproj"
+            "D:\\git\\EquipManager\\SystemSet\\SystemSet.csproj": {
+              "projectPath": "D:\\git\\EquipManager\\SystemSet\\SystemSet.csproj"
             },
-            "D:\\MyWork\\设备管理\\设备管理\\UserManagement\\UserManagement\\UserManagement.csproj": {
-              "projectPath": "D:\\MyWork\\设备管理\\设备管理\\UserManagement\\UserManagement\\UserManagement.csproj"
+            "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj": {
+              "projectPath": "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj"
             }
           }
         }
