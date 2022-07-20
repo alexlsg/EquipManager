@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>UITest</id>
+    <version>1.0.0</version>
+    <authors>UITest</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="EquipDataManager" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="D:\MyWork\设备管理\设备管理\UITest\bin\Debug\netcoreapp3.1\UITest.runtimeconfig.json" target="lib\netcoreapp3.1\UITest.runtimeconfig.json" />
+    <file src="D:\MyWork\设备管理\设备管理\UITest\bin\Debug\netcoreapp3.1\UITest.dll" target="lib\netcoreapp3.1\UITest.dll" />
+  </files>
+</package>

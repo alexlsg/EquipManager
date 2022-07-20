@@ -1,0 +1,171 @@
+{
+  "code": 0,
+  "msg": {
+    "E:1": {
+      "Type": "E",
+      "EquipNo": 1,
+      "EquipNm": "静电监测设备1",
+      "State": "1"
+    },
+    "A:1-1": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 1,
+      "SpotNm": "前端主机类型",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": ""
+    },
+    "A:1-2": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 2,
+      "SpotNm": "接地状态",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": ""
+    },
+    "A:1-3": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 3,
+      "SpotNm": "端口数量",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": ""
+    },
+    "A:1-11": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 11,
+      "SpotNm": "通道1当前状态",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": ""
+    },
+    "A:1-12": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 12,
+      "SpotNm": "通道1当前值（阻抗）",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": "mΩ"
+    },
+    "A:1-13": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 13,
+      "SpotNm": "通道2当前状态",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": ""
+    },
+    "A:1-14": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 14,
+      "SpotNm": "通道2当前值（阻抗）",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": "mΩ"
+    },
+    "A:1-15": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 15,
+      "SpotNm": "通道3当前状态",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": ""
+    },
+    "A:1-16": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 16,
+      "SpotNm": "通道3当前值（阻抗）",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": "mΩ"
+    },
+    "A:1-17": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 17,
+      "SpotNm": "通道4当前状态",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": ""
+    },
+    "A:1-18": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 18,
+      "SpotNm": "通道4当前值（阻抗）",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": "mΩ"
+    },
+    "A:1-101": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 101,
+      "SpotNm": "手腕带阻抗最大值",
+      "Value": 1036563520.00,
+      "State": 0,
+      "NoState": 2,
+      "Unit": "mΩ"
+    },
+    "A:1-102": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 102,
+      "SpotNm": "手腕带阻抗最小值",
+      "Value": 1111988608.00,
+      "State": 0,
+      "NoState": 2,
+      "Unit": "mΩ"
+    },
+    "A:1-103": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 103,
+      "SpotNm": "台垫阻抗最大值",
+      "Value": 1167328384.00,
+      "State": 0,
+      "NoState": 2,
+      "Unit": "mΩ"
+    },
+    "A:1-104": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 104,
+      "SpotNm": "台垫阻抗最小值",
+      "Value": 1125221632.00,
+      "State": 0,
+      "NoState": 2,
+      "Unit": "mΩ"
+    },
+    "A:1-105": {
+      "Type": "A",
+      "EquipNo": 1,
+      "SpotNo": 105,
+      "SpotNm": "设备阻抗最大值",
+      "Value": 4500000.00,
+      "State": 0,
+      "NoState": 0,
+      "Unit": "mΩ"
+    }
+  }
+}

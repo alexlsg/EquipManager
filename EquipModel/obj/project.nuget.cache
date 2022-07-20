@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "FkyJwyg8XE+IYVSYY/ie01+QqJKQyYKI+z+j0iDBncGjsVfeG3Bol7u+R7gD9BqLsX7yy6CRP02ktBvycis56Q==",
+  "success": true,
+  "projectFilePath": "D:\\MyWork\\设备管理\\设备管理\\EquipModel\\EquipModel.csproj",
+  "expectedPackageFiles": [
+    "D:\\User\\Nuget\\microsoft.netcore.app.runtime.win-x86\\3.1.23\\microsoft.netcore.app.runtime.win-x86.3.1.23.nupkg.sha512",
+    "D:\\User\\Nuget\\microsoft.windowsdesktop.app.runtime.win-x86\\3.1.23\\microsoft.windowsdesktop.app.runtime.win-x86.3.1.23.nupkg.sha512",
+    "D:\\User\\Nuget\\microsoft.aspnetcore.app.runtime.win-x86\\3.1.23\\microsoft.aspnetcore.app.runtime.win-x86.3.1.23.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,38 @@
+﻿<Window x:Class="SystemSetClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemSetClient"
+        mc:Ignorable="d"
+        xmlns:UC="clr-namespace:SystemSetClient"
+        Title="系统设置" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <!--<TabItem Header="网关配置">
+                <UC:UCGateway></UC:UCGateway>
+            </TabItem>
+            <TabItem Header="设备配置">
+                <UC:UCEquip></UC:UCEquip>
+            </TabItem>-->
+            <TabItem Header="设备类型配置">
+                <UC:UCEquipType></UC:UCEquipType>
+            </TabItem>
+            <!--<TabItem Header="设备测点配置">
+                <UC:UCEquipSpotSet></UC:UCEquipSpotSet>
+            </TabItem>-->
+            <TabItem Header="设备组配置">
+                <UC:UCEquipGroup></UC:UCEquipGroup>
+            </TabItem>
+            <!--<TabItem Header="产线配置">
+                <UC:UCProductionLine></UC:UCProductionLine>
+            </TabItem>-->
+            <TabItem Header="产线组配置">
+                <UC:UCProductionLineGroup></UC:UCProductionLineGroup>
+            </TabItem>
+            <TabItem Header="设备统计配置">
+                <UC:UCEquipTjSet></UC:UCEquipTjSet>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

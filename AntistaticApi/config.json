@@ -1,0 +1,26 @@
+{
+  "port": "9003",
+  "token": {
+    "user": "Admin",
+    "password": "888"
+  },
+  "save": {
+    "timespan": "1"
+  },
+  "settings": {
+    "listenport": "9909"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "server=localhost;port=3306;database=EquipManager;user=root;password=root;SslMode = none;allowPublicKeyRetrieval=true"
+    }
+  },
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ]
+}

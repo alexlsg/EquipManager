@@ -1,0 +1,46 @@
+﻿<Window x:Class="SystemSetClient.FrmLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemSetClient"
+        mc:Ignorable="d"
+        Title="登录" Height="230" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF185D9E"/>
+                <GradientStop Color="#FFAAC7E4" Offset="1"/>
+                <GradientStop Color="#FFC5D9EC" Offset="0.185"/>
+                <GradientStop Color="#FF3182CE" Offset="0.225"/>
+                <GradientStop Color="#FF6F9BC7" Offset="0.831"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="防静电信息化管理数据分析" Grid.ColumnSpan="3" FontSize="18" FontWeight="Black" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock.Effect>
+                <DropShadowEffect></DropShadowEffect>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">用户名</TextBlock>
+        <TextBlock Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center">密码</TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="2" Name="tb_user" Margin="2" VerticalContentAlignment="Center"></TextBox>
+        <PasswordBox Grid.Column="1" Grid.Row="3" Name="tb_pwd" Margin="2" VerticalContentAlignment="Center"></PasswordBox>
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="3"
+                    VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Click="Button_Click_1">登录</Button>
+            <Button Click="Button_Click">退出</Button>
+        </StackPanel>
+    </Grid>
+</Window>

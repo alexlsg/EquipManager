@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\MyWork\设备管理\设备管理\SystemSetClient\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ChooseEquip.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrmEquipGroup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrmEquip.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrmLogin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainWindow1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ComSet\UCComSet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\EquipGroupSet\UCEquipGroupSet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\EquipSet\UCEquipSet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UCSpotSet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\WinAbout.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCEquipGroup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrmEquipSpotSet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCEquipTjSet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCEquipType.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrmGateway.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrmProductionLine.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCProductionLineGroup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ChooseEquip.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrmEquipGroup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrmLogin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrmEquip.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ComSet\UCComSet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\EquipGroupSet\UCEquipGroupSet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\EquipSet\UCEquipSet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UCSpotSet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinAbout.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCEquipGroup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrmEquipSpotSet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCEquipTjSet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCEquipType.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrmGateway.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrmProductionLine.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCProductionLineGroup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

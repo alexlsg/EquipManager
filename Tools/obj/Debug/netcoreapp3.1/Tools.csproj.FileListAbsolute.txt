@@ -1,0 +1,14 @@
+D:\MyWork\设备管理\设备管理\Tools\bin\Debug\netcoreapp3.1\Tools.deps.json
+D:\MyWork\设备管理\设备管理\Tools\bin\Debug\netcoreapp3.1\Tools.dll
+D:\MyWork\设备管理\设备管理\Tools\bin\Debug\netcoreapp3.1\Tools.pdb
+D:\MyWork\设备管理\设备管理\Tools\obj\Debug\netcoreapp3.1\Tools.csproj.AssemblyReference.cache
+D:\MyWork\设备管理\设备管理\Tools\obj\Debug\netcoreapp3.1\Tools.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\设备管理\设备管理\Tools\obj\Debug\netcoreapp3.1\Tools.AssemblyInfoInputs.cache
+D:\MyWork\设备管理\设备管理\Tools\obj\Debug\netcoreapp3.1\Tools.AssemblyInfo.cs
+D:\MyWork\设备管理\设备管理\Tools\obj\Debug\netcoreapp3.1\Tools.csproj.CoreCompileInputs.cache
+D:\MyWork\设备管理\设备管理\Tools\obj\Debug\netcoreapp3.1\Tools.dll
+D:\MyWork\设备管理\设备管理\Tools\obj\Debug\netcoreapp3.1\Tools.pdb
+D:\MyWork\设备管理\设备管理\Tools\bin\Debug\netcoreapp3.1\AWSSDK.Core.dll
+D:\MyWork\设备管理\设备管理\Tools\bin\Debug\netcoreapp3.1\AWSSDK.Core.pdb
+D:\MyWork\设备管理\设备管理\Tools\bin\Debug\netcoreapp3.1\AWSSDK.Core.xml
+D:\MyWork\设备管理\设备管理\Tools\obj\Debug\netcoreapp3.1\Tools.csproj.CopyComplete

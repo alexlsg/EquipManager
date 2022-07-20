@@ -1,0 +1,23 @@
+{
+  "token": {
+    "user": "",
+    "password": ""
+  },
+  "save": {
+    "timespan": "10"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "server=49.235.143.181;port=3306;database=ByteCube;user=ByteCube;password=ByteCube;SslMode = none;"
+    }
+  },
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ]
+  
+}

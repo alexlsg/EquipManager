@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="SystemSetClient.Pages.EquipGroupSet.UCEquipGroupSet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SystemSetClient.Pages.EquipGroupSet"
+             xmlns:systemset="clr-namespace:SystemSet;assembly=SystemSet"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <GroupBox Grid.Row="1" Grid.RowSpan="2" Header="产线组">
+            <TreeView Name="treeview">
+                <TreeView.Resources>
+                    <HierarchicalDataTemplate DataType="{x:Type systemset:EquipGroup}" ItemsSource="{Binding Path=Equips}">
+                        <TextBlock Text="{Binding EquipGroupName}"  Tag="{Binding Id}"></TextBlock>
+                    </HierarchicalDataTemplate>
+                    <HierarchicalDataTemplate DataType="{x:Type systemset:Equip}">
+                        <TextBlock Text="{Binding EquipName}"></TextBlock>
+                    </HierarchicalDataTemplate>
+                </TreeView.Resources>
+                <TreeView.ItemContainerStyle>
+                    <Style TargetType="TreeViewItem">
+                        <Setter Property="IsExpanded" Value="True"/>
+                        <EventSetter Event="PreviewMouseLeftButtonDown" Handler="MenuItem_Click_1"></EventSetter>
+                        <EventSetter Event="PreviewMouseDoubleClick" Handler="MenuItem_MouseDoubleClick"></EventSetter>
+                    </Style>
+                </TreeView.ItemContainerStyle>
+            </TreeView>
+        </GroupBox>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label>当前产线名称</Label>
+            <TextBox x:Name="tb" Width="200" Margin="2" Text="{Binding EquipGroupName}"></TextBox>
+        </StackPanel>
+        <GroupBox Grid.Column="1" Grid.Row="2" Header="{Binding EquipGroupName}" Name="gb1">
+            <DataGrid IsReadOnly="True" x:Name="dg_sb">
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"></EventSetter>
+                    </Style>
+                </DataGrid.RowStyle>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="设备编号" Binding="{Binding EquipNO}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="设备名称" Binding="{Binding EquipName}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+        <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label VerticalAlignment="Center">设置产线组名称</Label>
+            <TextBox Width="200" Margin="2" Height="25" Name="tname"></TextBox>
+            <Button Click="Button_Click">新增产线</Button>
+            <Button Click="Button_Click_1">删除产线</Button>
+            <Button Click="Button_Click_2">保存</Button>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="SystemSetClient.ChooseEquip"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemSetClient"
+        mc:Ignorable="d"
+        Title="ChooseEquip" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Click="Button_Click_2">保存</Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" x:Name="datagrid" CanUserAddRows="False" CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Header="选择" Binding="{Binding Selected,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></DataGridCheckBoxColumn>
+                <DataGridTextColumn Header="编号" IsReadOnly="True" MinWidth="100" Binding="{Binding EquipNO,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn Header="名称" IsReadOnly="True" MinWidth="150" Binding="{Binding EquipName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="类型绑定" MinWidth="150" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox DisplayMemberPath="EquipTypeName" SelectedValuePath="EquipTypeId" ItemsSource="{Binding EquipTypes}" SelectedValue="{Binding TypeBinding,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--<DataGridTextColumn IsReadOnly="True" Header="产线组绑定" MinWidth="100" Binding="{Binding ProductionLineGroupBinding,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>-->
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

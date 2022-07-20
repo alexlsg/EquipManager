@@ -1,0 +1,15 @@
+D:\MyWork\设备管理\设备管理\EquipDataManager\bin\Release\netcoreapp3.1\EquipDataManager.deps.json
+D:\MyWork\设备管理\设备管理\EquipDataManager\bin\Release\netcoreapp3.1\EquipDataManager.dll
+D:\MyWork\设备管理\设备管理\EquipDataManager\bin\Release\netcoreapp3.1\EquipDataManager.pdb
+D:\MyWork\设备管理\设备管理\EquipDataManager\bin\Release\netcoreapp3.1\EquipModel.dll
+D:\MyWork\设备管理\设备管理\EquipDataManager\bin\Release\netcoreapp3.1\Tools.dll
+D:\MyWork\设备管理\设备管理\EquipDataManager\bin\Release\netcoreapp3.1\EquipModel.pdb
+D:\MyWork\设备管理\设备管理\EquipDataManager\bin\Release\netcoreapp3.1\Tools.pdb
+D:\MyWork\设备管理\设备管理\EquipDataManager\obj\Release\netcoreapp3.1\EquipDataManager.csproj.AssemblyReference.cache
+D:\MyWork\设备管理\设备管理\EquipDataManager\obj\Release\netcoreapp3.1\EquipDataManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\设备管理\设备管理\EquipDataManager\obj\Release\netcoreapp3.1\EquipDataManager.AssemblyInfoInputs.cache
+D:\MyWork\设备管理\设备管理\EquipDataManager\obj\Release\netcoreapp3.1\EquipDataManager.AssemblyInfo.cs
+D:\MyWork\设备管理\设备管理\EquipDataManager\obj\Release\netcoreapp3.1\EquipDataManager.csproj.CoreCompileInputs.cache
+D:\MyWork\设备管理\设备管理\EquipDataManager\obj\Release\netcoreapp3.1\EquipDataManager.csproj.CopyComplete
+D:\MyWork\设备管理\设备管理\EquipDataManager\obj\Release\netcoreapp3.1\EquipDataManager.dll
+D:\MyWork\设备管理\设备管理\EquipDataManager\obj\Release\netcoreapp3.1\EquipDataManager.pdb

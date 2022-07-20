@@ -1,0 +1,45 @@
+﻿<Window x:Class="SystemSetClient.FrmEquipSpotSet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SystemSetClient"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Click="Button_Click">删除</Button>
+            <Button Click="Button_Click_2">保存</Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" x:Name="datagrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="测点编号" MinWidth="150" Binding="{Binding SpotNO,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn Header="测点名称" MinWidth="150" Binding="{Binding SpotNm,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn Header="数据类型" MinWidth="150" Binding="{Binding DataType,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <!--<DataGridTemplateColumn Header="设备类型" MinWidth="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox DisplayMemberPath="EquipTypeName" SelectedValuePath="EquipTypeId" ItemsSource="{Binding EquipTypes}" SelectedValue="{Binding EquipType,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"> </ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>-->
+                <DataGridTemplateColumn Header="保存类型" MinWidth="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox SelectedIndex="{Binding SaveType,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                                <ComboBoxItem>不保存</ComboBoxItem>
+                                <ComboBoxItem>外接设备类型</ComboBoxItem>
+                                <ComboBoxItem>状态</ComboBoxItem>
+                                <ComboBoxItem>实时值</ComboBoxItem>
+                            </ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

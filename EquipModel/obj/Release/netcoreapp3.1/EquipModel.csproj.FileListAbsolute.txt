@@ -1,0 +1,10 @@
+D:\MyWork\设备管理\设备管理\EquipModel\bin\Release\netcoreapp3.1\EquipModel.deps.json
+D:\MyWork\设备管理\设备管理\EquipModel\bin\Release\netcoreapp3.1\EquipModel.dll
+D:\MyWork\设备管理\设备管理\EquipModel\bin\Release\netcoreapp3.1\EquipModel.pdb
+D:\MyWork\设备管理\设备管理\EquipModel\obj\Release\netcoreapp3.1\EquipModel.csproj.AssemblyReference.cache
+D:\MyWork\设备管理\设备管理\EquipModel\obj\Release\netcoreapp3.1\EquipModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\设备管理\设备管理\EquipModel\obj\Release\netcoreapp3.1\EquipModel.AssemblyInfoInputs.cache
+D:\MyWork\设备管理\设备管理\EquipModel\obj\Release\netcoreapp3.1\EquipModel.AssemblyInfo.cs
+D:\MyWork\设备管理\设备管理\EquipModel\obj\Release\netcoreapp3.1\EquipModel.csproj.CoreCompileInputs.cache
+D:\MyWork\设备管理\设备管理\EquipModel\obj\Release\netcoreapp3.1\EquipModel.dll
+D:\MyWork\设备管理\设备管理\EquipModel\obj\Release\netcoreapp3.1\EquipModel.pdb

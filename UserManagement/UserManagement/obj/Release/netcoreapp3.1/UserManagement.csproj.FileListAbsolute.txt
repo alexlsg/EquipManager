@@ -1,0 +1,13 @@
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\bin\Release\netcoreapp3.1\UserManagement.deps.json
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\bin\Release\netcoreapp3.1\UserManagement.dll
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\bin\Release\netcoreapp3.1\UserManagement.pdb
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\bin\Release\netcoreapp3.1\Tools.dll
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\bin\Release\netcoreapp3.1\Tools.pdb
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\obj\Release\netcoreapp3.1\UserManagement.csproj.AssemblyReference.cache
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\obj\Release\netcoreapp3.1\UserManagement.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\obj\Release\netcoreapp3.1\UserManagement.AssemblyInfoInputs.cache
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\obj\Release\netcoreapp3.1\UserManagement.AssemblyInfo.cs
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\obj\Release\netcoreapp3.1\UserManagement.csproj.CoreCompileInputs.cache
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\obj\Release\netcoreapp3.1\UserManagement.csproj.CopyComplete
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\obj\Release\netcoreapp3.1\UserManagement.dll
+D:\MyWork\设备管理\设备管理\UserManagement\UserManagement\obj\Release\netcoreapp3.1\UserManagement.pdb
