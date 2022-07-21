@@ -236,3 +236,4 @@ D:\git\EquipManager\AntistaticApi\obj\Debug\netcoreapp3.1\staticwebassets\Antist
 D:\git\EquipManager\AntistaticApi\obj\Debug\netcoreapp3.1\AntistaticApi.RazorTargetAssemblyInfo.cache
 D:\git\EquipManager\AntistaticApi\obj\Debug\netcoreapp3.1\AntistaticApi.csproj.CopyComplete
 D:\git\EquipManager\AntistaticApi\obj\Debug\netcoreapp3.1\AntistaticApi.genruntimeconfig.cache
+D:\git\EquipManager\AntistaticApi\bin\Debug\netcoreapp3.1\config.json

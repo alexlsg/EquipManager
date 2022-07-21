@@ -13,7 +13,7 @@ namespace AntistaticApi.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class StatisticsController : ControllerBase
     {
         [HttpGet]
@@ -56,6 +56,7 @@ namespace AntistaticApi.Controllers
             {
                 List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByGroup(groupid);
                 HttpResult _httpResult = new HttpResult();
+                _httpResult.Message = "parametter:"+groupid;
                 _httpResult.Data = _datas;
                 _httpResult.Status = true;
                 return new JsonResult(_httpResult);

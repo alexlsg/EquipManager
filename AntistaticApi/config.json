@@ -1,4 +1,7 @@
 {
+  "log": {
+    "url": ""
+  },
   "port": "9003",
   "token": {
     "user": "Admin",

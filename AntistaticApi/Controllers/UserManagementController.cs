@@ -10,7 +10,7 @@ namespace AntistaticApi.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class UserManagementController : ControllerBase
     {
         public static List<User> users = new List<User>();
