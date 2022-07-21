@@ -31,7 +31,7 @@ namespace AntistaticApi.Controllers
         {
             try
             {
-                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType(typeid);
+                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType(typeid,"");
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = _datas;
                 _httpResult.Status = true;
@@ -54,7 +54,7 @@ namespace AntistaticApi.Controllers
         {
             try
             {
-                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByGroup(groupid);
+                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType("",groupid);
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Message = "parametter:"+groupid;
                 _httpResult.Data = _datas;

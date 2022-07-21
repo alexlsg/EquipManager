@@ -317,14 +317,18 @@ namespace EquipDataManager.Bll
         /// 获取设备实时统计数据,按类型
         /// </summary>
         /// <returns></returns>
-        public List<EquipSstjData> GetEquipSstjDataByType(string typeid)
+        public List<EquipSstjData> GetEquipSstjDataByType(string typeid, string groupid)
         {
             lock (dataCache)
             {
                 var _temp = (from a in dataCache
                              from b in equipTjSets
                              from c in equips
-                             where a.EquipID == c.ID && c.EquipType == typeid && c.EquipTypeName == b.EquipTypeName && GetSjdb(a, b)
+                             where a.EquipID == c.ID
+                             && (string.IsNullOrWhiteSpace(typeid) || c.EquipType == typeid)
+                             && (string.IsNullOrWhiteSpace(groupid) || c.GroupID == groupid)
+                             && c.EquipTypeName == b.EquipTypeName
+                             && GetSjdb(a, b)
                              group a by new { b.EquipTypeName, b.Tjlx, b.Tjzt, b.Cyhj, b.Cyzshj } into g
                              select new EquipSstjData
                              {
@@ -383,21 +387,21 @@ namespace EquipDataManager.Bll
             lock (dataCache)
             {
                 var _temp = (from a in dataCache
-                            from b in equipTjSets
-                            from c in equips
-                            where a.EquipID == c.ID && c.GroupID == groupid && c.EquipTypeName == b.EquipTypeName && GetSjdb(a, b)
-                            group a by new { c.GroupName, b.Tjlx, b.Tjzt, b.Cyhj, b.Cyzshj } into g
-                            select new EquipSstjData
-                            {
-                                TjType = "明细",
-                                TypeName = g.Key.GroupName,
-                                Tjlx = g.Key.Tjlx,
-                                Tjzt = g.Key.Tjzt,
-                                Count = g.Count(),
-                                Cyhj = g.Key.Cyhj,
-                                Cyzshj = g.Key.Cyzshj,
-                                Px = 0
-                            }).ToList();
+                             from b in equipTjSets
+                             from c in equips
+                             where a.EquipID == c.ID && c.GroupID == groupid && c.EquipTypeName == b.EquipTypeName && GetSjdb(a, b)
+                             group a by new { c.GroupName, b.Tjlx, b.Tjzt, b.Cyhj, b.Cyzshj } into g
+                             select new EquipSstjData
+                             {
+                                 TjType = "明细",
+                                 TypeName = g.Key.GroupName,
+                                 Tjlx = g.Key.Tjlx,
+                                 Tjzt = g.Key.Tjzt,
+                                 Count = g.Count(),
+                                 Cyhj = g.Key.Cyhj,
+                                 Cyzshj = g.Key.Cyzshj,
+                                 Px = 0
+                             }).ToList();
                 var _temp2 = from a in equipTjSets
                              join b in equips on a.EquipTypeName equals b.EquipTypeName
                              where b.GroupID == groupid &&
