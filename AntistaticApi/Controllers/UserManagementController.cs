@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AntistaticApi.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -10,10 +11,9 @@ namespace AntistaticApi.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class UserManagementController : ControllerBase
     {
-        public static List<User> users = new List<User>();
         /// <summary>
         /// 新增用户
         /// </summary>
@@ -55,10 +55,10 @@ namespace AntistaticApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetUserList(string text)
+        public IActionResult GetUserList(Params paras)
         {
             UserService userService = new UserService();
-            HttpResult httpResult = userService.GetUserList(text);
+            HttpResult httpResult = userService.GetUserList(paras.text);
             return new JsonResult(httpResult);
         }
         /// <summary>

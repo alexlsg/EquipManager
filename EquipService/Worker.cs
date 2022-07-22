@@ -42,9 +42,7 @@ namespace EquipService
                 webBuilder.ConfigureKestrel(serverOptions =>
                   {
                       serverOptions.ListenAnyIP(port);
-                  })
-                    .UseStartup<Startup>();
-                webBuilder.UseStartup<Startup>();
+                  }).UseStartup<Startup>();
             });
     }
 }

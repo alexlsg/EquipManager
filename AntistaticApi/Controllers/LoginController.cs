@@ -23,12 +23,11 @@ namespace AntistaticApi.Controllers
         /// <param name="user"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult Login(string username, string password)
+        public IActionResult Login(User user)
         {
             try
             {
                 UserService userService = new UserService();
-                User user = new User() { UserName = username, PassWord = password };
                 HttpResult httpResult = userService.Login(user);
                 if (httpResult.Status)
                 {
@@ -49,13 +48,11 @@ namespace AntistaticApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult LogOut(string username)
+        public IActionResult LogOut(User user)
         {
             try
             {
-                User user = new User() { UserName = username };
-                string token;
-                _authenservice.IsAuthenticated(user, out token);
+
                 HttpResult httpResult = HttpResult.GetJsonResult(true, "登出成功", String.Empty);
                 return new JsonResult(httpResult);
             }

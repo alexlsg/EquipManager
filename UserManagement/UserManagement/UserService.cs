@@ -32,7 +32,7 @@ VALUES(@UserName,@RoleGroup,@PassWord,@ThemeColor,@LastLoginTime,@Remarks,@ZoneB
                 MySqlParameter[] mySqlParameters = new MySqlParameter[7];
                 mySqlParameters[0] = new MySqlParameter("UserName", user.UserName);
                 mySqlParameters[1] = new MySqlParameter("RoleGroup", user.RoleGroup);
-                mySqlParameters[2] = new MySqlParameter("PassWord", DES.MD5Encrypt(user.PassWord));
+                mySqlParameters[2] = new MySqlParameter("PassWord", user.PassWord);
                 mySqlParameters[3] = new MySqlParameter("ThemeColor", user.ThemeColor);
                 mySqlParameters[4] = new MySqlParameter("LastLoginTime", user.LastLoginTime);
                 mySqlParameters[5] = new MySqlParameter("Remarks", user.Remarks);

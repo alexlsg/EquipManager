@@ -1,5 +1,0 @@
-D:\MyWork\设备管理\设备管理\SystemSetClient\bin\Release\netcoreapp3.1\publish\win-x64\SystemSetClient.pdb
-D:\MyWork\设备管理\设备管理\SystemSetClient\bin\Release\netcoreapp3.1\publish\win-x64\SystemSet.pdb
-D:\MyWork\设备管理\设备管理\SystemSetClient\bin\Release\netcoreapp3.1\publish\win-x64\UserManagement.pdb
-D:\MyWork\设备管理\设备管理\SystemSetClient\bin\Release\netcoreapp3.1\publish\win-x64\Tools.pdb
-D:\MyWork\设备管理\设备管理\SystemSetClient\bin\Release\netcoreapp3.1\publish\win-x64\SystemSetClient.exe

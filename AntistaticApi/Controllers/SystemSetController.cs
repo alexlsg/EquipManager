@@ -9,7 +9,7 @@ namespace AntistaticApi.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class SystemSetController : ControllerBase
     {
         /// <summary>

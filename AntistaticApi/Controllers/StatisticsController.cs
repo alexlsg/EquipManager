@@ -13,7 +13,7 @@ namespace AntistaticApi.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class StatisticsController : ControllerBase
     {
         [HttpGet]
@@ -251,7 +251,7 @@ namespace AntistaticApi.Controllers
                 return new JsonResult(ex.Message);
             }
         }
-
+        [HttpPost]
         public IActionResult GetEvent(string groupid, string equiptypeid, DateTime ksrq, DateTime jsrq, string datatype, string eventkey)
         {
             try

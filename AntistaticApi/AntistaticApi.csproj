@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="appsettings.json" />
     <Content Remove="config.json" />
   </ItemGroup>
 

@@ -24,7 +24,7 @@ namespace UserManagement
             {
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.Append(@"
-INSERT INTO Function(FunctionName)
+INSERT INTO 'function'(FunctionName)
 VALUES(@FunctionName)
 ");
                 MySqlParameter[] mySqlParameters = new MySqlParameter[1];
@@ -52,7 +52,7 @@ VALUES(@FunctionName)
             {
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.Append(@"
-UPDATE Function SET FunctionName=@FunctionName
+UPDATE 'Function' SET FunctionName=@FunctionName
 WHERE FunctionId=@FunctionId
 ");
                 MySqlParameter[] mySqlParameters = new MySqlParameter[2];
@@ -81,7 +81,7 @@ WHERE FunctionId=@FunctionId
             {
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.Append(@"
-DELETE Function WHERE FunctionId=@FunctionId
+DELETE 'Function' WHERE FunctionId=@FunctionId
 ");
                 MySqlParameter[] mySqlParameters = new MySqlParameter[1];
                 mySqlParameters[0] = new MySqlParameter("FunctionId", Function.FunctionId);
@@ -108,11 +108,11 @@ DELETE Function WHERE FunctionId=@FunctionId
                 StringBuilder stringBuilder = new StringBuilder();
                 if (string.IsNullOrWhiteSpace(text))
                 {
-                    stringBuilder.Append(@"SELECT * FROM Function");
+                    stringBuilder.Append(@"SELECT * FROM 'Function'");
                 }
                 else
                 {
-                    stringBuilder.Append(@"SELECT * FROM Function WHERE FunctionName like '%" + text + "%'");
+                    stringBuilder.Append(@"SELECT * FROM 'Function' WHERE FunctionName like '%" + text + "%'");
                 }
                 DataTable _ds = Tools.DBHelper.GetDataTable(stringBuilder.ToString());
                 for (int i = 0; i < _ds.Rows.Count; i++)

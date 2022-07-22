@@ -9,12 +9,6 @@
     <Content Remove="config.json" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="config.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 	<ItemGroup>
 		<PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
 	</ItemGroup>
@@ -27,4 +21,6 @@
     <ProjectReference Include="..\AntistaticApi\AntistaticApi.csproj" />
     <ProjectReference Include="..\EquipDataManager\EquipDataManager.csproj" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 </Project>
