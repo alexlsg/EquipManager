@@ -31,6 +31,7 @@ namespace AntistaticApi.Model
         public string eventkey { get; set; }
         public DateTime ksrq { get; set; }
         public DateTime jsrq { get; set; }
+        public string spotno { get; set; }
 
         public string typeid { get; set; }
     }
