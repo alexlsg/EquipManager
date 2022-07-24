@@ -1,4 +1,5 @@
 ﻿using AntistaticApi.IdentityService;
+using AntistaticApi.Model;
 using EquipDataManager.Bll;
 using EquipDataManager.Dal;
 using EquipModel;
@@ -27,11 +28,11 @@ namespace AntistaticApi.Controllers
         /// <param name="Equip"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetEquipStatusByType(string typeid)
+        public IActionResult GetEquipStatusByType(Params paras)
         {
             try
             {
-                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType(typeid,"");
+                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType(paras.typeid, "");
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = _datas;
                 _httpResult.Status = true;
@@ -50,13 +51,13 @@ namespace AntistaticApi.Controllers
         /// <param name="Equip"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetEquipStatusByGroup(string groupid)
+        public IActionResult GetEquipStatusByGroup(Params paras)
         {
             try
             {
-                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType("",groupid);
+                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType("", paras.groupid);
                 HttpResult _httpResult = new HttpResult();
-                _httpResult.Message = "parametter:"+groupid;
+                _httpResult.Message = "parametter:" + paras.groupid;
                 _httpResult.Data = _datas;
                 _httpResult.Status = true;
                 return new JsonResult(_httpResult);
@@ -73,11 +74,11 @@ namespace AntistaticApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetLscdlb(string groupid)
+        public IActionResult GetLscdlb(Params paras)
         {
             try
             {
-                IEnumerable<object> _cds = DataPicker.Instance.GetLssjcdlb(groupid);
+                IEnumerable<object> _cds = DataPicker.Instance.GetLssjcdlb(paras.groupid);
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = _cds;
                 _httpResult.Status = true;
@@ -168,12 +169,12 @@ namespace AntistaticApi.Controllers
         /// <param name="equipid">设备id</param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetLsjlByEquipID(string equipid)
+        public IActionResult GetLsjlByEquipID(Params paras)
         {
             try
             {
                 HttpResult _httpResult = new HttpResult();
-                _httpResult.Data = DataPicker.Instance.dataCache.FindAll(n => n.EquipID.ToString() == equipid);
+                _httpResult.Data = DataPicker.Instance.dataCache.FindAll(n => n.EquipID.ToString() == paras.equipid);
                 _httpResult.Status = true;
                 return new JsonResult(_httpResult);
             }
@@ -190,14 +191,14 @@ namespace AntistaticApi.Controllers
         /// <param name="equipid">产线id</param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetLsjlByGroupID(string groupid)
+        public IActionResult GetLsjlByGroupID(Params paras)
         {
             try
             {
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = from a in DataPicker.Instance.dataCache
                                    join b in DataPicker.Instance.equips on a.EquipID equals b.ID
-                                   where b.GroupID == groupid
+                                   where b.GroupID == paras.groupid
                                    select a;
                 _httpResult.Status = true;
                 return new JsonResult(_httpResult);
@@ -252,11 +253,11 @@ namespace AntistaticApi.Controllers
             }
         }
         [HttpPost]
-        public IActionResult GetEvent(string groupid, string equiptypeid, DateTime ksrq, DateTime jsrq, string datatype, string eventkey)
+        public IActionResult GetEvent(Params paras)
         {
             try
             {
-                object data = EquipDataDal.GetEvent(groupid, equiptypeid, ksrq, jsrq, datatype, eventkey);
+                object data = EquipDataDal.GetEvent(paras.groupid, paras.equiptypeid, paras.ksrq, paras.jsrq, paras.datatype, paras.eventkey);
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = data;
                 _httpResult.Status = true;

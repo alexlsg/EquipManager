@@ -145,7 +145,7 @@ DELETE User WHERE UserName=@UserName
                     user.RoleGroup = _ds.Rows[i]["RoleGroup"].ToString();
                     user.PassWord = _ds.Rows[i]["PassWord"].ToString();
                     user.ThemeColor = _ds.Rows[i]["ThemeColor"].ToString();
-                    user.LastLoginTime = (DateTime?)_ds.Rows[i]["LastLoginTime"];
+                    user.LastLoginTime =string.IsNullOrWhiteSpace(_ds.Rows[i]["LastLoginTime"].ToString())? null : (DateTime?)_ds.Rows[i]["LastLoginTime"];
                     user.Remarks = _ds.Rows[i]["Remarks"].ToString();
                     user.ZoneBinding = _ds.Rows[i]["ZoneBinding"].ToString();
                     users.Add(user);

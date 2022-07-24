@@ -17,6 +17,11 @@ namespace AntistaticApi.Controllers
         {
             _authenservice = service;
         }
+        [HttpGet]
+        public IActionResult Test()
+        {
+            return new JsonResult("Test");
+        }
         /// <summary>
         /// 登录
         /// </summary>

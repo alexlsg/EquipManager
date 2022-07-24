@@ -153,7 +153,7 @@ DELETE  a,b From Equip a INNER JOIN Gateway b on a.GatewayId=b.Id WHERE b.EquipG
                 List<EquipGroup> EquipGroups = new List<EquipGroup>();
                 StringBuilder stringBuilder1 = new StringBuilder();
                 stringBuilder1.Append(@"SELECT * FROM EquipGroup");
-                DataTable _ds1 = Tools.DBHelper.GetDataTable(stringBuilder.ToString());
+                DataTable _ds1 = Tools.DBHelper.GetDataTable(stringBuilder1.ToString());
                 for (int i = 0; i < _ds1.Rows.Count; i++)
                 {
                     EquipGroup EquipGroup = new EquipGroup();

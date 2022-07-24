@@ -114,10 +114,10 @@ namespace AntistaticApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetRoleList(string text)
+        public IActionResult GetRoleList(Params paras)
         {
             RoleService userService = new RoleService();
-            HttpResult httpResult = userService.GetRoleList(text);
+            HttpResult httpResult = userService.GetRoleList(paras.text);
             return new JsonResult(httpResult);
         }
         /// <summary>
@@ -161,10 +161,10 @@ namespace AntistaticApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetFunctionList(string text)
+        public IActionResult GetFunctionList(Params paras)
         {
             FunctionService userService = new FunctionService();
-            HttpResult httpResult = userService.GetFunctionList(text);
+            HttpResult httpResult = userService.GetFunctionList(paras.text);
             return new JsonResult(httpResult);
         }
         /// <summary>
@@ -219,10 +219,10 @@ namespace AntistaticApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetRoleFunctionListByRoleID(string roleid)
+        public IActionResult GetRoleFunctionListByRoleID(Params paras)
         {
             RoleFunctionService userService = new RoleFunctionService();
-            HttpResult httpResult = userService.GetRoleFunctionListByRoleID(roleid);
+            HttpResult httpResult = userService.GetRoleFunctionListByRoleID(paras.roleid);
             return new JsonResult(httpResult);
         }
     }
