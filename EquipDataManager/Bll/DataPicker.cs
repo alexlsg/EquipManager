@@ -343,7 +343,7 @@ namespace EquipDataManager.Bll
                              }).ToList();
 
                 var _temp2 = from a in equipTjSets
-                             where a.EquipType == typeid &&
+                             where (string.IsNullOrWhiteSpace(typeid) || a.EquipType == typeid) &&
                              !_temp.Exists((Predicate<EquipSstjData>)(n => n.TypeName == a.EquipTypeName && n.Tjlx == a.Tjlx && n.Tjzt == a.Tjzt))
                              select new EquipSstjData
                              {

@@ -53,7 +53,7 @@ namespace UITest
                 Stopwatch _sw = new Stopwatch();
                 _sw.Start();
                 dg.ItemsSource = null;
-                List<EquipSstjData> data = DataPicker.Instance.GetEquipSstjDataByType(tb_lxid.Text);
+                List<EquipSstjData> data = DataPicker.Instance.GetEquipSstjDataByType(tb_lxid.Text,tb_cxid.Text);
                 rtb_lx.Document.Blocks.Clear();
                 rtb_lx.AppendText(JsonMapper.ToJson(data));
                 dg.ItemsSource = data;
