@@ -12,6 +12,7 @@ namespace AntistaticApi.Controllers
     [Route("[controller]/[action]")]
     [ApiController]
     [Authorize]
+    [TokenActionFilter1]
     public class UserManagementController : ControllerBase
     {
         /// <summary>
@@ -35,7 +36,7 @@ namespace AntistaticApi.Controllers
         public IActionResult ModUser(User user)
         {
             UserService userService = new UserService();
-            HttpResult httpResult = userService.AddUser(user);
+            HttpResult httpResult = userService.ModUser(user);
             return new JsonResult(httpResult);
         }
         /// <summary>

@@ -61,7 +61,7 @@ namespace SystemSetClient {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SystemSetClient;V1.0.0.0;component/frmgateway.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SystemSetClient;component/frmgateway.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\FrmGateway.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -94,7 +94,7 @@ namespace SystemSetClient.Pages.EquipGroupSet {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SystemSetClient;V1.0.0.0;component/pages/equipgroupset/ucequipgroupset.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SystemSetClient;component/pages/equipgroupset/ucequipgroupset.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\EquipGroupSet\UCEquipGroupSet.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AntistaticApi.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -10,7 +11,8 @@ namespace AntistaticApi.Controllers
     [Route("[controller]/[action]")]
     [ApiController]
     [Authorize]
-    public class SystemSetController : ControllerBase
+    [TokenActionFilter1]
+    public class SystemSetController 
     {
         /// <summary>
         /// 新增设备
@@ -33,7 +35,7 @@ namespace AntistaticApi.Controllers
         public IActionResult ModEquip([FromBody] Equip Equip)
         {
             EquipService EquipService = new EquipService();
-            HttpResult httpResult = EquipService.AddEquip(Equip);
+            HttpResult httpResult = EquipService.ModEquip(Equip);
             return new JsonResult(httpResult);
         }
         /// <summary>
@@ -105,7 +107,7 @@ namespace AntistaticApi.Controllers
         public IActionResult ModEquipSpotSet([FromBody] EquipSpotSet EquipSpotSet)
         {
             EquipSpotSetService EquipSpotSetService = new EquipSpotSetService();
-            HttpResult httpResult = EquipSpotSetService.AddEquipSpotSet(EquipSpotSet);
+            HttpResult httpResult = EquipSpotSetService.ModEquipSpotSet(EquipSpotSet);
             return new JsonResult(httpResult);
         }
         /// <summary>
@@ -153,7 +155,7 @@ namespace AntistaticApi.Controllers
         public IActionResult ModEquipType([FromBody] EquipType EquipType)
         {
             EquipTypeService EquipTypeService = new EquipTypeService();
-            HttpResult httpResult = EquipTypeService.AddEquipType(EquipType);
+            HttpResult httpResult = EquipTypeService.ModEquipType(EquipType);
             return new JsonResult(httpResult);
         }
         /// <summary>
@@ -201,7 +203,7 @@ namespace AntistaticApi.Controllers
         public IActionResult ModGateway(Gateway Gateway)
         {
             GatewayService GatewayService = new GatewayService();
-            HttpResult httpResult = GatewayService.AddGateway(Gateway);
+            HttpResult httpResult = GatewayService.ModGateway(Gateway);
             return new JsonResult(httpResult);
         }
         /// <summary>
@@ -249,7 +251,7 @@ namespace AntistaticApi.Controllers
         public IActionResult ModProductionLine(ProductionLine ProductionLine)
         {
             ProductionLineService ProductionLineService = new ProductionLineService();
-            HttpResult httpResult = ProductionLineService.AddProductionLine(ProductionLine);
+            HttpResult httpResult = ProductionLineService.ModProductionLine(ProductionLine);
             return new JsonResult(httpResult);
         }
         /// <summary>
@@ -297,7 +299,7 @@ namespace AntistaticApi.Controllers
         public IActionResult ModProductionLineGroup(ProductionLineGroup ProductionLineGroup)
         {
             ProductionLineGroupService ProductionLineGroupService = new ProductionLineGroupService();
-            HttpResult httpResult = ProductionLineGroupService.AddProductionLineGroup(ProductionLineGroup);
+            HttpResult httpResult = ProductionLineGroupService.ModProductionLineGroup(ProductionLineGroup);
             return new JsonResult(httpResult);
         }
         /// <summary>
@@ -356,7 +358,7 @@ namespace AntistaticApi.Controllers
         public IActionResult ModSystemSetting(SystemSetting SystemSetting)
         {
             SystemSettingService SystemSettingService = new SystemSettingService();
-            HttpResult httpResult = SystemSettingService.AddSystemSetting(SystemSetting);
+            HttpResult httpResult = SystemSettingService.ModSystemSetting(SystemSetting);
             return new JsonResult(httpResult);
         }
         /// <summary>
@@ -404,7 +406,7 @@ namespace AntistaticApi.Controllers
         public IActionResult ModEquipTjSet(EquipTjSet EquipTjSet)
         {
             EquipTjSetService EquipTjSetService = new EquipTjSetService();
-            HttpResult httpResult = EquipTjSetService.AddEquipTjSet(EquipTjSet);
+            HttpResult httpResult = EquipTjSetService.ModEquipTjSet(EquipTjSet);
             return new JsonResult(httpResult);
         }
         /// <summary>

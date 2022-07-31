@@ -1,4 +1,6 @@
 ﻿using AntistaticApi.IdentityService;
+using AntistaticApi.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -41,6 +43,7 @@ namespace AntistaticApi.Controllers
                     if (_authenservice.IsAuthenticated(user, out token))
                     {
                         httpResult.Token = token;
+                        tokenModel.LoginUser.Add(user.UserName);
                     }
                 }
                 return new JsonResult(httpResult);
@@ -51,15 +54,23 @@ namespace AntistaticApi.Controllers
                 return new JsonResult(ex.Message);
             }
         }
-
+        [Authorize]
         [HttpPost]
-        public IActionResult LogOut(User user)
+        public IActionResult LoginOut(User user)
         {
             try
             {
-
-                HttpResult httpResult = HttpResult.GetJsonResult(true, "登出成功", String.Empty);
-                return new JsonResult(httpResult);
+                if (tokenModel.LoginUser.Exists(n => n == user.UserName))
+                {
+                    tokenModel.LoginUser.Remove(user.UserName);
+                    HttpResult httpResult = HttpResult.GetJsonResult(true, "用户登出成功", String.Empty);
+                    return new JsonResult(httpResult);
+                }
+                else
+                {
+                    HttpResult httpResult = HttpResult.GetJsonResult(false, "", "用户未正常登录,登出失败");
+                    return new JsonResult(httpResult);
+                }
             }
             catch (Exception ex)
             {
@@ -67,5 +78,41 @@ namespace AntistaticApi.Controllers
                 return new JsonResult(ex.Message);
             }
         }
+        [Authorize]
+        [HttpPost]
+        public IActionResult RefreshToken(User user)
+        {
+            try
+            {
+                HttpResult httpResult1 = new HttpResult();
+                if (tokenModel.LoginUser.Exists(n => n == user.UserName))
+                {
+                    UserService userService = new UserService();
+                    HttpResult httpResult = userService.Login(user);
+                    if (httpResult.Status)
+                    {
+                        string token;
+                        if (_authenservice.IsAuthenticated(user, out token))
+                        {
+                            httpResult1.Token = token;
+                            httpResult1.Status = true;
+                            httpResult1.Message = "刷新Token成功";
+                        }
+                    }
+                }
+                else
+                {
+                    httpResult1 = HttpResult.GetJsonResult(false, "", "用户未正常登录,刷新Token失败");
+                }
+                return new JsonResult(httpResult1);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Add(ex);
+                return new JsonResult(ex.Message);
+            }
+        }
+
     }
 }

@@ -61,7 +61,7 @@ namespace SystemSetClient.Pages.ComSet {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SystemSetClient;V1.0.0.0;component/pages/comset/uccomset.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SystemSetClient;component/pages/comset/uccomset.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\ComSet\UCComSet.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

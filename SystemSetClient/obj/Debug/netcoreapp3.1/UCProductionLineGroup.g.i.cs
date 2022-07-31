@@ -62,7 +62,7 @@ namespace SystemSetClient {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SystemSetClient;V1.0.0.0;component/ucproductionlinegroup.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SystemSetClient;component/ucproductionlinegroup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\UCProductionLineGroup.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

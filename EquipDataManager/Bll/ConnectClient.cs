@@ -61,6 +61,7 @@ namespace EquipDataManager.Bll
             try
             {
                 string _value = Encoding.UTF8.GetString(result);
+                _value = _value.Replace("＝", "=");
                 log?.Invoke(_value);
                 string[] _ss = _value.Split('{')[1].Split('}')[0].Split(',');
                 Dictionary<string, string> _values = new Dictionary<string, string>();
@@ -69,12 +70,8 @@ namespace EquipDataManager.Bll
                     string[] _ss1 = item.Split('=');
                     _values[_ss1[0]] = _ss1[1];
                 }
-                Equip _e = DataPicker.Instance.equips.Find(n => n.NO == _values["id"] && n.GroupID == _values["line"]);
-                if (_e != null)
-                {
-
-                    DBHelper.ExecuteCommand($"insert into equipevent(groupid,typeid,equipname,devid,event,starttime,dvalue)values('{_e.GroupID}','{_e.EquipType}','{_e.Name}','{_e.ID}','{_values["qrcode"]}',now(),'{_values["adc0"]}')");
-                }
+                DBHelper.ExecuteCommand($"insert into equipevent(groupid,devid,event,starttime,dvalue)values('{_values["line"]}','{_values["id"]}','{_values["qrcode"]}',now(),'{_values["adc0"]}')");
+                client.Send(Encoding.UTF8.GetBytes("ok" + _value));
             }
             catch (Exception ex)
             {

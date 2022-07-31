@@ -15,6 +15,7 @@ namespace AntistaticApi.Controllers
     [Route("[controller]/[action]")]
     [ApiController]
     [Authorize]
+    [TokenActionFilter1]
     public class StatisticsController : ControllerBase
     {
         [HttpGet]

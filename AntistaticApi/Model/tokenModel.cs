@@ -1,4 +1,6 @@
-﻿namespace AntistaticApi.Model
+﻿using System.Collections.Generic;
+
+namespace AntistaticApi.Model
 {
     public class tokenModel
     {
@@ -22,5 +24,7 @@
         /// 刷新时间
         /// </summary>
         public int RefreshExpiration { get; set; }
+
+        internal static List<string> LoginUser { get; set; } = new List<string>();
     }
 }

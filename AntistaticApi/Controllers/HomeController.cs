@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Tools;
 
 namespace AntistaticApi.Controllers
 {
@@ -8,6 +10,11 @@ namespace AntistaticApi.Controllers
         public IActionResult Index()
         {
             return Ok("防静电信息化管理数据分析API启动...");
+        }
+        [Authorize]
+        public IActionResult Error()
+        {
+            return new JsonResult(HttpResult.GetJsonResult(false, "", "用户已经失效，请重新登录"));
         }
     }
 }
