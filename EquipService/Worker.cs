@@ -24,6 +24,8 @@ namespace EquipService
         {
             DataPicker.Instance.Start(new DataPickerRealise(), Log.Add);
             Log.Add("数据服务已启动！");
+            SocketListen.Instance.Start(Log.Add);
+            Log.Add("TCP监听已开启!");
             try
             {
                 port = int.Parse(ConfigHelper.GetConfigString("port"));

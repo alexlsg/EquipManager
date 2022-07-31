@@ -1,9 +1,11 @@
-﻿using System;
+﻿using EquipModel;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using Tools;
 
 namespace EquipDataManager.Bll
 {
@@ -40,21 +42,9 @@ namespace EquipDataManager.Bll
                     {
                         continue;
                     }
-                    //DataHelper _dh = new DataHelper(_result);
-                    //int _datalen = _dh.DataLen;
-                    //byte[] _data = new byte[_datalen];
-                    //Array.Copy(_result, _data, Consts.HeaderLen);
-                    //while (_len < _datalen)
-                    //{
-                    //    int size = 500 * 1024;
-                    //    if (size > _datalen - _len)
-                    //    {
-                    //        size = _datalen - _len;
-                    //    }
-                    //    int _ii = _client.Receive(_data, _len, size, SocketFlags.None);
-                    //    _len += _ii;
-                    //}
-                    //dealDataEvent?.Invoke(_data, _client);
+                    byte[] _buff = new byte[_len];
+                    Array.Copy(_result, _buff, _len);
+                    DealMsg(_buff);
                 }
                 catch (Exception ex)
                 {
@@ -64,6 +54,32 @@ namespace EquipDataManager.Bll
             log?.Invoke($"{_ip}已断开!");
             _client.Shutdown(SocketShutdown.Both);
             _client.Close();
+        }
+
+        private void DealMsg(byte[] result)
+        {
+            try
+            {
+                string _value = Encoding.UTF8.GetString(result);
+                log?.Invoke(_value);
+                string[] _ss = _value.Split('{')[1].Split('}')[0].Split(',');
+                Dictionary<string, string> _values = new Dictionary<string, string>();
+                foreach (var item in _ss)
+                {
+                    string[] _ss1 = item.Split('=');
+                    _values[_ss1[0]] = _ss1[1];
+                }
+                Equip _e = DataPicker.Instance.equips.Find(n => n.NO == _values["id"] && n.GroupID == _values["line"]);
+                if (_e != null)
+                {
+
+                    DBHelper.ExecuteCommand($"insert into equipevent(groupid,typeid,equipname,devid,event,starttime,dvalue)values('{_e.GroupID}','{_e.EquipType}','{_e.Name}','{_e.ID}','{_values["qrcode"]}',now(),'{_values["adc0"]}')");
+                }
+            }
+            catch (Exception ex)
+            {
+                log?.Invoke(ex.Message);
+            }
         }
 
         //internal void CheckActive()
