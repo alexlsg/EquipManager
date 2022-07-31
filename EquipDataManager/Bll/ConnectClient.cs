@@ -70,7 +70,12 @@ namespace EquipDataManager.Bll
                     string[] _ss1 = item.Split('=');
                     _values[_ss1[0]] = _ss1[1];
                 }
-                DBHelper.ExecuteCommand($"insert into equipevent(groupid,devid,event,starttime,dvalue)values('{_values["line"]}','{_values["id"]}','{_values["qrcode"]}',now(),'{_values["adc0"]}')");
+                string _cxid = _values["line"];
+                int _i = 0;
+                if (int.TryParse(_cxid, out _i))
+                    _cxid = _i.ToString();
+
+                DBHelper.ExecuteCommand($"insert into equipevent(groupid,typeid,devid,event,starttime,dvalue)values('{_cxid}','10001','{_values["id"]}','{_values["qrcode"]}',now(),'{_values["adc0"]}')");
                 client.Send(Encoding.UTF8.GetBytes("ok" + _value));
             }
             catch (Exception ex)
