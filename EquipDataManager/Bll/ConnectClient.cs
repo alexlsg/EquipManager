@@ -62,7 +62,6 @@ namespace EquipDataManager.Bll
             {
                 string _value = Encoding.UTF8.GetString(result);
                 _value = _value.Replace("＝", "=");
-                log?.Invoke(_value);
                 string[] _ss = _value.Split('{')[1].Split('}')[0].Split(',');
                 Dictionary<string, string> _values = new Dictionary<string, string>();
                 foreach (var item in _ss)
