@@ -23,6 +23,7 @@ namespace EquipService
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             DataPicker.Instance.Start(new DataPickerRealise(), Log.Add);
+            //DataPicker.Instance.LoadFile();
             Log.Add("数据服务已启动！");
             SocketListen.Instance.Start(Log.Add);
             Log.Add("TCP监听已开启!");

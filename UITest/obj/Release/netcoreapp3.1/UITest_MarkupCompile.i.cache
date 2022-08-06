@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\git\EquipManager\UITest\obj\Release\netcoreapp3.1\
+D:\MyWork\设备管理\EquipManager\UITest\obj\Release\netcoreapp3.1\
 UITest
 none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
-D:\git\EquipManager\UITest\App.xaml
+D:\MyWork\设备管理\EquipManager\UITest\App.xaml
 11407045341
 11413424753
 5202614824
-212-438352581
+2121446519611
 MainWindow.xaml;
 
 True

@@ -7,5 +7,6 @@ namespace EquipModel.Interfaces
     {
         string GetDataFromEquip(Equip equip);
         List<EquipData> AnalyzData(string data, int equipid);
+        string GetToken(Equip equip);
     }
 }

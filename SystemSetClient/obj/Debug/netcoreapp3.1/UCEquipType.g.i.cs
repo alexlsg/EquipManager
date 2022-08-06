@@ -61,7 +61,7 @@ namespace SystemSetClient {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SystemSetClient;component/ucequiptype.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SystemSetClient;V1.0.0.0;component/ucequiptype.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\UCEquipType.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

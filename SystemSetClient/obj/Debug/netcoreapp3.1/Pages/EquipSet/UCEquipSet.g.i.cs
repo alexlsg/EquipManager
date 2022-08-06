@@ -69,7 +69,7 @@ namespace SystemSetClient.Pages.EquipSet {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SystemSetClient;component/pages/equipset/ucequipset.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SystemSetClient;V1.0.0.0;component/pages/equipset/ucequipset.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\EquipSet\UCEquipSet.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

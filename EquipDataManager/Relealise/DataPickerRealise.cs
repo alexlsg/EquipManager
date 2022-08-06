@@ -65,7 +65,7 @@ namespace EquipDataManager.Relealise
         }
         Dictionary<string, string> tokens = new Dictionary<string, string>();
         Dictionary<string, DateTime> tokensx = new Dictionary<string, DateTime>();
-        string GetToken(Equip equip)
+       public string GetToken(Equip equip)
         {
             string _url = equip.IP + ":" + equip.PORT;
             if (tokensx.ContainsKey(_url) && (DateTime.Now - tokensx[_url]).TotalHours > 4)
