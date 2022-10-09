@@ -67,9 +67,8 @@ namespace SystemSetClient.Pages
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             HttpResult httpResult = null;
-            bool repea1 = JudgeSpotNORepeat();
             bool empty = JudgeEmpty();
-            if (repea1 && !empty)
+            if (!empty)
             {
                 EquipSpotSets.ToList().FindAll(n => n.DataStatus != DataStatus.NONE).ForEach(n =>
                 {

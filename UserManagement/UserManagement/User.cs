@@ -39,6 +39,7 @@ namespace UserManagement
         /// 区域绑定
         /// </summary>
         public string ZoneBinding { get; set; }
+        public string Token { get; set; }
 
     }
 }

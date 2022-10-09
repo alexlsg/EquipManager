@@ -2,6 +2,11 @@
 
 namespace AntistaticApi.Model
 {
+    public class UserToken
+    {
+        public string UserName { get; set; }
+        public string Token { get; set; }
+    }
     public class tokenModel
     {
         /// <summary>
@@ -25,6 +30,6 @@ namespace AntistaticApi.Model
         /// </summary>
         public int RefreshExpiration { get; set; }
 
-        internal static List<string> LoginUser { get; set; } = new List<string>();
+        internal static List<UserToken> LoginUser { get; set; } = new List<UserToken>();
     }
 }

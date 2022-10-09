@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "junjaHfblJl/3eA880lOx+GYuq9XeXXt1Wx8wZ6V4XVM8qAVqCRNnkyytce3decgXAohzcR5YQotxEaHcgHvsg==",
+  "dgSpecHash": "NsXX8BkeRE+AX7iYCphVgWKvPrwC0IwNDUdH9pAjOVSL6xjqb3ScYf3VwrZOQTRVxJ9tyilxoWBY7Fo4pJ4eQw==",
   "success": true,
   "projectFilePath": "D:\\git\\EquipManager\\EquipDataManagerTests\\EquipDataManagerTests.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "D:\\User\\Nuget\\microsoft.net.test.sdk\\16.11.0\\microsoft.net.test.sdk.16.11.0.nupkg.sha512",
     "D:\\User\\Nuget\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "D:\\User\\Nuget\\microsoft.qualitytools.testing.fakes\\16.11.230815\\microsoft.qualitytools.testing.fakes.16.11.230815.nupkg.sha512",
     "D:\\User\\Nuget\\microsoft.testplatform.objectmodel\\16.11.0\\microsoft.testplatform.objectmodel.16.11.0.nupkg.sha512",
     "D:\\User\\Nuget\\microsoft.testplatform.testhost\\16.11.0\\microsoft.testplatform.testhost.16.11.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
@@ -80,7 +81,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
     "D:\\User\\Nuget\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "D:\\User\\Nuget\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",

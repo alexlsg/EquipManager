@@ -20,7 +20,9 @@ namespace EquipDataManager.Dal
                             EquipTypeName = a.Field<string>("tname"),
                             SaveType = a.Field<int>("SaveType"),
                             SpotNO = a.Field<string>("SpotNO"),
-                            SpotName = a.Field<string>("SpotNm")
+                            SpotName = a.Field<string>("SpotNm"),
+                            Bhl = a.Field<double?>("Bhl"),
+                            Mrjg = a.Field<int?>("Mrjg")
                         };
             return new List<EquipSpotSet>(_temp);
         }

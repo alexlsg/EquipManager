@@ -4,6 +4,142 @@
     "D:\\git\\EquipManager\\SystemSetClient\\SystemSetClient.csproj": {}
   },
   "projects": {
+    "D:\\git\\EquipManager\\EquipDataManager\\EquipDataManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\EquipManager\\EquipDataManager\\EquipDataManager.csproj",
+        "projectName": "EquipDataManager",
+        "projectPath": "D:\\git\\EquipManager\\EquipDataManager\\EquipDataManager.csproj",
+        "packagesPath": "D:\\User\\Nuget",
+        "outputPath": "D:\\git\\EquipManager\\EquipDataManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alexlsg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\git\\EquipManager\\EquipModel\\EquipModel.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\EquipModel\\EquipModel.csproj"
+              },
+              "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj"
+              },
+              "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AWSSDK.Core": {
+              "target": "Package",
+              "version": "[3.7.12.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\git\\EquipManager\\EquipModel\\EquipModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\EquipManager\\EquipModel\\EquipModel.csproj",
+        "projectName": "EquipModel",
+        "projectPath": "D:\\git\\EquipManager\\EquipModel\\EquipModel.csproj",
+        "packagesPath": "D:\\User\\Nuget",
+        "outputPath": "D:\\git\\EquipManager\\EquipModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alexlsg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\git\\EquipManager\\SystemSetClient\\SystemSetClient.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -32,6 +168,12 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "D:\\git\\EquipManager\\EquipDataManager\\EquipDataManager.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\EquipDataManager\\EquipDataManager.csproj"
+              },
+              "D:\\git\\EquipManager\\EquipModel\\EquipModel.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\EquipModel\\EquipModel.csproj"
+              },
               "D:\\git\\EquipManager\\SystemSet\\SystemSet.csproj": {
                 "projectPath": "D:\\git\\EquipManager\\SystemSet\\SystemSet.csproj"
               },
@@ -108,6 +250,9 @@
             "projectReferences": {
               "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
                 "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj"
+              },
+              "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj"
               }
             }
           }

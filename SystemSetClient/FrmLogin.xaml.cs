@@ -45,7 +45,7 @@ namespace SystemSetClient
             HttpResult _r = _us.Login(new User()
             {
                 UserName = tb_user.Text,
-                PassWord = Tools.DES.MD5Encrypt(tb_pwd.Password)
+                PassWord = Tools.DES.MD5E(tb_pwd.Password)
             });
             if (_r.Status)
             {

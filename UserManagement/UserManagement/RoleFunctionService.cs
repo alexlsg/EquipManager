@@ -132,7 +132,7 @@ DELETE RoleFunction WHERE Id=@Id
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append(@"
 SELECT A.*,B.RoleName,C.FunctionName FROM RoleFunction A 
-JOIN Role B ON A.RoleId=B.RoleId
+JOIN User_role B ON A.RoleId=B.RoleId
 JOIN functiona C ON A.FunctionId=C.FunctionId
 ");
             DataTable _ds = Tools.DBHelper.GetDataTable(stringBuilder.ToString());
@@ -163,7 +163,7 @@ JOIN functiona C ON A.FunctionId=C.FunctionId
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.Append(@"
 SELECT A.*,B.RoleName,C.FunctionName FROM RoleFunction A 
-JOIN Role B ON A.RoleId=B.RoleId
+JOIN User_role B ON A.RoleId=B.RoleId
 JOIN functiona C ON A.FunctionId=C.FunctionId
 WHERE A.ROLEID=@ROLEID");
                 MySqlParameter[] mySqlParameters = new MySqlParameter[1];

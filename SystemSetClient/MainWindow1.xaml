@@ -32,6 +32,9 @@
             <Menu>
                 <MenuItem Header="数据配置">
                     <MenuItem Header="数据保存配置" Click="MenuItem_Click_5"></MenuItem>
+                    <MenuItem Header="CMD命令配置" Click="MenuItem_Click_8"></MenuItem>
+                    <MenuItem Header="事件状态规则配置" Click="MenuItem_Click_7"></MenuItem>
+                    <MenuItem Header="事件阈值规则配置" Click="MenuItem_Click_9"></MenuItem>
                     <MenuItem Header="统计配置" Click="MenuItem_Click_4"></MenuItem>
                 </MenuItem>
             </Menu>

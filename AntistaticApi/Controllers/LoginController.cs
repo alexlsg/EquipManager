@@ -43,7 +43,7 @@ namespace AntistaticApi.Controllers
                     if (_authenservice.IsAuthenticated(user, out token))
                     {
                         httpResult.Token = token;
-                        tokenModel.LoginUser.Add(user.UserName);
+                        tokenModel.LoginUser.Add(new UserToken() { UserName = user.UserName, Token = token });
                     }
                 }
                 return new JsonResult(httpResult);
@@ -56,13 +56,14 @@ namespace AntistaticApi.Controllers
         }
         [Authorize]
         [HttpPost]
-        public IActionResult LoginOut(User user)
+        public IActionResult LoginOut(Params user)
         {
             try
             {
-                if (tokenModel.LoginUser.Exists(n => n == user.UserName))
+                UserToken _ut = tokenModel.LoginUser.Find(n => n.UserName == user.user && n.Token == user.token);
+                if (_ut != null)
                 {
-                    tokenModel.LoginUser.Remove(user.UserName);
+                    tokenModel.LoginUser.Remove(_ut);
                     HttpResult httpResult = HttpResult.GetJsonResult(true, "用户登出成功", String.Empty);
                     return new JsonResult(httpResult);
                 }
@@ -85,7 +86,8 @@ namespace AntistaticApi.Controllers
             try
             {
                 HttpResult httpResult1 = new HttpResult();
-                if (tokenModel.LoginUser.Exists(n => n == user.UserName))
+                UserToken _ut = tokenModel.LoginUser.Find(n => n.UserName == user.UserName && n.Token == user.Token);
+                if (_ut != null)
                 {
                     UserService userService = new UserService();
                     HttpResult httpResult = userService.Login(user);
@@ -94,6 +96,7 @@ namespace AntistaticApi.Controllers
                         string token;
                         if (_authenservice.IsAuthenticated(user, out token))
                         {
+                            _ut.Token = token;
                             httpResult1.Token = token;
                             httpResult1.Status = true;
                             httpResult1.Message = "刷新Token成功";

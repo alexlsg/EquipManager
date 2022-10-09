@@ -19,20 +19,17 @@ namespace UserManagement
 
         /// <param name="Role">角色对象</param>
         /// <returns></returns>
-        public HttpResult AddRole(Role Role)
+        public HttpResult AddRole(Role role)
         {
             HttpResult httpResult = new HttpResult();
             try
             {
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append(@"
-INSERT INTO Role(RoleId,RoleName)
-VALUES(@RoleId,@RoleName)
+                stringBuilder.Append($@"
+INSERT INTO User_role(RoleType,RoleName,GroupQx,EquipQx,PageQx)
+Values({role.RoleType},'{role.Name}','{role.Groups}','{role.Equips}','{role.Pages}')
 ");
-                MySqlParameter[] mySqlParameters = new MySqlParameter[2];
-                mySqlParameters[0] = new MySqlParameter("RoleName", Role.RoleName);
-                mySqlParameters[1] = new MySqlParameter("RoleId", Role.RoleId);
-                int _res = Tools.DBHelper.ExecuteCommand(stringBuilder.ToString(), mySqlParameters);
+                int _res = Tools.DBHelper.ExecuteCommand(stringBuilder.ToString());
                 httpResult = HttpResult.GetJsonResult(_res == 1, "添加角色成功", "添加角色失败");
             }
             catch (Exception ex)
@@ -49,21 +46,19 @@ VALUES(@RoleId,@RoleName)
 
         /// <param name="Role">角色对象</param>
         /// <returns></returns>
-        public HttpResult ModRole(Role Role)
+        public HttpResult ModRole(Role role)
         {
             HttpResult httpResult = new HttpResult();
             try
             {
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append(@"
-UPDATE Role SET RoleName=@RoleName
-WHERE RoleId=@RoleId
+                stringBuilder.Append($@"
+UPDATE User_role SET RoleType = {role.RoleType},RoleName = '{role.Name}',GroupQx = '{role.Groups}',EquipQx = '{role.Equips}',PageQx = '{role.Pages}'
+WHERE ID={role.ID}
 ");
-                MySqlParameter[] mySqlParameters = new MySqlParameter[2];
-                mySqlParameters[0] = new MySqlParameter("RoleName", Role.RoleName);
-                mySqlParameters[1] = new MySqlParameter("RoleId", Role.RoleId);
-                int _res = Tools.DBHelper.ExecuteCommand(stringBuilder.ToString(), mySqlParameters);
+                int _res = Tools.DBHelper.ExecuteCommand(stringBuilder.ToString());
                 httpResult = HttpResult.GetJsonResult(_res == 1, "修改角色成功", "修改角色失败");
+                UserService.RefreshUserRoles();
             }
             catch (Exception ex)
             {
@@ -79,27 +74,18 @@ WHERE RoleId=@RoleId
 
         /// <param name="Role">角色对象</param>
         /// <returns></returns>
-        public HttpResult DelRole(Role Role)
+        public HttpResult DelRole(Role role)
         {
             HttpResult httpResult = new HttpResult();
             try
             {
-                if (Role.RoleId == (int)Enum_Role.超级管理员)
-                {
-                    httpResult = HttpResult.GetJsonResult(false, string.Empty, "超级管理员不能删除");
-                }
-                else
-                {
-                    StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.Append(@"
-DELETE Role WHERE RoleId=@RoleId
-DELETE RoleFunction WHERE RoleId=@RoleId
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.Append($@"
+DELETE from User_role WHERE ID={role.ID}
 ");
-                    MySqlParameter[] mySqlParameters = new MySqlParameter[1];
-                    mySqlParameters[0] = new MySqlParameter("RoleId", Role.RoleId);
-                    int _res = Tools.DBHelper.ExecuteCommand(stringBuilder.ToString(), mySqlParameters);
-                    httpResult = HttpResult.GetJsonResult(_res == 1, "删除角色成功", "删除角色失败");
-                }
+                int _res = Tools.DBHelper.ExecuteCommand(stringBuilder.ToString());
+                httpResult = HttpResult.GetJsonResult(_res == 1, "删除角色成功", "删除角色失败");
+                UserService.RefreshUserRoles();
             }
             catch (Exception ex)
             {
@@ -113,30 +99,26 @@ DELETE RoleFunction WHERE RoleId=@RoleId
         /// </summary>
 
         /// <returns></returns>
-        public HttpResult GetRoleList(string text)
+        public HttpResult GetRoleList()
         {
             HttpResult httpResult = new HttpResult();
             try
             {
                 List<Role> Roles = new List<Role>();
                 StringBuilder stringBuilder = new StringBuilder();
-                if (string.IsNullOrWhiteSpace(text))
-                {
-                    stringBuilder.Append(@"SELECT * FROM Role");
-                }
-                else
-                {
-                    stringBuilder.Append(@"SELECT * FROM Role WHERE RoleName LIKE '%" + text + "%'");
-                }
+                stringBuilder.Append(@"SELECT * FROM User_role");
                 DataTable _ds = Tools.DBHelper.GetDataTable(stringBuilder.ToString());
-                RoleFunctionService roleFunctionService = new RoleFunctionService();
-                List<RoleFunction> roleFunctions = roleFunctionService.GetList();
                 for (int i = 0; i < _ds.Rows.Count; i++)
                 {
-                    Role Role = new Role();
-                    Role.RoleName = _ds.Rows[i]["RoleName"].ToString();
-                    Role.RoleId = (int)_ds.Rows[i]["RoleId"];
-                    Role.RoleFunctions = roleFunctions.FindAll(n => n.RoleId == Role.RoleId);
+                    Role Role = new Role()
+                    {
+                        ID = _ds.Rows[i].Field<int>("ID"),
+                        RoleType = _ds.Rows[i].Field<int>("RoleType"),
+                        Pages = _ds.Rows[i].Field<string>("PageQx"),
+                        Equips = _ds.Rows[i].Field<string>("EquipQx"),
+                        Groups = _ds.Rows[i].Field<string>("GroupQx"),
+                        Name = _ds.Rows[i].Field<string>("RoleName")
+                    };
                     Roles.Add(Role);
                 }
                 httpResult = HttpResult.GetJsonResult(true, "查询角色列表成功", string.Empty, Roles);
@@ -144,6 +126,36 @@ DELETE RoleFunction WHERE RoleId=@RoleId
             catch (Exception ex)
             {
                 Tools.Log.Add("查询角色列表异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return httpResult;
+        }
+
+        public HttpResult GetRole(int id)
+        {
+            HttpResult httpResult = new HttpResult();
+            try
+            {
+                DataTable _dt = DBHelper.GetDataTable($"select * from User_role where id = {id}");
+                if (_dt.Rows.Count == 1)
+                {
+                    Role _r = new Role()
+                    {
+                        ID = _dt.Rows[0].Field<int>("ID"),
+                        RoleType = _dt.Rows[0].Field<int>("RoleType"),
+                        Pages = _dt.Rows[0].Field<string>("PageQx"),
+                        Equips = _dt.Rows[0].Field<string>("EquipQx"),
+                        Groups = _dt.Rows[0].Field<string>("GroupQx"),
+                        Name = _dt.Rows[0].Field<string>("RoleName")
+                    };
+                    httpResult = HttpResult.GetJsonResult(true, "查询角色列表成功", string.Empty, _r);
+                }
+                else
+                    httpResult = HttpResult.GetJsonResult(false, string.Empty,"查询角色失败,id="+id);
+            }
+            catch (Exception ex)
+            {
+                Tools.Log.Add("查询角色异常：" + ex.Message);
                 httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
             }
             return httpResult;

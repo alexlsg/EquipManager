@@ -36,6 +36,17 @@ namespace EquipModel
         /// </summary>
         public string PORT { get; set; }
         public string EquipType { get; set; }
+
+        private string txgzDesc;
+        public string TxgzDesc { get => txgzDesc; set { txgzDesc = value;  } }
+        private string txzcdesc;
+        public string TxzcDesc { get => txzcdesc; set { txzcdesc = value; } }
+        private int? eventlevel;
+        public int? EventLevel { get => eventlevel; set { eventlevel = value; } }
+        bool pb = false;
+        public bool Pb { get { return pb; } set { pb = value;  } }
+        private int? txcs;
+        public int? Txcs { get => txcs; set { txcs = value;  } }
         //public string EquipType { get; set; }
     }
 }

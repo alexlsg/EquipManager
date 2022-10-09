@@ -1,4 +1,6 @@
 ﻿using AntistaticApi.Model;
+using EquipDataManager.Dal;
+using EquipModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +22,7 @@ namespace AntistaticApi.Controllers
         /// <param name="Equip"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult AddEquip([FromBody] Equip Equip)
+        public IActionResult AddEquip([FromBody] SystemSet.Equip Equip)
         {
             EquipService EquipService = new EquipService();
             HttpResult httpResult = EquipService.AddEquip(Equip);
@@ -32,7 +34,7 @@ namespace AntistaticApi.Controllers
         /// <param name="Equip"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult ModEquip([FromBody] Equip Equip)
+        public IActionResult ModEquip([FromBody] SystemSet.Equip Equip)
         {
             EquipService EquipService = new EquipService();
             HttpResult httpResult = EquipService.ModEquip(Equip);
@@ -44,7 +46,7 @@ namespace AntistaticApi.Controllers
         /// <param name="Equip"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult DelEquip([FromBody] Equip Equip)
+        public IActionResult DelEquip([FromBody] SystemSet.Equip Equip)
         {
             EquipService EquipService = new EquipService();
             HttpResult httpResult = EquipService.DelEquip(Equip);
@@ -92,7 +94,7 @@ namespace AntistaticApi.Controllers
         /// <param name="EquipSpotSet"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult AddEquipSpotSet([FromBody] EquipSpotSet EquipSpotSet)
+        public IActionResult AddEquipSpotSet([FromBody] SystemSet.EquipSpotSet EquipSpotSet)
         {
             EquipSpotSetService EquipSpotSetService = new EquipSpotSetService();
             HttpResult httpResult = EquipSpotSetService.AddEquipSpotSet(EquipSpotSet);
@@ -104,7 +106,7 @@ namespace AntistaticApi.Controllers
         /// <param name="EquipSpotSet"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult ModEquipSpotSet([FromBody] EquipSpotSet EquipSpotSet)
+        public IActionResult ModEquipSpotSet([FromBody] SystemSet.EquipSpotSet EquipSpotSet)
         {
             EquipSpotSetService EquipSpotSetService = new EquipSpotSetService();
             HttpResult httpResult = EquipSpotSetService.ModEquipSpotSet(EquipSpotSet);
@@ -116,7 +118,7 @@ namespace AntistaticApi.Controllers
         /// <param name="EquipSpotSet"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult DelEquipSpotSet([FromBody] EquipSpotSet EquipSpotSet)
+        public IActionResult DelEquipSpotSet([FromBody] SystemSet.EquipSpotSet EquipSpotSet)
         {
             EquipSpotSetService EquipSpotSetService = new EquipSpotSetService();
             HttpResult httpResult = EquipSpotSetService.DelEquipSpotSet(EquipSpotSet);
@@ -319,10 +321,10 @@ namespace AntistaticApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetProductionLineGroupList()
+        public IActionResult GetProductionLineGroupList(Params par)
         {
             EquipGroupService ProductionLineGroupService = new EquipGroupService();
-            HttpResult httpResult = ProductionLineGroupService.GetProductionLineGroupList();
+            HttpResult httpResult = ProductionLineGroupService.GetProductionLineGroupList(par.user);
             return new JsonResult(httpResult);
         }
         /// <summary>
@@ -391,7 +393,7 @@ namespace AntistaticApi.Controllers
         /// <param name="EquipTjSet"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult AddEquipTjSet(EquipTjSet EquipTjSet)
+        public IActionResult AddEquipTjSet(SystemSet.EquipTjSet EquipTjSet)
         {
             EquipTjSetService EquipTjSetService = new EquipTjSetService();
             HttpResult httpResult = EquipTjSetService.AddEquipTjSet(EquipTjSet);
@@ -403,7 +405,7 @@ namespace AntistaticApi.Controllers
         /// <param name="EquipTjSet"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult ModEquipTjSet(EquipTjSet EquipTjSet)
+        public IActionResult ModEquipTjSet(SystemSet.EquipTjSet EquipTjSet)
         {
             EquipTjSetService EquipTjSetService = new EquipTjSetService();
             HttpResult httpResult = EquipTjSetService.ModEquipTjSet(EquipTjSet);
@@ -415,7 +417,7 @@ namespace AntistaticApi.Controllers
         /// <param name="EquipTjSet"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult DelEquipTjSet(EquipTjSet EquipTjSet)
+        public IActionResult DelEquipTjSet(SystemSet.EquipTjSet EquipTjSet)
         {
             EquipTjSetService EquipTjSetService = new EquipTjSetService();
             HttpResult httpResult = EquipTjSetService.DelEquipTjSet(EquipTjSet);
@@ -432,5 +434,259 @@ namespace AntistaticApi.Controllers
             HttpResult httpResult = EquipTjSetService.GetEquipTjSetList();
             return new JsonResult(httpResult);
         }
+        #region 事件规则接口
+        /// <summary>
+        /// 查询事件规则配置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult GetEventSet()
+        {
+            HttpResult httpResult;
+            try
+            {
+                httpResult = HttpResult.GetJsonResult(true, "查询事件规则配置成功", string.Empty, EventSetDal.GetList());
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("查询事件规则配置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+
+        /// <summary>
+        /// 新增事件规则设置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult AddEventSet(EventSet set)
+        {
+            HttpResult httpResult;
+            try
+            {
+                EventSetDal.SaveEventSet(set);
+                httpResult = HttpResult.GetJsonResult(true, "新增事件规则设置成功", "新增事件规则设置异常");
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("新增事件规则设置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+        /// <summary>
+        /// 修改事件规则设置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult ModEventSet(EventSet set)
+        {
+            HttpResult httpResult;
+            try
+            {
+                EventSetDal.SaveEventSet(set);
+                httpResult = HttpResult.GetJsonResult(true, "修改事件规则设置成功", "修改事件规则设置异常");
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("修改事件规则设置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+
+        /// <summary>
+        /// 删除事件规则设置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult DelEventSet(EventSet set)
+        {
+            HttpResult httpResult;
+            try
+            {
+                set.State = DataStatus.DEL;
+                EventSetDal.SaveEventSet(set);
+                httpResult = HttpResult.GetJsonResult(true, "删除事件规则设置成功", "删除事件规则设置异常");
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("删除事件规则设置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+        #endregion
+
+        #region 事件阈值规则接口
+        /// <summary>
+        /// 查询事件阈值规则配置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult GetEventYzSet()
+        {
+            HttpResult httpResult;
+            try
+            {
+                httpResult = HttpResult.GetJsonResult(true, "查询事件阈值规则配置成功", string.Empty, EventYzSetDal.GetList());
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("查询事件阈值规则配置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+
+        /// <summary>
+        /// 新增事件阈值规则设置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult AddEventYzSet(EventYzSet set)
+        {
+            HttpResult httpResult;
+            try
+            {
+                EventYzSetDal.SaveEventYzSet(set);
+                httpResult = HttpResult.GetJsonResult(true, "新增事件阈值规则设置成功", "新增事件阈值规则设置异常");
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("新增事件阈值规则设置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+        /// <summary>
+        /// 修改事件阈值规则设置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult ModEventYzSet(EventYzSet set)
+        {
+            HttpResult httpResult;
+            try
+            {
+                EventYzSetDal.SaveEventYzSet(set);
+                httpResult = HttpResult.GetJsonResult(true, "修改事件阈值规则设置成功", "修改事件阈值规则设置异常");
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("修改事件阈值规则设置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+
+        /// <summary>
+        /// 删除事件阈值规则设置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult DelEventYzSet(EventYzSet set)
+        {
+            HttpResult httpResult;
+            try
+            {
+                set.State = DataStatus.DEL;
+                EventYzSetDal.SaveEventYzSet(set);
+                httpResult = HttpResult.GetJsonResult(true, "删除事件阈值规则设置成功", "删除事件阈值规则设置异常");
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("删除事件阈值规则设置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+        #endregion
+
+        #region cmd配置
+        /// <summary>
+        /// 查询CMD配置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult GetCMDSet()
+        {
+            HttpResult httpResult;
+            try
+            {
+                httpResult = HttpResult.GetJsonResult(true, "查询CMD配置列表成功", string.Empty, CMDSetDal.GetList());
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("查询CMD规则配置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+
+        /// <summary>
+        /// 新增CMD规则设置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult AddCMDSet(CMDSet set)
+        {
+            HttpResult httpResult;
+            try
+            {
+                CMDSetDal.SaveCMDSet(set);
+                httpResult = HttpResult.GetJsonResult(true, "新增CMD设置成功", "新增CMD设置异常");
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("新增CMD设置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+        /// <summary>
+        /// 修改事件规则设置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult ModCMDSet(CMDSet set)
+        {
+            HttpResult httpResult;
+            try
+            {
+                CMDSetDal.SaveCMDSet(set);
+                httpResult = HttpResult.GetJsonResult(true, "修改CMD设置成功", "修改CMD设置异常");
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("修改CMD设置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+
+        /// <summary>
+        /// 删除事件规则设置
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult DelCMDSet(CMDSet set)
+        {
+            HttpResult httpResult;
+            try
+            {
+                set.State = DataStatus.DEL;
+                CMDSetDal.SaveCMDSet(set);
+                httpResult = HttpResult.GetJsonResult(true, "删除CMD设置成功", "删除CMD设置异常");
+            }
+            catch (System.Exception ex)
+            {
+                Tools.Log.Add("删除CMD设置异常：" + ex.Message);
+                httpResult = HttpResult.GetJsonResult(false, string.Empty, ex.Message);
+            }
+            return new JsonResult(httpResult);
+        }
+        #endregion
     }
 }

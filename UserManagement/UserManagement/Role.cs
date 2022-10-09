@@ -9,18 +9,14 @@ namespace UserManagement
     /// </summary>
     public class Role
     {
+        public int ID { get; set; }
+        public string Name { get; set; }
         /// <summary>
-        /// 角色ID
+        /// 
         /// </summary>
-        public int RoleId { get; set; }
-        /// <summary>
-        /// 角色名称
-        /// </summary>
-        public string RoleName { get; set; }
-        /// <summary>
-        /// 角色功能列表
-        /// </summary>
-
-        public List<RoleFunction> RoleFunctions { get; set; }
+        public int RoleType { get; set; }
+        public string Groups { get; set; }
+        public string Equips { get; set; }
+        public string Pages { get; set; }
     }
 }

@@ -14,31 +14,37 @@ namespace EquipDataManager.Bll
     public class SocketListen
     {
         Socket server;
-        LogDelegate logevent;
         int port;
         string szjd = "settings:listenport";
         private SocketListen()
         { }
         public static SocketListen Instance = new SocketListen();
 
-        public void Start(LogDelegate log)
+        public void Start()
         {
-            logevent = log;
-            InitSet();
-            if (port > 0)
+            try
             {
-                server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                IPEndPoint _ip = new IPEndPoint(IPAddress.Any, port);
-                server.Bind(_ip);
-                server.Listen(30);
-                logevent?.Invoke($"端口{port}监听已打开!");
-                Thread _t = new Thread(ConnectListen);
-                _t.IsBackground = true;
-                _t.Start();
+                InitSet();
+                if (port > 0)
+                {
+                    server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                    IPEndPoint _ip = new IPEndPoint(IPAddress.Any, port);
+                    server.Bind(_ip);
+                    server.Listen(30);
+                    Log.Add($"端口{port}监听已打开!");
+                    Thread _t = new Thread(ConnectListen);
+                    _t.IsBackground = true;
+                    _t.Start();
+                }
+                else
+                {
+                    Log.Add("未配置端口,监听已关闭!");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                logevent?.Invoke("未配置端口,监听已关闭!");
+                Log.Add("启动Tcp监听失败!");
+                Log.Add(ex);
             }
         }
 
@@ -49,14 +55,14 @@ namespace EquipDataManager.Bll
                 while (true)
                 {
                     Socket _client = server.Accept();
-                    ConnectClient _cc = new ConnectClient(logevent);
+                    ConnectClient _cc = new ConnectClient();
                     _cc.client = _client;
                     _cc.StartReciev();
                 }
             }
             catch (Exception ex)
             {
-                logevent?.Invoke(ex.Message);
+                Log.Add(ex);
             }
         }
         private void InitSet()

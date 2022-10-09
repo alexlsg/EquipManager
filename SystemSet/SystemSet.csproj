@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tools\Tools.csproj" />
+    <ProjectReference Include="..\UserManagement\UserManagement\UserManagement.csproj" />
   </ItemGroup>
 
 </Project>

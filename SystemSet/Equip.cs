@@ -56,5 +56,15 @@ namespace SystemSet
         public bool Selected { get { return selected; } set { selected = value; OnPropertyChanged("Selected"); } }
         public int Type { get; set; }
 
+        private string txgzDesc;
+        public string TxgzDesc { get => txgzDesc; set { txgzDesc = value;OnPropertyChanged("TxgzDesc"); } }
+        private string txzcdesc;
+        public string TxzcDesc { get => txzcdesc; set { txzcdesc = value; OnPropertyChanged("TxzcDesc"); } }
+        private int? eventlevel;
+        public int? EventLevel { get => eventlevel; set { eventlevel = value; OnPropertyChanged("EventLevel"); } }
+        bool pb = false;
+        public bool Pb { get { return pb; } set { pb = value; OnPropertyChanged("Pb"); } }
+        private int? txcs;
+        public int? Txcs { get => txcs; set { txcs = value; OnPropertyChanged("Txcs"); } }
     }
 }

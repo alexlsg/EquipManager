@@ -7,6 +7,10 @@ namespace AntistaticApi.Model
     /// </summary>
     public class Params
     {
+        internal string user;
+        internal string token;
+
+        public int id { get; set; }
         /// <summary>
         /// 检索文本
         /// </summary>
@@ -34,5 +38,7 @@ namespace AntistaticApi.Model
         public string spotno { get; set; }
 
         public string typeid { get; set; }
+        public string eventlevel { get; set; }
+        public string eventtype { get; set; }
     }
 }

@@ -26,6 +26,7 @@ values({log.Type},{log.GroupID},'{log.Event}','{log.User}',now(),'{log.Ipaddr}')
                 User = cmd.User,
                 Ipaddr = cmd.IP
             };
+            AddLog(_log);
         }
     }
 }

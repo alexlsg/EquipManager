@@ -24,15 +24,20 @@ namespace SystemSet
             {
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.Append(@"
-INSERT INTO Equip(EquipNO,EquipName,GatewayId,TypeBinding,ProductionLineGroupBinding)
-VALUES(@EquipNO,@EquipName,@GatewayId,@TypeBinding,@ProductionLineGroupBinding)
+INSERT INTO Equip(EquipNO,EquipName,GatewayId,TypeBinding,ProductionLineGroupBinding,TxgzDesc,TxzcDesc,EventLevel,Pb,Txcs)
+VALUES(@EquipNO,@EquipName,@GatewayId,@TypeBinding,@ProductionLineGroupBinding,@TxgzDesc,@TxzcDesc,@EventLevel,@Pb,@Txcs)
 ");
-                MySqlParameter[] mySqlParameters = new MySqlParameter[5];
+                MySqlParameter[] mySqlParameters = new MySqlParameter[10];
                 mySqlParameters[0] = new MySqlParameter("EquipNO", Equip.EquipNO);
                 mySqlParameters[1] = new MySqlParameter("EquipName", Equip.EquipName);
                 mySqlParameters[2] = new MySqlParameter("GatewayId", Equip.GatewayId);
                 mySqlParameters[3] = new MySqlParameter("TypeBinding", Equip.TypeBinding);
                 mySqlParameters[4] = new MySqlParameter("ProductionLineGroupBinding", Equip.ProductionLineGroupBinding);
+                mySqlParameters[5] = new MySqlParameter("TxgzDesc", Equip.TxgzDesc);
+                mySqlParameters[6] = new MySqlParameter("TxzcDesc", Equip.TxzcDesc);
+                mySqlParameters[7] = new MySqlParameter("EventLevel", Equip.EventLevel);
+                mySqlParameters[8] = new MySqlParameter("Pb", Equip.Pb);
+                mySqlParameters[9] = new MySqlParameter("Txcs", Equip.Txcs);
                 int _res = Tools.DBHelper.ExecuteCommand(stringBuilder.ToString(), mySqlParameters);
                 httpResult = HttpResult.GetJsonResult(_res == 1, "添加设备功能成功", "添加设备功能失败");
             }
@@ -57,16 +62,22 @@ VALUES(@EquipNO,@EquipName,@GatewayId,@TypeBinding,@ProductionLineGroupBinding)
             {
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.Append(@"
-UPDATE Equip SET EquipName=@EquipName, EquipNO=@EquipNO, GatewayId=@GatewayId,TypeBinding=@TypeBinding,ProductionLineGroupBinding=@ProductionLineGroupBinding
+UPDATE Equip SET EquipName=@EquipName, EquipNO=@EquipNO, GatewayId=@GatewayId,TypeBinding=@TypeBinding,ProductionLineGroupBinding=@ProductionLineGroupBinding,
+TxgzDesc = @TxgzDesc,TxzcDesc = @TxzcDesc,EventLevel = @EventLevel,Pb = @Pb,Txcs = @Txcs
 WHERE Id=@Id
 ");
-                MySqlParameter[] mySqlParameters = new MySqlParameter[6];
+                MySqlParameter[] mySqlParameters = new MySqlParameter[11];
                 mySqlParameters[0] = new MySqlParameter("EquipName", Equip.EquipName);
                 mySqlParameters[1] = new MySqlParameter("EquipNO", Equip.EquipNO);
                 mySqlParameters[2] = new MySqlParameter("GatewayId", Equip.GatewayId);
                 mySqlParameters[3] = new MySqlParameter("Id", Equip.Id);
                 mySqlParameters[4] = new MySqlParameter("TypeBinding", Equip.TypeBinding);
                 mySqlParameters[5] = new MySqlParameter("ProductionLineGroupBinding", Equip.ProductionLineGroupBinding);
+                mySqlParameters[6] = new MySqlParameter("TxgzDesc", Equip.TxgzDesc);
+                mySqlParameters[7] = new MySqlParameter("TxzcDesc", Equip.TxzcDesc);
+                mySqlParameters[8] = new MySqlParameter("EventLevel", Equip.EventLevel);
+                mySqlParameters[9] = new MySqlParameter("Pb", Equip.Pb);
+                mySqlParameters[10] = new MySqlParameter("Txcs", Equip.Txcs);
                 int _res = Tools.DBHelper.ExecuteCommand(stringBuilder.ToString(), mySqlParameters);
                 httpResult = HttpResult.GetJsonResult(_res == 1, "修改设备功能成功", "修改设备功能失败");
             }
@@ -128,6 +139,11 @@ DELETE From Equip WHERE Id=@Id
                     Equip.GatewayId = (int)_ds.Rows[i]["GatewayId"];
                     Equip.TypeBinding = (int)_ds.Rows[i]["TypeBinding"];
                     Equip.ProductionLineGroupBinding = _ds.Rows[i]["ProductionLineGroupBinding"].ToString();
+                    Equip.TxgzDesc = _ds.Rows[i]["TxgzDesc"].ToString();
+                    Equip.TxzcDesc = _ds.Rows[i]["TxzcDesc"].ToString();
+                    Equip.EventLevel = _ds.Rows[i].Field<int?>("EventLevel");
+                    Equip.Pb = _ds.Rows[i].Field<UInt64>("Pb") == 1;
+                    Equip.Txcs = _ds.Rows[i].Field<int?>("Txcs");
                     Equip.DataStatus = DataStatus.NONE;
                     Equips.Add(Equip);
                 }
@@ -164,6 +180,11 @@ DELETE From Equip WHERE Id=@Id
                     Equip.GatewayId = (int)_ds.Rows[i]["GatewayId"];
                     Equip.TypeBinding = (int)_ds.Rows[i]["TypeBinding"];
                     Equip.ProductionLineGroupBinding = _ds.Rows[i]["ProductionLineGroupBinding"].ToString();
+                    Equip.TxgzDesc = _ds.Rows[i]["TxgzDesc"].ToString();
+                    Equip.TxzcDesc = _ds.Rows[i]["TxzcDesc"].ToString();
+                    Equip.EventLevel = _ds.Rows[i].Field<int?>("EventLevel");
+                    Equip.Pb = _ds.Rows[i].Field<UInt64>("Pb") == 1;
+                    Equip.Txcs = _ds.Rows[i].Field<int?>("Txcs");
                     Equip.DataStatus = DataStatus.NONE;
                     Equips.Add(Equip);
                 }
@@ -205,6 +226,11 @@ WHERE ProductionLineId=@ProductionLineId AND B.TypeBinding=@TypeBinding
                     Equip.GatewayId = (int)_ds.Rows[i]["GatewayId"];
                     Equip.TypeBinding = (int)_ds.Rows[i]["TypeBinding"];
                     Equip.ProductionLineGroupBinding = _ds.Rows[i]["ProductionLineGroupBinding"].ToString();
+                    Equip.TxgzDesc = _ds.Rows[i]["TxgzDesc"].ToString();
+                    Equip.TxzcDesc = _ds.Rows[i]["TxzcDesc"].ToString();
+                    Equip.EventLevel = _ds.Rows[i].Field<int?>("EventLevel");
+                    Equip.Pb = _ds.Rows[i].Field<UInt64>("Pb") == 1;
+                    Equip.Txcs = _ds.Rows[i].Field<int?>("Txcs");
                     Equip.DataStatus = DataStatus.NONE;
                     Equips.Add(Equip);
                 }

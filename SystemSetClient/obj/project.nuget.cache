@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dmArPOZwn8vJTnflIoDH5Hv9d7ErRFlgEtNOBoZA0P2+PpSsd/zTGTrEDV1MQcNJIb7YMV6tgBA0RR1xNu6/vw==",
+  "dgSpecHash": "eYeb2zvdiVPtIReFgD/tA/PnLwscEhYoTYAusJTOyNwAkF8g5wmSknsx0rLfqRcrNOEOLh48SO6iJ4IpDoNzFA==",
   "success": true,
   "projectFilePath": "D:\\git\\EquipManager\\SystemSetClient\\SystemSetClient.csproj",
   "expectedPackageFiles": [
+    "D:\\User\\Nuget\\awssdk.core\\3.7.12.3\\awssdk.core.3.7.12.3.nupkg.sha512",
     "D:\\User\\Nuget\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "D:\\User\\Nuget\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "D:\\User\\Nuget\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",

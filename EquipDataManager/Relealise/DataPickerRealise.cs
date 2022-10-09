@@ -25,17 +25,18 @@ namespace EquipDataManager.Relealise
                 throw;
             }
         }
-        public List<EquipData> AnalyzData(string data, int equipid)
+        public List<EquipData> AnalyzData(string data, Equip equip)
         {
             JsonData jsonData = JsonMapper.ToObject(data);
             List<EquipData> dataList = new List<EquipData>();
             if (jsonData["msg"] != null)
             {
+
                 for (int i = 0; i < jsonData["msg"].Count; i++)
                 {
                     EquipData _ed = new EquipData();
-                    _ed.EquipID = equipid;
-                    _ed.EquipNO = GetValue(jsonData, "msg", i, "EquipNo"); 
+                    _ed.EquipID = equip.ID;
+                    _ed.EquipNO = equip.NO;
                     _ed.DataType = GetValue(jsonData, "msg", i, "Type");
                     _ed.State = GetValue(jsonData, "msg", i, "State");
                     _ed.Jlsj = DateTime.Now;
@@ -43,7 +44,7 @@ namespace EquipDataManager.Relealise
                     {
                         _ed.SpotNO = "0";
                         _ed.Data = _ed.State;
-                        _ed.EquipName = GetValue(jsonData, "msg", i, "EquipNm"); 
+                        _ed.EquipName = equip.Name;
                     }
                     else
                     {

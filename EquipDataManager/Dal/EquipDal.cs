@@ -11,7 +11,8 @@ namespace EquipDataManager.Dal
     {
         public static List<Equip> GetAllEquips()
         {
-            DataTable _dt = DBHelper.GetDataTable("select a.id,a.EquipNO NO,a.EquipName Name,b.IP,a.TypeBinding EquipType,b.Port,c.EquipTypeName EquipTypeName,d.equipgroupname GroupID,d.equipgroupid  " +
+            DataTable _dt = DBHelper.GetDataTable("select a.id,a.EquipNO NO,a.EquipName Name,b.IP,a.TypeBinding EquipType,b.Port,c.EquipTypeName EquipTypeName,d.equipgroupname GroupID,d.equipgroupid," +
+                "a.TxgzDesc,a.TxzcDesc,a.EventLevel,a.Pb,a.Txcs " +
                 "from Equip a ,gateway b,equiptype c,equipgroup d" +
                 " where a.gatewayid = b.id and a.TypeBinding = c.EquipTypeId" +
                 " and a.ProductionLineGroupBinding = d.equipgroupid");
@@ -26,7 +27,12 @@ namespace EquipDataManager.Dal
                             EquipType = a.Field<int>("EquipType").ToString(),
                             EquipTypeName = a.Field<string>("EquipTypeName"),
                             GroupName = a.Field<string>("GroupID"),
-                            GroupID = a.Field<int>("equipgroupid").ToString()
+                            GroupID = a.Field<int>("equipgroupid").ToString(),
+                            TxgzDesc = a.Field<string>("TxgzDesc").ToString(),
+                            TxzcDesc = a.Field<string>("TxzcDesc").ToString(),
+                            EventLevel = a.Field<int?>("EventLevel"),
+                            Pb = a.Field<UInt64>("Pb") == 1,
+                            Txcs = a.Field<int?>("Txcs"),
                         };
             return new List<Equip>(_temp);
         }

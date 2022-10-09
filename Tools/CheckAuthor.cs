@@ -6,13 +6,13 @@ namespace Tools
 {
     public class CheckAuthor
     {
-        public static void Check(Action<string> log)
-        {
-            if (DateTime.Now.Date >= new DateTime(2022,9,1).Date)
-            {
-                throw new Exception("授权已过期!");
-            }
-            log?.Invoke("授权有效期:2022-08-31");
-        }
+        //public static void Check(Action<string> log)
+        //{
+        //    if (DateTime.Now.Date >= new DateTime(2022,10,1).Date)
+        //    {
+        //        throw new Exception("授权已过期!");
+        //    }
+        //    log?.Invoke("授权有效期:2022-09-30");
+        //}
     }
 }

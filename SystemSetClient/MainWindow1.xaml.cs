@@ -62,5 +62,20 @@ namespace SystemSetClient
             _about.Owner = this;
             _about.ShowDialog();
         }
+
+        private void MenuItem_Click_7(object sender, RoutedEventArgs e)
+        {
+            maincc.Content = new UCEventSet();
+        }
+
+        private void MenuItem_Click_8(object sender, RoutedEventArgs e)
+        {
+            maincc.Content = new UCCMDSet();
+        }
+
+        private void MenuItem_Click_9(object sender, RoutedEventArgs e)
+        {
+            maincc.Content = new UCEventYzSet();
+        }
     }
 }

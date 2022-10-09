@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Linq;
 using System.Text;
 using Tools;
+using UserManagement;
 
 namespace SystemSet
 {
@@ -124,12 +126,28 @@ DELETE  a,b From Equip a INNER JOIN Gateway b on a.GatewayId=b.Id WHERE b.EquipG
             }
             return httpResult;
         }
-
+        public static bool CheckQx(string user, string equipid, string groupid)
+        {
+            var _qx = UserService.UserRoles.Find(n => n.User == user);
+            return (_qx == null ||
+                                            (
+                                                (
+                                                       string.IsNullOrWhiteSpace(_qx.GroupQx)
+                                                       || _qx.GroupQx.Split(',').Contains(groupid)
+                                                )
+                                                &&
+                                                (
+                                                    string.IsNullOrWhiteSpace(_qx.EquipQx)
+                                                    || _qx.EquipQx.Split(',').Contains(equipid)
+                                                 )
+                                             )
+                                            );
+        }
         /// <summary>
         /// 查询设备组列表
         /// </summary>
         /// <returns></returns>
-        public HttpResult GetProductionLineGroupList()
+        public HttpResult GetProductionLineGroupList(string user)
         {
             HttpResult httpResult = new HttpResult();
             try
@@ -150,7 +168,10 @@ DELETE  a,b From Equip a INNER JOIN Gateway b on a.GatewayId=b.Id WHERE b.EquipG
                     Equip.DataStatus = DataStatus.NONE;
                     Equips.Add(Equip);
                 }
-                List<EquipGroup> EquipGroups = new List<EquipGroup>();
+                var _temps = from a in Equips
+                             where CheckQx(user, a.Id.ToString(), a.ProductionLineGroupBinding)
+                             select a;
+                List < EquipGroup > EquipGroups = new List<EquipGroup>();
                 StringBuilder stringBuilder1 = new StringBuilder();
                 stringBuilder1.Append(@"SELECT * FROM EquipGroup");
                 DataTable _ds1 = Tools.DBHelper.GetDataTable(stringBuilder1.ToString());
@@ -162,6 +183,12 @@ DELETE  a,b From Equip a INNER JOIN Gateway b on a.GatewayId=b.Id WHERE b.EquipG
                     EquipGroup.DataStatus = DataStatus.NONE;
                     EquipGroup.Equips = new ObservableCollection<Equip>(Equips.FindAll(n => n.ProductionLineGroupBinding == EquipGroup.EquipGroupId.ToString()));
                     EquipGroups.Add(EquipGroup);
+                }
+
+                var _qx = UserService.UserRoles.Find(n => n.User == user);
+                if (!string.IsNullOrWhiteSpace(_qx?.GroupQx))
+                {
+                    EquipGroups.RemoveAll(n => !_qx.GroupQx.Split(',').Contains(n.EquipGroupId.ToString()));
                 }
 
                 httpResult = HttpResult.GetJsonResult(true, "查询产线组列表成功", string.Empty, EquipGroups);

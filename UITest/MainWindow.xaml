@@ -19,6 +19,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Button Click="Button_Click_11">测试</Button>
             <Button Click="Button_Click" MinWidth="75" Height="25" Margin="2">启动轮询服务</Button>
             <Button Click="Button_Click_4" MinWidth="75" Height="25" Margin="2">打开TCP监听</Button>
             <Label>产线ID</Label>

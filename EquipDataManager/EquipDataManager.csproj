@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\EquipModel\EquipModel.csproj" />
     <ProjectReference Include="..\Tools\Tools.csproj" />
+    <ProjectReference Include="..\UserManagement\UserManagement\UserManagement.csproj" />
   </ItemGroup>
 
 </Project>

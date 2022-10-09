@@ -440,7 +440,8 @@
         "dependencies": {
           "AWSSDK.Core": "3.7.12.3",
           "EquipModel": "1.0.0",
-          "Tools": "1.0.0"
+          "Tools": "1.0.0",
+          "UserManagement": "1.0.0"
         },
         "compile": {
           "bin/placeholder/EquipDataManager.dll": {}
@@ -452,6 +453,9 @@
       "EquipModel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Tools": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/EquipModel.dll": {}
         },
@@ -472,6 +476,20 @@
         },
         "runtime": {
           "bin/placeholder/Tools.dll": {}
+        }
+      },
+      "UserManagement/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MySql.Data": "8.0.29",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UserManagement.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserManagement.dll": {}
         }
       }
     }
@@ -1333,6 +1351,11 @@
       "type": "project",
       "path": "../Tools/Tools.csproj",
       "msbuildProject": "../Tools/Tools.csproj"
+    },
+    "UserManagement/1.0.0": {
+      "type": "project",
+      "path": "../UserManagement/UserManagement/UserManagement.csproj",
+      "msbuildProject": "../UserManagement/UserManagement/UserManagement.csproj"
     }
   },
   "projectFileDependencyGroups": {

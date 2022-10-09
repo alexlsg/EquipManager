@@ -35,7 +35,7 @@ namespace UITest
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DataPicker.Instance.Start(new DataPickerRealise(), AddLog);
+            DataPicker.Instance.Start(new DataPickerRealise());
         }
 
         private void AddLog(string message)
@@ -53,7 +53,7 @@ namespace UITest
                 Stopwatch _sw = new Stopwatch();
                 _sw.Start();
                 dg.ItemsSource = null;
-                List<EquipSstjData> data = DataPicker.Instance.GetEquipSstjDataByType(tb_lxid.Text,tb_cxid.Text);
+                List<EquipSstjData> data = DataPicker.Instance.GetEquipSstjDataByType("",tb_lxid.Text,tb_cxid.Text);
                 rtb_lx.Document.Blocks.Clear();
                 rtb_lx.AppendText(JsonMapper.ToJson(data));
                 dg.ItemsSource = data;
@@ -90,7 +90,7 @@ namespace UITest
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            SocketListen.Instance.Start(AddLog);
+            SocketListen.Instance.Start();
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
@@ -252,7 +252,7 @@ CREATE TABLE `EquipTjSet`  (
         {
             try
             {
-                IEnumerable<object> _lb = DataPicker.Instance.GetLssjcdlb(tb_group.Text);
+                IEnumerable<object> _lb = DataPicker.Instance.GetLssjcdlb("",tb_group.Text);
                 db_cdlb.ItemsSource = _lb;
                 rtb_ls.Document.Blocks.Clear();
                 rtb_ls.AppendText(JsonMapper.ToJson(_lb.ToList()));
@@ -285,12 +285,18 @@ CREATE TABLE `EquipTjSet`  (
         {
             try
             {
-                dg_sj.DataContext = EquipDataManager.Dal.EquipDataDal.GetEvent(sj_cx.Text, sj_lx.Text, sj_ks.SelectedDate.Value, sj_js.SelectedDate.Value, sj_sjlx.Text, sj_gjz.Text);
+                //dg_sj.DataContext = EquipDataManager.Dal.EquipDataDal.GetEvent("",sj_cx.Text, sj_lx.Text, sj_ks.SelectedDate.Value, sj_js.SelectedDate.Value, sj_sjlx.Text, sj_gjz.Text);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Button_Click_11(object sender, RoutedEventArgs e)
+        {
+            FrmTest _fr = new FrmTest();
+            _fr.ShowDialog();
         }
     }
 }

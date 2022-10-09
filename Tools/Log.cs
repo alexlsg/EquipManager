@@ -36,26 +36,42 @@ namespace Tools
         static StreamWriter streamwriter;
         public static void Add(string message)
         {
-            LogEvent?.Invoke(message);
-            lock (lockobj)
+            try
             {
-                string _message = DateTime.Now.ToString("★yyyy-MM-dd HH;mm:ss.fff ") + message;
-                using (streamwriter = new StreamWriter(GetFilePath(), true))
+                LogEvent?.Invoke(message);
+                lock (lockobj)
                 {
-                    streamwriter.WriteLine(_message);
-                    streamwriter.Flush();
-                    streamwriter.Close();
-                    streamwriter.Dispose();
+                    string _message = DateTime.Now.ToString("★yyyy-MM-dd HH;mm:ss.fff ") + message;
+                    using (streamwriter = new StreamWriter(GetFilePath(), true))
+                    {
+                        streamwriter.WriteLine(_message);
+                        streamwriter.Flush();
+                        streamwriter.Close();
+                        streamwriter.Dispose();
+                    }
                 }
             }
+            catch (Exception)
+            {
+            }
+
         }
 
         public static void Add(Exception ex)
         {
-            if (ex.StackTrace != null)
+            try
             {
-                Add(ex.StackTrace);
+                Add(ex.Message);
+                if (ex.StackTrace != null)
+                {
+                    Add(ex.StackTrace);
+                }
             }
+            catch
+            {
+
+            }
+
         }
     }
 }

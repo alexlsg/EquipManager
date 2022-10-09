@@ -1,0 +1,851 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EquipDataManager.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:EquipDataManager.Bll.Fakes.ShimConnectClient">
+            <summary>EquipDataManager.Bll.ConnectClient 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimConnectClient.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimConnectClient.#ctor(EquipDataManager.Bll.ConnectClient)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Bll.Fakes.ShimConnectClient.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimConnectClient.AllInstances.DealMsgByteArray">
+            <summary>设置 ConnectClient.DealMsg(ConnectClient this, Byte[] result) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimConnectClient.AllInstances.OnMessageObject">
+            <summary>设置 ConnectClient.OnMessage(ConnectClient this, Object clientSocket) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimConnectClient.AllInstances.StartReciev">
+            <summary>设置 ConnectClient.StartReciev(ConnectClient this) 的 填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimConnectClient.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimConnectClient.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimConnectClient.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimConnectClient.Constructor">
+            <summary>设置 ConnectClient.ConnectClient(ConnectClient this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimConnectClient.DealMsgByteArray">
+            <summary>设置 ConnectClient.DealMsg(ConnectClient this, Byte[] result) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimConnectClient.OnMessageObject">
+            <summary>设置 ConnectClient.OnMessage(ConnectClient this, Object clientSocket) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimConnectClient.StartReciev">
+            <summary>设置 ConnectClient.StartReciev(ConnectClient this) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Bll.Fakes.ShimDataPicker">
+            <summary>EquipDataManager.Bll.DataPicker 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimDataPicker.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimDataPicker.#ctor(EquipDataManager.Bll.DataPicker)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.CalcEventLevelEquipData">
+            <summary>设置 DataPicker.CalcEventLevel(DataPicker this, EquipData data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.CheckSave_BhlEquipDataEquipSpotSet">
+            <summary>设置 DataPicker.CheckSave_Bhl(DataPicker this, EquipData data, EquipSpotSet set) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.CheckSave_BxsEquipDataEquipSpotSet">
+            <summary>设置 DataPicker.CheckSave_Bxs(DataPicker this, EquipData data, EquipSpotSet set) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.CheckSave_YxsEquipDataEquipSpotSet">
+            <summary>设置 DataPicker.CheckSave_Yxs(DataPicker this, EquipData data, EquipSpotSet set) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.CmdZF">
+            <summary>设置 DataPicker.CmdZF(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.CurrentEventGet">
+            <summary>设置 DataPicker.get_CurrentEvent(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.CurrentEventSetListOfEventData">
+            <summary>设置 DataPicker.set_CurrentEvent(DataPicker this, List`1 value) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.DataPickerRun">
+            <summary>设置 DataPicker.DataPickerRun(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.DealCurrentEventEventData">
+            <summary>设置 DataPicker.DealCurrentEvent(DataPicker this, EventData ed) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.ExecCommandListOfCommandBoolean">
+            <summary>设置 DataPicker.ExecCommand(DataPicker this, List`1 cmds, Boolean needreturn) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.FxclsjListOfEquipSpotSetEquipString">
+            <summary>设置 DataPicker.Fxclsj(DataPicker this, List`1 _equipsSpotSets, Equip item, String _data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.GetCurrentEventStringStringStringDateTimeDateTimeStringStringStringStringString">
+            <summary>设置 DataPicker.GetCurrentEvent(DataPicker this, String user, String groupid, String equiptypeid, DateTime ksrq, DateTime jsrq, String eventkey, String sbid, String cdbh, String level, String eventtype) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.GetDataByGroupString">
+            <summary>设置 DataPicker.GetDataByGroup(DataPicker this, String groupid) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.GetEquipSstjDataByGroupString">
+            <summary>设置 DataPicker.GetEquipSstjDataByGroup(DataPicker this, String groupid) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.GetEquipSstjDataByTypeStringStringString">
+            <summary>设置 DataPicker.GetEquipSstjDataByType(DataPicker this, String user, String typeid, String groupid) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.GetKeyEquipData">
+            <summary>设置 DataPicker.GetKey(DataPicker this, EquipData data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.GetLssjStringDateTimeDateTime">
+            <summary>设置 DataPicker.GetLssj(DataPicker this, String spotno, DateTime ksrq, DateTime jsrq) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.GetLssjcdlbStringString">
+            <summary>设置 DataPicker.GetLssjcdlb(DataPicker this, String user, String groupid) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.GetSbztString">
+            <summary>设置 DataPicker.GetSbzt(DataPicker this, String data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.GetSjdbEquipDataEquipTjSet">
+            <summary>设置 DataPicker.GetSjdb(DataPicker this, EquipData a, EquipTjSet b) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.Init">
+            <summary>设置 DataPicker.Init(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.InitCmd">
+            <summary>设置 DataPicker.InitCmd(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.LoadFile">
+            <summary>设置 DataPicker.LoadFile(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.ReadDataEquip">
+            <summary>设置 DataPicker.ReadData(DataPicker this, Equip item) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.RefreshEventSet">
+            <summary>设置 DataPicker.RefreshEventSet(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.SaveCacheEquipData">
+            <summary>设置 DataPicker.SaveCache(DataPicker this, EquipData data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.SaveEventEquipEquipData">
+            <summary>设置 DataPicker.SaveEvent(DataPicker this, Equip item, EquipData data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.SaveFile">
+            <summary>设置 DataPicker.SaveFile(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.SaveMxEquipDataEquipSpotSet">
+            <summary>设置 DataPicker.SaveMx(DataPicker this, EquipData data, EquipSpotSet set) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.SeveEvent1EquipDataEquip">
+            <summary>设置 DataPicker.SeveEvent1(DataPicker this, EquipData data, Equip item) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.StartIDataPicker">
+            <summary>设置 DataPicker.Start(DataPicker this, IDataPicker idp) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.Stop">
+            <summary>设置 DataPicker.Stop(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.保存通讯故障事件Equip">
+            <summary>设置 DataPicker.保存通讯故障事件(DataPicker this, Equip item) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.AllInstances.保存通讯正常事件Equip">
+            <summary>设置 DataPicker.保存通讯正常事件(DataPicker this, Equip item) 的 填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimDataPicker.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimDataPicker.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.CalcEventLevelEquipData">
+            <summary>设置 DataPicker.CalcEventLevel(DataPicker this, EquipData data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.CheckSave_BhlEquipDataEquipSpotSet">
+            <summary>设置 DataPicker.CheckSave_Bhl(DataPicker this, EquipData data, EquipSpotSet set) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.CheckSave_BxsEquipDataEquipSpotSet">
+            <summary>设置 DataPicker.CheckSave_Bxs(DataPicker this, EquipData data, EquipSpotSet set) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.CheckSave_YxsEquipDataEquipSpotSet">
+            <summary>设置 DataPicker.CheckSave_Yxs(DataPicker this, EquipData data, EquipSpotSet set) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.CmdZF">
+            <summary>设置 DataPicker.CmdZF(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.Constructor">
+            <summary>设置 DataPicker.DataPicker(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.CurrentEventGet">
+            <summary>设置 DataPicker.get_CurrentEvent(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.CurrentEventSetListOfEventData">
+            <summary>设置 DataPicker.set_CurrentEvent(DataPicker this, List`1 value) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.DataPickerRun">
+            <summary>设置 DataPicker.DataPickerRun(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.DealCurrentEventEventData">
+            <summary>设置 DataPicker.DealCurrentEvent(DataPicker this, EventData ed) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.ExecCommandListOfCommandBoolean">
+            <summary>设置 DataPicker.ExecCommand(DataPicker this, List`1 cmds, Boolean needreturn) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.FxclsjListOfEquipSpotSetEquipString">
+            <summary>设置 DataPicker.Fxclsj(DataPicker this, List`1 _equipsSpotSets, Equip item, String _data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.GetCurrentEventStringStringStringDateTimeDateTimeStringStringStringStringString">
+            <summary>设置 DataPicker.GetCurrentEvent(DataPicker this, String user, String groupid, String equiptypeid, DateTime ksrq, DateTime jsrq, String eventkey, String sbid, String cdbh, String level, String eventtype) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.GetDataByGroupString">
+            <summary>设置 DataPicker.GetDataByGroup(DataPicker this, String groupid) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.GetEquipSstjDataByGroupString">
+            <summary>设置 DataPicker.GetEquipSstjDataByGroup(DataPicker this, String groupid) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.GetEquipSstjDataByTypeStringStringString">
+            <summary>设置 DataPicker.GetEquipSstjDataByType(DataPicker this, String user, String typeid, String groupid) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.GetKeyEquipData">
+            <summary>设置 DataPicker.GetKey(DataPicker this, EquipData data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.GetLssjStringDateTimeDateTime">
+            <summary>设置 DataPicker.GetLssj(DataPicker this, String spotno, DateTime ksrq, DateTime jsrq) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.GetLssjcdlbStringString">
+            <summary>设置 DataPicker.GetLssjcdlb(DataPicker this, String user, String groupid) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.GetSbztString">
+            <summary>设置 DataPicker.GetSbzt(DataPicker this, String data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.GetSjdbEquipDataEquipTjSet">
+            <summary>设置 DataPicker.GetSjdb(DataPicker this, EquipData a, EquipTjSet b) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.Init">
+            <summary>设置 DataPicker.Init(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.InitCmd">
+            <summary>设置 DataPicker.InitCmd(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.LoadFile">
+            <summary>设置 DataPicker.LoadFile(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.ReadDataEquip">
+            <summary>设置 DataPicker.ReadData(DataPicker this, Equip item) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.RefreshEventSet">
+            <summary>设置 DataPicker.RefreshEventSet(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.SaveCacheEquipData">
+            <summary>设置 DataPicker.SaveCache(DataPicker this, EquipData data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.SaveEventEquipEquipData">
+            <summary>设置 DataPicker.SaveEvent(DataPicker this, Equip item, EquipData data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.SaveFile">
+            <summary>设置 DataPicker.SaveFile(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.SaveMxEquipDataEquipSpotSet">
+            <summary>设置 DataPicker.SaveMx(DataPicker this, EquipData data, EquipSpotSet set) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.SeveEvent1EquipDataEquip">
+            <summary>设置 DataPicker.SeveEvent1(DataPicker this, EquipData data, Equip item) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.StartIDataPicker">
+            <summary>设置 DataPicker.Start(DataPicker this, IDataPicker idp) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.StaticConstructor">
+            <summary>设置 DataPicker.DataPicker() 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.Stop">
+            <summary>设置 DataPicker.Stop(DataPicker this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.保存通讯故障事件Equip">
+            <summary>设置 DataPicker.保存通讯故障事件(DataPicker this, Equip item) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimDataPicker.保存通讯正常事件Equip">
+            <summary>设置 DataPicker.保存通讯正常事件(DataPicker this, Equip item) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Bll.Fakes.ShimSocketListen">
+            <summary>EquipDataManager.Bll.SocketListen 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimSocketListen.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimSocketListen.#ctor(EquipDataManager.Bll.SocketListen)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Bll.Fakes.ShimSocketListen.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimSocketListen.AllInstances.ConnectListen">
+            <summary>设置 SocketListen.ConnectListen(SocketListen this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimSocketListen.AllInstances.InitSet">
+            <summary>设置 SocketListen.InitSet(SocketListen this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimSocketListen.AllInstances.Start">
+            <summary>设置 SocketListen.Start(SocketListen this) 的 填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimSocketListen.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.ShimSocketListen.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimSocketListen.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimSocketListen.ConnectListen">
+            <summary>设置 SocketListen.ConnectListen(SocketListen this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimSocketListen.Constructor">
+            <summary>设置 SocketListen.SocketListen(SocketListen this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimSocketListen.InitSet">
+            <summary>设置 SocketListen.InitSet(SocketListen this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimSocketListen.Start">
+            <summary>设置 SocketListen.Start(SocketListen this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.ShimSocketListen.StaticConstructor">
+            <summary>设置 SocketListen.SocketListen() 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Bll.Fakes.StubConnectClient">
+            <summary>EquipDataManager.Bll.ConnectClient 的存根类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.StubConnectClient.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.StubConnectClient.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Bll.Fakes.StubConnectClient.InitializeStub">
+            <summary>初始化 type StubConnectClient 的新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.StubConnectClient.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:EquipDataManager.Bll.Fakes.StubConnectClient.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimCMDSetDal">
+            <summary>EquipDataManager.Dal.CMDSetDal 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimCMDSetDal.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimCMDSetDal.#ctor(EquipDataManager.Dal.CMDSetDal)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimCMDSetDal.AddCMDSetCMDSet">
+            <summary>设置 CMDSetDal.AddCMDSet(CMDSet set) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimCMDSetDal.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimCMDSetDal.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimCMDSetDal.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimCMDSetDal.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimCMDSetDal.Constructor">
+            <summary>设置 CMDSetDal.CMDSetDal(CMDSetDal this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimCMDSetDal.DelInt32">
+            <summary>设置 CMDSetDal.Del(Int32 id) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimCMDSetDal.GetList">
+            <summary>设置 CMDSetDal.GetList() 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimCMDSetDal.ModCMDSetCMDSet">
+            <summary>设置 CMDSetDal.ModCMDSet(CMDSet set) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimCMDSetDal.SaveCMDSetCMDSet">
+            <summary>设置 CMDSetDal.SaveCMDSet(CMDSet set) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimEquipDal">
+            <summary>EquipDataManager.Dal.EquipDal 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipDal.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipDal.#ctor(EquipDataManager.Dal.EquipDal)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimEquipDal.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipDal.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipDal.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDal.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDal.Constructor">
+            <summary>设置 EquipDal.EquipDal(EquipDal this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDal.GetAllEquips">
+            <summary>设置 EquipDal.GetAllEquips() 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDal.GetGroupSets">
+            <summary>设置 EquipDal.GetGroupSets() 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimEquipDataDal">
+            <summary>EquipDataManager.Dal.EquipDataDal 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipDataDal.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipDataDal.#ctor(EquipDataManager.Dal.EquipDataDal)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimEquipDataDal.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipDataDal.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipDataDal.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDataDal.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDataDal.Constructor">
+            <summary>设置 EquipDataDal.EquipDataDal(EquipDataDal this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDataDal.GetEventStringStringStringDateTimeDateTimeStringStringStringStringString">
+            <summary>设置 EquipDataDal.GetEvent(String user, String groupid, String equiptypeid, DateTime ksrq, DateTime jsrq, String eventkey, String sbid, String cdbh, String level, String eventtype) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDataDal.GetLssjStringDateTimeDateTime">
+            <summary>设置 EquipDataDal.GetLssj(String spotno, DateTime ksrq, DateTime jsrq) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDataDal.GetValueString">
+            <summary>设置 EquipDataDal.GetValue(String s) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDataDal.SaveEventEquipDataEquip">
+            <summary>设置 EquipDataDal.SaveEvent(EquipData data, Equip equip) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDataDal.SaveEventStringStringStringStringStringInt32StringStringStringStringNullableOfInt32String">
+            <summary>设置 EquipDataDal.SaveEvent(String groupname, String groupid, String typename, String equiptype, String equipname, Int32 sbid, String cdmc, String cdbh, String sj, String eventmsg, Nullable`1 level, String etype) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDataDal.SaveMxEquipData">
+            <summary>设置 EquipDataDal.SaveMx(EquipData data) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDataDal.SaveTxzcEventStringStringStringStringStringInt32StringStringStringStringNullableOfInt32String">
+            <summary>设置 EquipDataDal.SaveTxzcEvent(String groupname, String groupid, String typename, String equiptype, String equipname, Int32 sbid, String cdmc, String cdbh, String sj, String eventmsg, Nullable`1 level, String etype) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipDataDal.StaticConstructor">
+            <summary>设置 EquipDataDal.EquipDataDal() 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimEquipSpotSetDal">
+            <summary>EquipDataManager.Dal.EquipSpotSetDal 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipSpotSetDal.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipSpotSetDal.#ctor(EquipDataManager.Dal.EquipSpotSetDal)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimEquipSpotSetDal.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipSpotSetDal.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEquipSpotSetDal.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipSpotSetDal.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipSpotSetDal.Constructor">
+            <summary>设置 EquipSpotSetDal.EquipSpotSetDal(EquipSpotSetDal this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipSpotSetDal.GetAllSpotSets">
+            <summary>设置 EquipSpotSetDal.GetAllSpotSets() 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipSpotSetDal.GetAllTjSets">
+            <summary>设置 EquipSpotSetDal.GetAllTjSets() 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEquipSpotSetDal.MoniData">
+            <summary>设置 EquipSpotSetDal.MoniData() 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimEventSetDal">
+            <summary>EquipDataManager.Dal.EventSetDal 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEventSetDal.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEventSetDal.#ctor(EquipDataManager.Dal.EventSetDal)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventSetDal.AddEventSetEventSet">
+            <summary>设置 EventSetDal.AddEventSet(EventSet set) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimEventSetDal.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEventSetDal.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEventSetDal.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventSetDal.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventSetDal.Constructor">
+            <summary>设置 EventSetDal.EventSetDal(EventSetDal this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventSetDal.DelInt32">
+            <summary>设置 EventSetDal.Del(Int32 id) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventSetDal.GetList">
+            <summary>设置 EventSetDal.GetList() 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventSetDal.ModEventSetEventSet">
+            <summary>设置 EventSetDal.ModEventSet(EventSet set) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventSetDal.SaveEventSetEventSet">
+            <summary>设置 EventSetDal.SaveEventSet(EventSet set) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimEventYzSetDal">
+            <summary>EquipDataManager.Dal.EventYzSetDal 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.#ctor(EquipDataManager.Dal.EventYzSetDal)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.AddEventYzSetEventYzSet">
+            <summary>设置 EventYzSetDal.AddEventYzSet(EventYzSet set) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.Constructor">
+            <summary>设置 EventYzSetDal.EventYzSetDal(EventYzSetDal this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.DelInt32">
+            <summary>设置 EventYzSetDal.Del(Int32 id) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.GetList">
+            <summary>设置 EventYzSetDal.GetList() 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.ModEventYzSetEventYzSet">
+            <summary>设置 EventYzSetDal.ModEventYzSet(EventYzSet set) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimEventYzSetDal.SaveEventYzSetEventYzSet">
+            <summary>设置 EventYzSetDal.SaveEventYzSet(EventYzSet set) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimLogEventDal">
+            <summary>EquipDataManager.Dal.LogEventDal 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimLogEventDal.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimLogEventDal.#ctor(EquipDataManager.Dal.LogEventDal)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimLogEventDal.AddLogEquipCommand">
+            <summary>设置 LogEventDal.AddLog(Equip eq, Command cmd) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimLogEventDal.AddLogLogEvent">
+            <summary>设置 LogEventDal.AddLog(LogEvent log) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.ShimLogEventDal.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimLogEventDal.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.ShimLogEventDal.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimLogEventDal.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.ShimLogEventDal.Constructor">
+            <summary>设置 LogEventDal.LogEventDal(LogEventDal this) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.StubCMDSetDal">
+            <summary>EquipDataManager.Dal.CMDSetDal 的存根类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubCMDSetDal.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubCMDSetDal.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubCMDSetDal.InitializeStub">
+            <summary>初始化 type StubCMDSetDal 的新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubCMDSetDal.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubCMDSetDal.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.StubEquipDal">
+            <summary>EquipDataManager.Dal.EquipDal 的存根类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubEquipDal.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEquipDal.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubEquipDal.InitializeStub">
+            <summary>初始化 type StubEquipDal 的新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEquipDal.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEquipDal.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.StubEquipDataDal">
+            <summary>EquipDataManager.Dal.EquipDataDal 的存根类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubEquipDataDal.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEquipDataDal.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubEquipDataDal.InitializeStub">
+            <summary>初始化 type StubEquipDataDal 的新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEquipDataDal.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEquipDataDal.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.StubEquipSpotSetDal">
+            <summary>EquipDataManager.Dal.EquipSpotSetDal 的存根类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubEquipSpotSetDal.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEquipSpotSetDal.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubEquipSpotSetDal.InitializeStub">
+            <summary>初始化 type StubEquipSpotSetDal 的新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEquipSpotSetDal.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEquipSpotSetDal.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.StubEventSetDal">
+            <summary>EquipDataManager.Dal.EventSetDal 的存根类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubEventSetDal.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEventSetDal.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubEventSetDal.InitializeStub">
+            <summary>初始化 type StubEventSetDal 的新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEventSetDal.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEventSetDal.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.StubEventYzSetDal">
+            <summary>EquipDataManager.Dal.EventYzSetDal 的存根类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubEventYzSetDal.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEventYzSetDal.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubEventYzSetDal.InitializeStub">
+            <summary>初始化 type StubEventYzSetDal 的新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEventYzSetDal.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubEventYzSetDal.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:EquipDataManager.Dal.Fakes.StubLogEventDal">
+            <summary>EquipDataManager.Dal.LogEventDal 的存根类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubLogEventDal.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubLogEventDal.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Dal.Fakes.StubLogEventDal.InitializeStub">
+            <summary>初始化 type StubLogEventDal 的新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubLogEventDal.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:EquipDataManager.Dal.Fakes.StubLogEventDal.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:EquipDataManager.Fakes.ShimPub">
+            <summary>EquipDataManager.Pub 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Fakes.ShimPub.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Fakes.ShimPub.#ctor(EquipDataManager.Pub)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Fakes.ShimPub.AddTestLogString">
+            <summary>设置 Pub.AddTestLog(String msg) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Fakes.ShimPub.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Fakes.ShimPub.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Fakes.ShimPub.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Fakes.ShimPub.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Fakes.ShimPub.CheckQxStringStringString">
+            <summary>设置 Pub.CheckQx(String user, String equipid, String groupid) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Fakes.ShimPub.Constructor">
+            <summary>设置 Pub.Pub(Pub this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Fakes.ShimPub.IsDBNullObject">
+            <summary>设置 Pub.IsDBNull(Object obj) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Fakes.ShimPub.LogModalGet">
+            <summary>设置 Pub.get_LogModal() 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Fakes.StubPub">
+            <summary>EquipDataManager.Pub 的存根类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Fakes.StubPub.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Fakes.StubPub.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Fakes.StubPub.InitializeStub">
+            <summary>初始化 type StubPub 的新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Fakes.StubPub.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:EquipDataManager.Fakes.StubPub.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise">
+            <summary>EquipDataManager.Relealise.DataPickerRealise 的填充码类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.#ctor(EquipDataManager.Relealise.DataPickerRealise)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.AllInstances.AnalyzDataStringInt32">
+            <summary>设置 DataPickerRealise.AnalyzData(DataPickerRealise this, String data, Int32 equipid) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.AllInstances.GetDataFromEquipEquip">
+            <summary>设置 DataPickerRealise.GetDataFromEquip(DataPickerRealise this, Equip equip) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.AllInstances.GetTokenEquip">
+            <summary>设置 DataPickerRealise.GetToken(DataPickerRealise this, Equip equip) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.AllInstances.GetValueJsonDataStringInt32String">
+            <summary>设置 DataPickerRealise.GetValue(DataPickerRealise this, JsonData json, String listname, Int32 row, String column) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.AnalyzDataStringInt32">
+            <summary>设置 DataPickerRealise.AnalyzData(DataPickerRealise this, String data, Int32 equipid) 的 填充码</summary>
+        </member>
+        <member name="M:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.Bind(EquipModel.Interfaces.IDataPicker)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.Constructor">
+            <summary>设置 DataPickerRealise.DataPickerRealise(DataPickerRealise this) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.GetDataFromEquipEquip">
+            <summary>设置 DataPickerRealise.GetDataFromEquip(DataPickerRealise this, Equip equip) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.GetTokenEquip">
+            <summary>设置 DataPickerRealise.GetToken(DataPickerRealise this, Equip equip) 的 填充码</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.ShimDataPickerRealise.GetValueJsonDataStringInt32String">
+            <summary>设置 DataPickerRealise.GetValue(DataPickerRealise this, JsonData json, String listname, Int32 row, String column) 的 填充码</summary>
+        </member>
+        <member name="T:EquipDataManager.Relealise.Fakes.StubDataPickerRealise">
+            <summary>EquipDataManager.Relealise.DataPickerRealise 的存根类型</summary>
+        </member>
+        <member name="M:EquipDataManager.Relealise.Fakes.StubDataPickerRealise.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.StubDataPickerRealise.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:EquipDataManager.Relealise.Fakes.StubDataPickerRealise.InitializeStub">
+            <summary>初始化 type StubDataPickerRealise 的新实例</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.StubDataPickerRealise.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:EquipDataManager.Relealise.Fakes.StubDataPickerRealise.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+    </members>
+</doc>

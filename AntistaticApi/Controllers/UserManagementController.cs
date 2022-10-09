@@ -115,116 +115,123 @@ namespace AntistaticApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetRoleList(Params paras)
+        public IActionResult GetRoleList()
         {
             RoleService userService = new RoleService();
-            HttpResult httpResult = userService.GetRoleList(paras.text);
+            HttpResult httpResult = userService.GetRoleList();
             return new JsonResult(httpResult);
         }
-        /// <summary>
-        /// 新增功能
-        /// </summary>
-        /// <param name="Function"></param>
-        /// <returns></returns>
         [HttpPost]
-        public IActionResult AddFunction(Function Function)
+        public IActionResult GetRole(Params paras)
         {
-            FunctionService userService = new FunctionService();
-            HttpResult httpResult = userService.AddFunction(Function);
+            RoleService userService = new RoleService();
+            HttpResult httpResult = userService.GetRole(paras.id);
             return new JsonResult(httpResult);
         }
-        /// <summary>
-        /// 修改功能
-        /// </summary>
-        /// <param name="Function"></param>
-        /// <returns></returns>
-        [HttpPost]
-        public IActionResult ModFunction(Function Function)
-        {
-            FunctionService userService = new FunctionService();
-            HttpResult httpResult = userService.ModFunction(Function);
-            return new JsonResult(httpResult);
-        }
-        /// <summary>
-        /// 删除功能
-        /// </summary>
-        /// <param name="Function"></param>
-        /// <returns></returns>
-        [HttpPost]
-        public IActionResult DelFunction(Function Function)
-        {
-            FunctionService userService = new FunctionService();
-            HttpResult httpResult = userService.DelFunction(Function);
-            return new JsonResult(httpResult);
-        }
-        /// <summary>
-        /// 查询功能列表
-        /// </summary>
-        /// <returns></returns>
-        [HttpPost]
-        public IActionResult GetFunctionList(Params paras)
-        {
-            FunctionService userService = new FunctionService();
-            HttpResult httpResult = userService.GetFunctionList(paras.text);
-            return new JsonResult(httpResult);
-        }
-        /// <summary>
-        /// 新增角色功能
-        /// </summary>
-        /// <param name="RoleFunction"></param>
-        /// <returns></returns>
-        [HttpPost]
-        public IActionResult AddRoleFunction(RoleFunction RoleFunction)
-        {
-            RoleFunctionService userService = new RoleFunctionService();
-            HttpResult httpResult = userService.AddRoleFunction(RoleFunction);
-            return new JsonResult(httpResult);
-        }
-        /// <summary>
-        /// 修改角色功能
-        /// </summary>
-        /// <param name="RoleFunction"></param>
-        /// <returns></returns>
-        [HttpPost]
-        public IActionResult ModRoleFunction(RoleFunction RoleFunction)
-        {
-            RoleFunctionService userService = new RoleFunctionService();
-            HttpResult httpResult = userService.ModRoleFunction(RoleFunction);
-            return new JsonResult(httpResult);
-        }
-        /// <summary>
-        /// 删除角色功能
-        /// </summary>
-        /// <param name="RoleFunction"></param>
-        /// <returns></returns>
-        [HttpPost]
-        public IActionResult DelRoleFunction(RoleFunction RoleFunction)
-        {
-            RoleFunctionService userService = new RoleFunctionService();
-            HttpResult httpResult = userService.DelRoleFunction(RoleFunction);
-            return new JsonResult(httpResult);
-        }
-        /// <summary>
-        /// 查询角色功能列表
-        /// </summary>
-        /// <returns></returns>
-        [HttpPost]
-        public IActionResult GetRoleFunctionList()
-        {
-            RoleFunctionService userService = new RoleFunctionService();
-            HttpResult httpResult = userService.GetRoleFunctionList();
-            return new JsonResult(httpResult);
-        }
-        /// <summary>
-        /// 根据角色Id查询角色功能列表
-        /// </summary>
-        /// <returns></returns>
-        [HttpPost]
-        public IActionResult GetRoleFunctionListByRoleID(Params paras)
-        {
-            RoleFunctionService userService = new RoleFunctionService();
-            HttpResult httpResult = userService.GetRoleFunctionListByRoleID(paras.roleid);
-            return new JsonResult(httpResult);
-        }
+        ///// <summary>
+        ///// 新增功能
+        ///// </summary>
+        ///// <param name="Function"></param>
+        ///// <returns></returns>
+        //[HttpPost]
+        //public IActionResult AddFunction(Function Function)
+        //{
+        //    FunctionService userService = new FunctionService();
+        //    HttpResult httpResult = userService.AddFunction(Function);
+        //    return new JsonResult(httpResult);
+        //}
+        ///// <summary>
+        ///// 修改功能
+        ///// </summary>
+        ///// <param name="Function"></param>
+        ///// <returns></returns>
+        //[HttpPost]
+        //public IActionResult ModFunction(Function Function)
+        //{
+        //    FunctionService userService = new FunctionService();
+        //    HttpResult httpResult = userService.ModFunction(Function);
+        //    return new JsonResult(httpResult);
+        //}
+        ///// <summary>
+        ///// 删除功能
+        ///// </summary>
+        ///// <param name="Function"></param>
+        ///// <returns></returns>
+        //[HttpPost]
+        //public IActionResult DelFunction(Function Function)
+        //{
+        //    FunctionService userService = new FunctionService();
+        //    HttpResult httpResult = userService.DelFunction(Function);
+        //    return new JsonResult(httpResult);
+        //}
+        ///// <summary>
+        ///// 查询功能列表
+        ///// </summary>
+        ///// <returns></returns>
+        //[HttpPost]
+        //public IActionResult GetFunctionList(Params paras)
+        //{
+        //    FunctionService userService = new FunctionService();
+        //    HttpResult httpResult = userService.GetFunctionList(paras.text);
+        //    return new JsonResult(httpResult);
+        //}
+        ///// <summary>
+        ///// 新增角色功能
+        ///// </summary>
+        ///// <param name="RoleFunction"></param>
+        ///// <returns></returns>
+        //[HttpPost]
+        //public IActionResult AddRoleFunction(RoleFunction RoleFunction)
+        //{
+        //    RoleFunctionService userService = new RoleFunctionService();
+        //    HttpResult httpResult = userService.AddRoleFunction(RoleFunction);
+        //    return new JsonResult(httpResult);
+        //}
+        ///// <summary>
+        ///// 修改角色功能
+        ///// </summary>
+        ///// <param name="RoleFunction"></param>
+        ///// <returns></returns>
+        //[HttpPost]
+        //public IActionResult ModRoleFunction(RoleFunction RoleFunction)
+        //{
+        //    RoleFunctionService userService = new RoleFunctionService();
+        //    HttpResult httpResult = userService.ModRoleFunction(RoleFunction);
+        //    return new JsonResult(httpResult);
+        //}
+        ///// <summary>
+        ///// 删除角色功能
+        ///// </summary>
+        ///// <param name="RoleFunction"></param>
+        ///// <returns></returns>
+        //[HttpPost]
+        //public IActionResult DelRoleFunction(RoleFunction RoleFunction)
+        //{
+        //    RoleFunctionService userService = new RoleFunctionService();
+        //    HttpResult httpResult = userService.DelRoleFunction(RoleFunction);
+        //    return new JsonResult(httpResult);
+        //}
+        ///// <summary>
+        ///// 查询角色功能列表
+        ///// </summary>
+        ///// <returns></returns>
+        //[HttpPost]
+        //public IActionResult GetRoleFunctionList()
+        //{
+        //    RoleFunctionService userService = new RoleFunctionService();
+        //    HttpResult httpResult = userService.GetRoleFunctionList();
+        //    return new JsonResult(httpResult);
+        //}
+        ///// <summary>
+        ///// 根据角色Id查询角色功能列表
+        ///// </summary>
+        ///// <returns></returns>
+        //[HttpPost]
+        //public IActionResult GetRoleFunctionListByRoleID(Params paras)
+        //{
+        //    RoleFunctionService userService = new RoleFunctionService();
+        //    HttpResult httpResult = userService.GetRoleFunctionListByRoleID(paras.roleid);
+        //    return new JsonResult(httpResult);
+        //}
     }
 }

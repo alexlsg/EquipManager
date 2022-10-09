@@ -30,5 +30,7 @@ namespace EquipModel
         /// 保存类型,0不保存、1外接设备类型、2状态、3实时值
         /// </summary>
         public int SaveType { get; set; }
+        public double? Bhl { get; set; }
+        public int? Mrjg { get; set; }
     }
 }

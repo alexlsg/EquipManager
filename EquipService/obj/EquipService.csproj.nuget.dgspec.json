@@ -127,6 +127,9 @@
               },
               "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
                 "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj"
+              },
+              "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj"
               }
             }
           }
@@ -192,7 +195,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -338,6 +345,9 @@
             "projectReferences": {
               "D:\\git\\EquipManager\\Tools\\Tools.csproj": {
                 "projectPath": "D:\\git\\EquipManager\\Tools\\Tools.csproj"
+              },
+              "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj": {
+                "projectPath": "D:\\git\\EquipManager\\UserManagement\\UserManagement\\UserManagement.csproj"
               }
             }
           }

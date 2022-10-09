@@ -18,6 +18,9 @@ using AntistaticApi.IdentityService;
 using UserManagement;
 using Ubiety.Dns.Core;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace AntistaticApi
 {
@@ -82,6 +85,28 @@ namespace AntistaticApi
                 {
                     context.Request.EnableBuffering();
                     return next();
+                });
+                var provider = new FileExtensionContentTypeProvider();
+                string _path = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
+                _path = Path.GetDirectoryName(_path);
+                string _3wpath = Path.Combine(_path, @"wwwroot");
+                if (!Directory.Exists(_3wpath))
+                {
+                    Directory.CreateDirectory(_3wpath);
+                }
+                app.UseStaticFiles(new StaticFileOptions()
+                {
+                    FileProvider = new PhysicalFileProvider(_3wpath),
+                    ContentTypeProvider = provider
+                });
+                app.UseFileServer(new FileServerOptions()
+                {
+                    FileProvider = new PhysicalFileProvider(_3wpath),
+                    EnableDirectoryBrowsing = true,
+                    DefaultFilesOptions = {
+                    DefaultFileNames = new List<string>(){ "/index.html"}
+                    },
+                    EnableDefaultFiles = true
                 });
                 app.UseRouting();
                 app.UseCors("cors");

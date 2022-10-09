@@ -49,6 +49,14 @@ namespace EquipModel
         public string State { get; set; }
         public string NoState { get; set; }
         public string Unit { get; set; }
+        /// <summary>
+        /// 事件配置id
+        /// </summary>
+        public EventSet eventset { get; set; } = null;
+        public EventYzSet eventyset { get; set; } = null;
+        public int eventtype = -1;
+        public string eventmessage;
+
         public new string ToString()
         {
             return $"EquipName:{EquipName};EquipNO:{EquipNO};State:{State};type:{DataType};spot:{SpotNO};SpotName:{SpotName};Data:{Data}";

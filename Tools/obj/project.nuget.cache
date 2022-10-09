@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0BVUBan0hrj7CMyvpYRl7YCkiZSuzO/rZiJKlfNLfkY+vxUfeBoxUaEQh41Wbd/z7HqyC+LALxxJ4fJr5i1w5A==",
+  "dgSpecHash": "88+0P3E+hu9EsK26SxRXSkpt/4wBNkfPHMpknskM97qjztCGt+EGl+pDTbPpTcBkcU+LcU99W6sNq6sJtLraTA==",
   "success": true,
   "projectFilePath": "D:\\git\\EquipManager\\Tools\\Tools.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,10 @@
     "D:\\User\\Nuget\\system.text.encoding.codepages\\4.4.0\\system.text.encoding.codepages.4.4.0.nupkg.sha512",
     "D:\\User\\Nuget\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "D:\\User\\Nuget\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "D:\\User\\Nuget\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "D:\\User\\Nuget\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "D:\\User\\Nuget\\microsoft.netcore.app.runtime.win-x86\\3.1.23\\microsoft.netcore.app.runtime.win-x86.3.1.23.nupkg.sha512",
+    "D:\\User\\Nuget\\microsoft.windowsdesktop.app.runtime.win-x86\\3.1.23\\microsoft.windowsdesktop.app.runtime.win-x86.3.1.23.nupkg.sha512",
+    "D:\\User\\Nuget\\microsoft.aspnetcore.app.runtime.win-x86\\3.1.23\\microsoft.aspnetcore.app.runtime.win-x86.3.1.23.nupkg.sha512"
   ],
   "logs": []
 }

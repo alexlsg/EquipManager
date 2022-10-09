@@ -53,6 +53,10 @@ namespace SystemSet
         /// 设备类型列表
         /// </summary>
         public List<EquipType> EquipTypes { get; set; }
+        double? bhl;
+        public double? Bhl { get { return bhl; } set { bhl = value; OnPropertyChanged("Bhl"); } }
+        int? mrjg;
+        public int? Mrjg { get { return mrjg; } set { mrjg = value; OnPropertyChanged("Mrjg"); } }
         public int Type { get; set; }
     }
 }

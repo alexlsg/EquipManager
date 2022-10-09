@@ -24,16 +24,18 @@ namespace SystemSet
             {
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.Append(@"
-INSERT INTO EquipSpotSet(EquipId,DataType,SpotNO,SaveType,SpotNm,EquipType)
-VALUES(@EquipId,@DataType,@SpotNO,@SaveType,@SpotNm,@EquipType)
+INSERT INTO EquipSpotSet(EquipId,DataType,SpotNO,SaveType,SpotNm,EquipType,Bhl,Mrjg)
+VALUES(@EquipId,@DataType,@SpotNO,@SaveType,@SpotNm,@EquipType,@Bhl,@Mrjg)
 ");
-                MySqlParameter[] mySqlParameters = new MySqlParameter[6];
+                MySqlParameter[] mySqlParameters = new MySqlParameter[8];
                 mySqlParameters[0] = new MySqlParameter("EquipId", EquipSpotSet.EquipId);
                 mySqlParameters[1] = new MySqlParameter("DataType", EquipSpotSet.DataType);
                 mySqlParameters[2] = new MySqlParameter("SpotNO", EquipSpotSet.SpotNO);
                 mySqlParameters[3] = new MySqlParameter("SaveType", EquipSpotSet.SaveType);
                 mySqlParameters[4] = new MySqlParameter("SpotNm", EquipSpotSet.SpotNm);
                 mySqlParameters[5] = new MySqlParameter("EquipType", EquipSpotSet.EquipType);
+                mySqlParameters[6] = new MySqlParameter("Bhl", EquipSpotSet.Bhl);
+                mySqlParameters[7] = new MySqlParameter("Mrjg", EquipSpotSet.Mrjg);
                 int _res = DBHelper.ExecuteCommand(stringBuilder.ToString(), mySqlParameters);
                 httpResult = HttpResult.GetJsonResult(_res == 1, "添加设备测点功能成功", "添加设备测点功能失败");
             }
@@ -58,10 +60,10 @@ VALUES(@EquipId,@DataType,@SpotNO,@SaveType,@SpotNm,@EquipType)
             {
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.Append(@"
-UPDATE EquipSpotSet SET EquipId=@EquipId, DataType=@DataType, SpotNO=@SpotNO, SaveType=@SaveType,SpotNm=@SpotNm,EquipType=@EquipType
+UPDATE EquipSpotSet SET EquipId=@EquipId, DataType=@DataType, SpotNO=@SpotNO, SaveType=@SaveType,SpotNm=@SpotNm,EquipType=@EquipType,Bhl=@Bhl,Mrjg=@Mrjg
 WHERE Id=@Id
 ");
-                MySqlParameter[] mySqlParameters = new MySqlParameter[7];
+                MySqlParameter[] mySqlParameters = new MySqlParameter[9];
                 mySqlParameters[0] = new MySqlParameter("EquipId", EquipSpotSet.EquipId);
                 mySqlParameters[1] = new MySqlParameter("DataType", EquipSpotSet.DataType);
                 mySqlParameters[2] = new MySqlParameter("SpotNO", EquipSpotSet.SpotNO);
@@ -69,6 +71,8 @@ WHERE Id=@Id
                 mySqlParameters[4] = new MySqlParameter("Id", EquipSpotSet.Id);
                 mySqlParameters[5] = new MySqlParameter("SpotNm", EquipSpotSet.SpotNm);
                 mySqlParameters[6] = new MySqlParameter("EquipType", EquipSpotSet.EquipType);
+                mySqlParameters[7] = new MySqlParameter("Bhl", EquipSpotSet.Bhl);
+                mySqlParameters[8] = new MySqlParameter("Mrjg", EquipSpotSet.Mrjg);
                 int _res = DBHelper.ExecuteCommand(stringBuilder.ToString(), mySqlParameters);
                 httpResult = HttpResult.GetJsonResult(_res == 1, "修改设备测点功能成功", "修改设备测点功能失败");
             }
@@ -132,6 +136,8 @@ DELETE From EquipSpotSet WHERE Id=@Id
                     EquipSpotSet.SpotNO = _ds.Rows[i]["SpotNO"].ToString();
                     EquipSpotSet.SpotNm = _ds.Rows[i]["SpotNm"].ToString();
                     EquipSpotSet.SaveType = (int)_ds.Rows[i]["SaveType"];
+                    EquipSpotSet.Bhl = _ds.Rows[i].Field<double?>("Bhl");
+                    EquipSpotSet.Mrjg = _ds.Rows[i].Field<int?>("Mrjg");
                     EquipSpotSet.DataStatus = DataStatus.NONE;
                     EquipSpotSets.Add(EquipSpotSet);
                 }

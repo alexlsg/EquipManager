@@ -19,7 +19,8 @@
         <TextBlock x:Name="t_com" Visibility="Collapsed"></TextBlock>
         <DataGrid Grid.Row="1" x:Name="datagrid">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="编号" MinWidth="100" Binding="{Binding EquipNO,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn Header="设备ID" Binding="{Binding Id}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="设备编号" Binding="{Binding EquipNO,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
                 <DataGridTextColumn Header="名称" MinWidth="150" Binding="{Binding EquipName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
                 <DataGridTemplateColumn Header="类型绑定" MinWidth="150">
                     <DataGridTemplateColumn.CellTemplate>
@@ -35,6 +36,29 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                <DataGridTextColumn Header="通讯故障注释" Binding="{Binding TxgzDesc,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn Header="通讯正常注释" Binding="{Binding TxzcDesc,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="事件级别">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox SelectedIndex="{Binding EventLevel,UpdateSourceTrigger=PropertyChanged}">
+                                <ComboBoxItem Content="0"></ComboBoxItem>
+                                <ComboBoxItem Content="1"></ComboBoxItem>
+                                <ComboBoxItem Content="2"></ComboBoxItem>
+                                <ComboBoxItem Content="3"></ComboBoxItem>
+                                <ComboBoxItem Content="4"></ComboBoxItem>
+                                <ComboBoxItem Content="5"></ComboBoxItem>
+                                <ComboBoxItem Content="6"></ComboBoxItem>
+                                <ComboBoxItem Content="7"></ComboBoxItem>
+                                <ComboBoxItem Content="8"></ComboBoxItem>
+                                <ComboBoxItem Content="9"></ComboBoxItem>
+                                <ComboBoxItem Content="10"></ComboBoxItem>
+                            </ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridCheckBoxColumn Header="屏蔽" Binding="{Binding Pb,UpdateSourceTrigger=PropertyChanged}"></DataGridCheckBoxColumn>
+                <DataGridTextColumn Header="通讯参数" Binding="{Binding Txcs,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
                 <!--<DataGridTextColumn Header="产线组绑定" MinWidth="100" Binding="{Binding ProductionLineGroupBinding,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>-->
             </DataGrid.Columns>
         </DataGrid>

@@ -18,5 +18,10 @@ namespace AntistaticApi.Controllers
         {
             return new JsonResult(HttpResult.GetJsonResult(false, "", "用户已经失效，请重新登录"));
         }
+        [Authorize]
+        public IActionResult QxError()
+        {
+            return new JsonResult(HttpResult.GetJsonResult(false, "", "没有访问权限!"));
+        }
     }
 }

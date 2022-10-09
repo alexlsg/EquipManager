@@ -33,6 +33,15 @@
     <Compile Update="Pages\EquipSet\UCEquipSet.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\UCCMDSet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UCEventSet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UCEventYzSet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\UCSpotSet.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -87,6 +96,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\EquipSet\UCEquipSet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UCCMDSet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UCEventSet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UCEventYzSet.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UCSpotSet.xaml">

@@ -1,440 +1,1020 @@
 ﻿++解决方案“设备管理”‎(10 个项目，共 10 个)
 i:{00000000-0000-0000-0000-000000000000}:设备管理.sln
-++UserManagement
-i:{00000000-0000-0000-0000-000000000000}:UserManagement
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\usermanagement\usermanagement\usermanagement.csproj
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\usermanagement\usermanagement\usermanagement.csproj
+++EquipDataManager
+i:{00000000-0000-0000-0000-000000000000}:EquipDataManager
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\git\equipmanager\equipdatamanager\equipdatamanager.csproj
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\equipdatamanager\equipdatamanager.csproj
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanager\equipdatamanager.csproj
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\equipdatamanager\equipdatamanager.csproj
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\equipdatamanager\equipdatamanager.csproj
 ++依赖项
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:>1071
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:>224
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:>222
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>223
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:>273
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:>462
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>1107
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:>819
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:>1147
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:>952
-++Function.cs
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\mywork\设备管理\equipmanager(2)\equipmanager\usermanagement\usermanagement\function.cs
-++FunctionService.cs
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\mywork\设备管理\equipmanager(2)\equipmanager\usermanagement\usermanagement\functionservice.cs
-++Role.cs
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\mywork\设备管理\equipmanager(2)\equipmanager\usermanagement\usermanagement\role.cs
-++RoleFunction.cs
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\mywork\设备管理\equipmanager(2)\equipmanager\usermanagement\usermanagement\rolefunction.cs
-++RoleFunctionService.cs
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\mywork\设备管理\equipmanager(2)\equipmanager\usermanagement\usermanagement\rolefunctionservice.cs
-++RoleService.cs
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\mywork\设备管理\equipmanager(2)\equipmanager\usermanagement\usermanagement\roleservice.cs
-++User.cs
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\mywork\设备管理\equipmanager(2)\equipmanager\usermanagement\usermanagement\user.cs
-++UserService.cs
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\mywork\设备管理\equipmanager(2)\equipmanager\usermanagement\usermanagement\userservice.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:>3496
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>6320
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:>6319
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:>3494
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>6321
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:>3493
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:>4459
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:>3492
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:>3495
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:>6832
+++Bll
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\bll\
+++CMDManager.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\bll\cmdmanager.cs
+++ConnectClient.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\bll\connectclient.cs
+++DataPicker.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\bll\datapicker.cs
+++EventManager.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\bll\eventmanager.cs
+++EventSetService.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\bll\eventsetservice.cs
+++LsManager.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\bll\lsmanager.cs
+++SocketListen.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\bll\socketlisten.cs
+++TjManager.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\bll\tjmanager.cs
+++Dal
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\dal\
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanagertests\dal\
+++CMDSetDal.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\dal\cmdsetdal.cs
+++EquipDal.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\dal\equipdal.cs
+++EquipDataDal.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\dal\equipdatadal.cs
+++EquipSpotSetDal.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\dal\equipspotsetdal.cs
+++EventSetDal.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\dal\eventsetdal.cs
+++EventYzSetDal.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\dal\eventyzsetdal.cs
+++LogEventDal.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\dal\logeventdal.cs
+++Relealise
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\relealise\
+++DataPickerRealise.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\relealise\datapickerrealise.cs
+++Config.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\config.cs
+++Pub.cs
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\pub.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\pub.cs
 ++包
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:包
 i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:包
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:包
 i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:包
 i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:包
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:包
 i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:包
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:包
 i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:包
 ++分析器
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:分析器
 i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:分析器
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:分析器
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:分析器
 i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:分析器
 i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:分析器
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:分析器
 i:{f2984255-650a-46b7-8d37-36cd835588eb}:分析器
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:分析器
 i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:分析器
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:分析器
 i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:分析器
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:分析器
 ++框架
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:框架
 i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:框架
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:框架
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:框架
 i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:框架
 i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:框架
 i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:框架
 i:{f2984255-650a-46b7-8d37-36cd835588eb}:框架
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:框架
 i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:框架
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:框架
 i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:框架
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:框架
 ++项目
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:项目
 i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:项目
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:项目
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:项目
 i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:项目
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:项目
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:项目
 i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:项目
-++MySql.Data (8.0.29)
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:>1202
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:>1190
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:>1161
-++System.Text.Json.SourceGeneration
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:c:\users\44139\.nuget\packages\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:c:\users\44139\.nuget\packages\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:c:\users\44139\.nuget\packages\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:c:\users\44139\.nuget\packages\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:c:\users\44139\.nuget\packages\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:c:\users\44139\.nuget\packages\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:c:\users\44139\.nuget\packages\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\users\44139\.nuget\packages\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:c:\users\44139\.nuget\packages\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
-++Microsoft.NETCore.App
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\mywork\设备管理\equipmanager(2)\equipmanager\usermanagement\usermanagement\microsoft.netcore.app
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\microsoft.netcore.app
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\microsoft.netcore.app
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanagertests\microsoft.netcore.app
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\microsoft.netcore.app
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\microsoft.netcore.app
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipservice\microsoft.netcore.app
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\microsoft.netcore.app
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\microsoft.netcore.app
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\microsoft.netcore.app
-++Tools
-i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\tools.csproj
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\tools.csproj
-i:{00000000-0000-0000-0000-000000000000}:Tools
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\tools.csproj
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\tools.csproj
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\tools.csproj
-++EquipDataManager
-i:{00000000-0000-0000-0000-000000000000}:EquipDataManager
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\equipdatamanager.csproj
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\equipdatamanager.csproj
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\equipdatamanager.csproj
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\equipdatamanager.csproj
-++Bll
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\bll\
-++Dal
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\dal\
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanagertests\dal\
-++Relealise
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\relealise\
-++Config.cs
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\config.cs
-++ConnectClient.cs
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\bll\connectclient.cs
-++DataPicker.cs
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\bll\datapicker.cs
-++SocketListen.cs
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\bll\socketlisten.cs
-++EquipDal.cs
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\dal\equipdal.cs
-++EquipDataDal.cs
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\dal\equipdatadal.cs
-++EquipSpotSetDal.cs
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\dal\equipspotsetdal.cs
-++DataPickerRealise.cs
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanager\relealise\datapickerrealise.cs
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:项目
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:项目
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:项目
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:项目
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:项目
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:项目
 ++AWSSDK.Core (3.7.12.3)
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:>1159
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>1177
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:>6895
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>6878
+++System.Text.Json.SourceGeneration
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\user\nuget\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\user\nuget\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\user\nuget\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\user\nuget\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\user\nuget\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\user\nuget\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\user\nuget\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\user\nuget\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\user\nuget\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\user\nuget\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+++Microsoft.NETCore.App
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipdatamanager\microsoft.netcore.app
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\git\equipmanager\equipservice\microsoft.netcore.app
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\microsoft.netcore.app
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\microsoft.netcore.app
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanagertests\microsoft.netcore.app
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\microsoft.netcore.app
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\microsoft.netcore.app
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\microsoft.netcore.app
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\git\equipmanager\usermanagement\usermanagement\microsoft.netcore.app
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\microsoft.netcore.app
 ++EquipModel
-i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\equipmodel.csproj
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\equipmodel\equipmodel.csproj
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\equipmodel\equipmodel.csproj
 i:{00000000-0000-0000-0000-000000000000}:EquipModel
-++BaseNotifyPropertyChanged.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\basenotifypropertychanged.cs
-++CheckAuthor.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\checkauthor.cs
-++ConfigHelper.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\confighelper.cs
-++Const.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\const.cs
-++DBHelper.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\dbhelper.cs
-++DES.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\des.cs
-++Enum.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\enum.cs
-++HttpHelper.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\httphelper.cs
-++HttpResult.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\httpresult.cs
-++KeyValue.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\keyvalue.cs
-++Log.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\log.cs
-++XmlHelper.cs
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\xmlhelper.cs
-++程序集
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:程序集
-++Microsoft.Extensions.Configuration (6.0.1)
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:>1189
-++Microsoft.Extensions.Configuration.Json (6.0.0)
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:>1188
-++AWSSDK.Core
-i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\mywork\设备管理\equipmanager(2)\equipmanager\tools\awssdk.core
-++EquipDataManagerTests
-i:{00000000-0000-0000-0000-000000000000}:EquipDataManagerTests
-++122.xml
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanagertests\122.xml
-++config.json
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanagertests\config.json
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\config.json
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\config.json
-++ConfigTest.cs
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanagertests\configtest.cs
-++jsdata.json
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanagertests\jsdata.json
-++EquipDalTests.cs
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipdatamanagertests\dal\equipdaltests.cs
-++coverlet.collector (3.1.0)
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>1178
-++Microsoft.NET.Test.Sdk (16.11.0)
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>1176
-++MSTest.TestAdapter (2.2.7)
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>1179
-++MSTest.TestFramework (2.2.7)
-i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>1175
-++Interfaces
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\interfaces\
-++Equip.cs
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\equip.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equip.cs
-++EquipData.cs
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\equipdata.cs
-++EquipData_Ls.cs
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\equipdata_ls.cs
-++EquipGroup.cs
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\equipgroup.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equipgroup.cs
-++EquipSpotSet.cs
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\equipspotset.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equipspotset.cs
-++EquipSstjData.cs
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\equipsstjdata.cs
-++EquipTjSet.cs
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\equiptjset.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equiptjset.cs
-++Lscdlb.cs
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\lscdlb.cs
-++IDataPicker.cs
-i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipmodel\interfaces\idatapicker.cs
-++UITest
-i:{00000000-0000-0000-0000-000000000000}:UITest
-++Properties
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\properties\
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipservice\properties\
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\properties\
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\properties\
-++App.xaml
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\app.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\app.xaml
-++AssemblyInfo.cs
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\assemblyinfo.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\assemblyinfo.cs
-++Data.dat
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\data.dat
-++jsconfig1.json
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\jsconfig1.json
-++MainWindow.xaml
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\mainwindow.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\mainwindow.xaml
-++侯鹏.json
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\侯鹏.json
-++PublishProfiles
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\properties\publishprofiles\
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipservice\properties\publishprofiles\
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\properties\publishprofiles\
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\properties\publishprofiles\
-++App.xaml.cs
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\app.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\app.xaml.cs
-++MainWindow.xaml.cs
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\mainwindow.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\mainwindow.xaml.cs
-++FolderProfile.pubxml
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\properties\publishprofiles\folderprofile.pubxml
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipservice\properties\publishprofiles\folderprofile.pubxml
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\properties\publishprofiles\folderprofile.pubxml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\properties\publishprofiles\folderprofile.pubxml
-++Microsoft.WindowsDesktop.App.WPF
-i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\mywork\设备管理\equipmanager(2)\equipmanager\uitest\microsoft.windowsdesktop.app.wpf
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\microsoft.windowsdesktop.app.wpf
+++Tools
+i:{8880e89c-aede-42e4-9f37-4644ab5d1b67}:d:\git\equipmanager\tools\tools.csproj
+i:{00000000-0000-0000-0000-000000000000}:Tools
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\tools\tools.csproj
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\tools\tools.csproj
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\tools\tools.csproj
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\git\equipmanager\tools\tools.csproj
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\tools\tools.csproj
 ++EquipService
 i:{00000000-0000-0000-0000-000000000000}:EquipService
 ++Connected Services 
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>1108
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:>1148
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>6322
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:>6833
+++Properties
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\git\equipmanager\equipservice\properties\
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\properties\
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\properties\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\properties\
 ++appsettings.Development.json
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipservice\appsettings.development.json
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\git\equipmanager\equipservice\appsettings.development.json
 ++appsettings.json
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipservice\appsettings.json
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\git\equipmanager\equipservice\appsettings.json
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\appsettings.json
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanagertests\appsettings.json
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\appsettings.json
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\appsettings.json
 ++Program.cs
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipservice\program.cs
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\program.cs
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\git\equipmanager\equipservice\program.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\program.cs
 ++Worker.cs
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipservice\worker.cs
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\git\equipmanager\equipservice\worker.cs
 ++未发现任何服务依赖项
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>1109
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:>1149
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>6323
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:>6834
+++PublishProfiles
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\git\equipmanager\equipservice\properties\publishprofiles\
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\properties\publishprofiles\
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\properties\publishprofiles\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\properties\publishprofiles\
 ++launchSettings.json
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\mywork\设备管理\equipmanager(2)\equipmanager\equipservice\properties\launchsettings.json
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\properties\launchsettings.json
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\git\equipmanager\equipservice\properties\launchsettings.json
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\properties\launchsettings.json
+++FolderProfile.pubxml
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\git\equipmanager\equipservice\properties\publishprofiles\folderprofile.pubxml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\properties\publishprofiles\folderprofile.pubxml
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\properties\publishprofiles\folderprofile.pubxml
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\properties\publishprofiles\folderprofile.pubxml
 ++Grpc.AspNetCore (2.40.0)
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>1160
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>6867
 ++Microsoft.Extensions.Hosting (3.1.21)
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>1162
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>6868
 ++Microsoft.Extensions.Hosting.WindowsServices (3.1.21)
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>1163
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:>6869
 ++AntistaticApi
-i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\antistaticapi.csproj
+i:{533d5daf-fc6e-4787-9a63-dbb53f0782fa}:d:\git\equipmanager\antistaticapi\antistaticapi.csproj
 i:{00000000-0000-0000-0000-000000000000}:AntistaticApi
-++SystemSet
-i:{00000000-0000-0000-0000-000000000000}:SystemSet
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\systemset.csproj
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\systemset.csproj
-++EquipGroupService.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equipgroupservice.cs
-++EquipService.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equipservice.cs
-++EquipSpot.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equipspot.cs
-++EquipSpotService.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equipspotservice.cs
-++EquipSpotSetService.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equipspotsetservice.cs
-++EquipTjSetService.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equiptjsetservice.cs
-++EquipType.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equiptype.cs
-++EquipTypeService.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\equiptypeservice.cs
-++Gateway.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\gateway.cs
-++GatewayService.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\gatewayservice.cs
-++ProductionLine.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\productionline.cs
-++ProductionLineGroup.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\productionlinegroup.cs
-++ProductionLineGroupService.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\productionlinegroupservice.cs
-++ProductionLineService.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\productionlineservice.cs
-++Pub.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\pub.cs
-++SystemSetting.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\systemsetting.cs
-++SystemSettingService.cs
-i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemset\systemsettingservice.cs
-++Controllers
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\controllers\
-++IdentityService
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\identityservice\
-++Model
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\model\
-++Startup.cs
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\startup.cs
-++HomeController.cs
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\controllers\homecontroller.cs
-++LoginController.cs
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\controllers\logincontroller.cs
-++StatisticsController.cs
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\controllers\statisticscontroller.cs
-++SystemSetController.cs
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\controllers\systemsetcontroller.cs
-++UserManagementController.cs
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\controllers\usermanagementcontroller.cs
-++AuthenticateService.cs
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\identityservice\authenticateservice.cs
-++IAuthenticateService.cs
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\identityservice\iauthenticateservice.cs
-++Params.cs
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\model\params.cs
-++tokenModel.cs
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\model\tokenmodel.cs
-++Microsoft.AspNetCore.Authentication.JwtBearer (3.1.26)
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:>1218
-++Microsoft.IdentityModel.Tokens (6.20.0)
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:>1219
-++Microsoft.AspNetCore.Analyzers
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
-++Microsoft.AspNetCore.Components.Analyzers
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
-++Microsoft.AspNetCore.Mvc.Analyzers
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
-++Microsoft.AspNetCore.App
-i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\mywork\设备管理\equipmanager(2)\equipmanager\antistaticapi\microsoft.aspnetcore.app
 ++SystemSetClient
 i:{00000000-0000-0000-0000-000000000000}:SystemSetClient
 ++Pages
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\
-++ChooseEquip.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\chooseequip.xaml
-++FrmEquip.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmequip.xaml
-++FrmEquipGroup.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmequipgroup.xaml
-++FrmEquipSpotSet.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmequipspotset.xaml
-++FrmGateway.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmgateway.xaml
-++FrmLogin.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmlogin.xaml
-++FrmProductionLine.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmproductionline.xaml
-++MainWindow1.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\mainwindow1.xaml
-++UCEquipGroup.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\ucequipgroup.xaml
-++UCEquipTjSet.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\ucequiptjset.xaml
-++UCEquipType.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\ucequiptype.xaml
-++UCProductionLineGroup.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\ucproductionlinegroup.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\
 ++ComSet
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\comset\
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\comset\
 ++EquipGroupSet
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\equipgroupset\
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\equipgroupset\
 ++EquipSet
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\equipset\
-++UCSpotSet.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\ucspotset.xaml
-++WinAbout.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\winabout.xaml
-++ChooseEquip.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\chooseequip.xaml.cs
-++FrmEquip.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmequip.xaml.cs
-++FrmEquipGroup.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmequipgroup.xaml.cs
-++FrmEquipSpotSet.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmequipspotset.xaml.cs
-++FrmGateway.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmgateway.xaml.cs
-++FrmLogin.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmlogin.xaml.cs
-++FrmProductionLine.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\frmproductionline.xaml.cs
-++MainWindow1.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\mainwindow1.xaml.cs
-++UCEquipGroup.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\ucequipgroup.xaml.cs
-++UCEquipTjSet.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\ucequiptjset.xaml.cs
-++UCEquipType.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\ucequiptype.xaml.cs
-++UCProductionLineGroup.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\ucproductionlinegroup.xaml.cs
-++UCComSet.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\comset\uccomset.xaml
-++UCEquipGroupSet.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\equipgroupset\ucequipgroupset.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\equipset\
 ++UCEquipSet.xaml
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\equipset\ucequipset.xaml
-++UCSpotSet.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\ucspotset.xaml.cs
-++WinAbout.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\winabout.xaml.cs
-++UCComSet.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\comset\uccomset.xaml.cs
-++UCEquipGroupSet.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\equipgroupset\ucequipgroupset.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\equipset\ucequipset.xaml
 ++UCEquipSet.xaml.cs
-i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\mywork\设备管理\equipmanager(2)\equipmanager\systemsetclient\pages\equipset\ucequipset.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\equipset\ucequipset.xaml.cs
+++UCCMDSet.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\uccmdset.xaml
+++UCEventSet.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\uceventset.xaml
+++UCEventYzSet.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\uceventyzset.xaml
+++UCSpotSet.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\ucspotset.xaml
+++WinAbout.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\winabout.xaml
+++App.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\app.xaml
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\app.xaml
+++AssemblyInfo.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\assemblyinfo.cs
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\assemblyinfo.cs
+++ChooseEquip.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\chooseequip.xaml
+++config.json
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\config.json
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanagertests\config.json
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\config.json
+++FrmEquip.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmequip.xaml
+++FrmEquipGroup.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmequipgroup.xaml
+++FrmEquipSpotSet.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmequipspotset.xaml
+++FrmGateway.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmgateway.xaml
+++FrmLogin.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmlogin.xaml
+++FrmProductionLine.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmproductionline.xaml
+++MainWindow.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\mainwindow.xaml
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\mainwindow.xaml
+++MainWindow1.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\mainwindow1.xaml
+++MainWindow1.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\mainwindow1.xaml.cs
+++UCEquipGroup.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\ucequipgroup.xaml
+++UCEquipTjSet.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\ucequiptjset.xaml
+++UCEquipType.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\ucequiptype.xaml
+++UCProductionLineGroup.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\ucproductionlinegroup.xaml
+++UCComSet.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\comset\uccomset.xaml
+++UCEquipGroupSet.xaml
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\equipgroupset\ucequipgroupset.xaml
+++UCCMDSet.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\uccmdset.xaml.cs
+++UCEventSet.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\uceventset.xaml.cs
+++UCEventYzSet.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\uceventyzset.xaml.cs
+++UCSpotSet.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\ucspotset.xaml.cs
+++WinAbout.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\winabout.xaml.cs
+++App.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\app.xaml.cs
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\app.xaml.cs
+++ChooseEquip.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\chooseequip.xaml.cs
+++FrmEquip.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmequip.xaml.cs
+++FrmEquipGroup.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmequipgroup.xaml.cs
+++FrmEquipSpotSet.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmequipspotset.xaml.cs
+++FrmGateway.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmgateway.xaml.cs
+++FrmLogin.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmlogin.xaml.cs
+++FrmProductionLine.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\frmproductionline.xaml.cs
+++MainWindow.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\mainwindow.xaml.cs
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\mainwindow.xaml.cs
+++UCEquipGroup.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\ucequipgroup.xaml.cs
+++UCEquipTjSet.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\ucequiptjset.xaml.cs
+++UCEquipType.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\ucequiptype.xaml.cs
+++UCProductionLineGroup.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\ucproductionlinegroup.xaml.cs
+++Microsoft.WindowsDesktop.App.WPF
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\microsoft.windowsdesktop.app.wpf
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\microsoft.windowsdesktop.app.wpf
+++SystemSet
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemset\systemset.csproj
+i:{00000000-0000-0000-0000-000000000000}:SystemSet
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\systemset\systemset.csproj
+++UserManagement
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\usermanagement\usermanagement\usermanagement.csproj
+i:{00000000-0000-0000-0000-000000000000}:UserManagement
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\usermanagement\usermanagement\usermanagement.csproj
+++UCComSet.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\comset\uccomset.xaml.cs
+++UCEquipGroupSet.xaml.cs
+i:{7d84161b-2c0e-430c-8c06-cc4e7e334009}:d:\git\equipmanager\systemsetclient\pages\equipgroupset\ucequipgroupset.xaml.cs
+++BaseNotifyPropertyChanged.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\basenotifypropertychanged.cs
+++CheckAuthor.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\checkauthor.cs
+++ConfigHelper.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\confighelper.cs
+++Const.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\const.cs
+++DBHelper.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\dbhelper.cs
+++DES.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\des.cs
+++Enum.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\enum.cs
+++HttpHelper.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\httphelper.cs
+++HttpResult.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\httpresult.cs
+++KeyValue.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\keyvalue.cs
+++Log.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\log.cs
+++XmlHelper.cs
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\xmlhelper.cs
+++程序集
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:程序集
+++Microsoft.Extensions.Configuration (6.0.1)
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:>6890
+++Microsoft.Extensions.Configuration.Json (6.0.0)
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:>6889
+++MySql.Data (8.0.29)
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:>6891
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:>6855
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:>6846
+++AWSSDK.Core
+i:{0b7843e5-e31b-46c7-9819-00ffd912d6ca}:d:\git\equipmanager\tools\awssdk.core
+++EquipDataManagerTests
+i:{00000000-0000-0000-0000-000000000000}:EquipDataManagerTests
+++122.xml
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanagertests\122.xml
+++ConfigTest.cs
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanagertests\configtest.cs
+++EventSaveTest.cs
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanagertests\eventsavetest.cs
+++jsdata.json
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanagertests\jsdata.json
+++Resource.resx
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanagertests\resource.resx
+++EquipDalTests.cs
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanagertests\dal\equipdaltests.cs
+++Resource.Designer.cs
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:d:\git\equipmanager\equipdatamanagertests\resource.designer.cs
+++coverlet.collector (3.1.0)
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>6879
+++Microsoft.NET.Test.Sdk (16.11.0)
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>6877
+++MSTest.TestAdapter (2.2.7)
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>6880
+++MSTest.TestFramework (2.2.7)
+i:{fbff87b3-1b4e-4796-8cf5-58a84bd9df47}:>6876
+++Interfaces
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\interfaces\
+++CMDSet.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\cmdset.cs
+++Command.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\command.cs
+++Equip.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\equip.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equip.cs
+++EquipData.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\equipdata.cs
+++EquipData_Ls.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\equipdata_ls.cs
+++EquipGroup.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\equipgroup.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equipgroup.cs
+++EquipSpotSet.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\equipspotset.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equipspotset.cs
+++EquipSstjData.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\equipsstjdata.cs
+++EquipTjSet.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\equiptjset.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equiptjset.cs
+++EventSet.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\eventset.cs
+++EventYzSet.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\eventyzset.cs
+++LogEvent.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\logevent.cs
+++Lscdlb.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\lscdlb.cs
+++IDataPicker.cs
+i:{45df20dd-584c-4010-8a4d-c523eb0a834f}:d:\git\equipmanager\equipmodel\interfaces\idatapicker.cs
+++UITest
+i:{00000000-0000-0000-0000-000000000000}:UITest
+++Data.dat
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\data.dat
+++jsconfig1.json
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\jsconfig1.json
+++侯鹏.json
+i:{f2984255-650a-46b7-8d37-36cd835588eb}:d:\git\equipmanager\uitest\侯鹏.json
+++EquipGroupService.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equipgroupservice.cs
+++EquipService.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equipservice.cs
+++EquipSpot.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equipspot.cs
+++EquipSpotService.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equipspotservice.cs
+++EquipSpotSetService.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equipspotsetservice.cs
+++EquipTjSetService.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equiptjsetservice.cs
+++EquipType.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equiptype.cs
+++EquipTypeService.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\equiptypeservice.cs
+++Gateway.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\gateway.cs
+++GatewayService.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\gatewayservice.cs
+++ProductionLine.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\productionline.cs
+++ProductionLineGroup.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\productionlinegroup.cs
+++ProductionLineGroupService.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\productionlinegroupservice.cs
+++ProductionLineService.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\productionlineservice.cs
+++SystemSetting.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\systemsetting.cs
+++SystemSettingService.cs
+i:{bcc0fadb-5ef9-4bcd-b0e9-32c539b1f615}:d:\git\equipmanager\systemset\systemsettingservice.cs
+++Function.cs
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\git\equipmanager\usermanagement\usermanagement\function.cs
+++FunctionService.cs
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\git\equipmanager\usermanagement\usermanagement\functionservice.cs
+++Role.cs
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\git\equipmanager\usermanagement\usermanagement\role.cs
+++RoleFunction.cs
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\git\equipmanager\usermanagement\usermanagement\rolefunction.cs
+++RoleFunctionService.cs
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\git\equipmanager\usermanagement\usermanagement\rolefunctionservice.cs
+++RoleService.cs
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\git\equipmanager\usermanagement\usermanagement\roleservice.cs
+++User.cs
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\git\equipmanager\usermanagement\usermanagement\user.cs
+++UserService.cs
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\git\equipmanager\usermanagement\usermanagement\userservice.cs
+++导入
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:>6506
+++bin
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\
+++Controllers
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\controllers\
+++CMDController.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\controllers\cmdcontroller.cs
+++HomeController.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\controllers\homecontroller.cs
+++LoginController.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\controllers\logincontroller.cs
+++StatisticsController.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\controllers\statisticscontroller.cs
+++SystemSetController.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\controllers\systemsetcontroller.cs
+++UserManagementController.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\controllers\usermanagementcontroller.cs
+++IdentityService
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\identityservice\
+++AuthenticateService.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\identityservice\authenticateservice.cs
+++IAuthenticateService.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\identityservice\iauthenticateservice.cs
+++Model
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\model\
+++Params.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\model\params.cs
+++TokenActionFilter1.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\model\tokenactionfilter1.cs
+++tokenModel.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\model\tokenmodel.cs
+++obj
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\
+++Startup.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\startup.cs
+++Sdk.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\sdk\sdk.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.illink.tasks\sdk\sdk.props
+++Sdk.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\sdk\sdk.targets
+++Debug
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\
+++Release
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\
+++AntistaticApi.csproj.nuget.dgspec.json
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\antistaticapi.csproj.nuget.dgspec.json
+++AntistaticApi.csproj.nuget.g.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\antistaticapi.csproj.nuget.g.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\antistaticapi.csproj.nuget.g.props
+++AntistaticApi.csproj.nuget.g.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\antistaticapi.csproj.nuget.g.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\antistaticapi.csproj.nuget.g.targets
+++project.assets.json
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\project.assets.json
+++project.nuget.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\project.nuget.cache
+++FolderProfile.pubxml.user
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\properties\publishprofiles\folderprofile.pubxml.user
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\sdk\sdk.props
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.201\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\sdk\sdk.targets
+++Microsoft.AspNetCore.Authentication.JwtBearer (3.1.26)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:>6907
+++Microsoft.IdentityModel.Tokens (6.20.0)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:>6908
+++Microsoft.AspNetCore.Analyzers
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.App
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\microsoft.aspnetcore.app
+++netcoreapp3.1
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\
+++Microsoft.Common.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.props
+++Microsoft.NET.Sdk.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.props
+++Sdk.Razor.CurrentVersion.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.props
+++Microsoft.NET.Sdk.Web.ProjectSystem.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.props
+++Microsoft.NET.Sdk.Publish.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.props
+++Microsoft.NET.Sdk.BeforeCommon.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.beforecommon.targets
+++Microsoft.CSharp.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.csharp.targets
+++Microsoft.NET.Sdk.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.targets
+++Microsoft.NET.Compatibility.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.targets
+++NuGet.Build.Tasks.Pack.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\nuget.build.tasks.pack\build\nuget.build.tasks.pack.targets
+++Sdk.Razor.CurrentVersion.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.targets
+++Microsoft.NET.Sdk.Web.ProjectSystem.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.targets
+++Microsoft.NET.Sdk.Publish.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.targets
+++runtimes
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\runtimes\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\runtimes\
+++AntistaticApi.deps.json
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\antistaticapi.deps.json
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\antistaticapi.deps.json
+++AntistaticApi.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\antistaticapi.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\antistaticapi.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.dll
+++AntistaticApi.exe
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\antistaticapi.exe
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\antistaticapi.exe
+++AntistaticApi.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\antistaticapi.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\antistaticapi.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.pdb
+++AntistaticApi.runtimeconfig.dev.json
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\antistaticapi.runtimeconfig.dev.json
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\antistaticapi.runtimeconfig.dev.json
+++AntistaticApi.runtimeconfig.json
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\antistaticapi.runtimeconfig.json
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\antistaticapi.runtimeconfig.json
+++AWSSDK.Core.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\awssdk.core.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\awssdk.core.dll
+++BouncyCastle.Crypto.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\bouncycastle.crypto.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\bouncycastle.crypto.dll
+++EquipDataManager.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\equipdatamanager.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\equipdatamanager.dll
+++EquipDataManager.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\equipdatamanager.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\equipdatamanager.pdb
+++EquipModel.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\equipmodel.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\equipmodel.dll
+++EquipModel.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\equipmodel.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\equipmodel.pdb
+++Google.Protobuf.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\google.protobuf.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\google.protobuf.dll
+++K4os.Compression.LZ4.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\k4os.compression.lz4.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\k4os.compression.lz4.dll
+++K4os.Compression.LZ4.Streams.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\k4os.compression.lz4.streams.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\k4os.compression.lz4.streams.dll
+++K4os.Hash.xxHash.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\k4os.hash.xxhash.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\k4os.hash.xxhash.dll
+++Microsoft.AspNetCore.Authentication.JwtBearer.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.aspnetcore.authentication.jwtbearer.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.aspnetcore.authentication.jwtbearer.dll
+++Microsoft.Extensions.Configuration.Abstractions.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.extensions.configuration.abstractions.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.extensions.configuration.abstractions.dll
+++Microsoft.Extensions.Configuration.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.extensions.configuration.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.extensions.configuration.dll
+++Microsoft.Extensions.Configuration.FileExtensions.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.extensions.configuration.fileextensions.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.extensions.configuration.fileextensions.dll
+++Microsoft.Extensions.Configuration.Json.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.extensions.configuration.json.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.extensions.configuration.json.dll
+++Microsoft.Extensions.FileProviders.Abstractions.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.extensions.fileproviders.abstractions.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.extensions.fileproviders.abstractions.dll
+++Microsoft.Extensions.FileProviders.Physical.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.extensions.fileproviders.physical.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.extensions.fileproviders.physical.dll
+++Microsoft.Extensions.FileSystemGlobbing.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.extensions.filesystemglobbing.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.extensions.filesystemglobbing.dll
+++Microsoft.Extensions.Primitives.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.extensions.primitives.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.extensions.primitives.dll
+++Microsoft.IdentityModel.Abstractions.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.identitymodel.abstractions.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.identitymodel.abstractions.dll
+++Microsoft.IdentityModel.JsonWebTokens.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.identitymodel.jsonwebtokens.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.identitymodel.jsonwebtokens.dll
+++Microsoft.IdentityModel.Logging.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.identitymodel.logging.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.identitymodel.logging.dll
+++Microsoft.IdentityModel.Protocols.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.identitymodel.protocols.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.identitymodel.protocols.dll
+++Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.identitymodel.protocols.openidconnect.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.identitymodel.protocols.openidconnect.dll
+++Microsoft.IdentityModel.Tokens.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\microsoft.identitymodel.tokens.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\microsoft.identitymodel.tokens.dll
+++MySql.Data.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\mysql.data.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\mysql.data.dll
+++Newtonsoft.Json.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\newtonsoft.json.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\newtonsoft.json.dll
+++System.Configuration.ConfigurationManager.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\system.configuration.configurationmanager.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\system.configuration.configurationmanager.dll
+++System.IdentityModel.Tokens.Jwt.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\system.identitymodel.tokens.jwt.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\system.identitymodel.tokens.jwt.dll
+++System.Runtime.CompilerServices.Unsafe.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\system.runtime.compilerservices.unsafe.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\system.runtime.compilerservices.unsafe.dll
+++System.Security.Cryptography.ProtectedData.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\system.security.cryptography.protecteddata.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\system.security.cryptography.protecteddata.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\system.security.cryptography.protecteddata.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\system.security.cryptography.protecteddata.dll
+++System.Text.Encodings.Web.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\system.text.encodings.web.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\system.text.encodings.web.dll
+++System.Text.Json.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\system.text.json.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\system.text.json.dll
+++SystemSet.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\systemset.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\systemset.dll
+++SystemSet.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\systemset.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\systemset.pdb
+++Tools.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\tools.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\tools.dll
+++Tools.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\tools.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\tools.pdb
+++Ubiety.Dns.Core.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\ubiety.dns.core.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\ubiety.dns.core.dll
+++UserManagement.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\usermanagement.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\usermanagement.dll
+++UserManagement.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\usermanagement.pdb
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\usermanagement.pdb
+++ZstdNet.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\zstdnet.dll
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\zstdnet.dll
+++staticwebassets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\staticwebassets\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\staticwebassets\
+++.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\.netcoreapp,version=v3.1.assemblyattributes.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\.netcoreapp,version=v3.1.assemblyattributes.cs
+++AntistaticApi.AssemblyInfo.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.assemblyinfo.cs
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.assemblyinfo.cs
+++AntistaticApi.AssemblyInfoInputs.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.assemblyinfoinputs.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.assemblyinfoinputs.cache
+++AntistaticApi.assets.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.assets.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.assets.cache
+++AntistaticApi.csproj.AssemblyReference.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.csproj.assemblyreference.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.csproj.assemblyreference.cache
+++AntistaticApi.csproj.BuildWithSkipAnalyzers
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.csproj.buildwithskipanalyzers
+++AntistaticApi.csproj.CopyComplete
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.csproj.copycomplete
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.csproj.copycomplete
+++AntistaticApi.csproj.CoreCompileInputs.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.csproj.corecompileinputs.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.csproj.corecompileinputs.cache
+++AntistaticApi.csproj.FileListAbsolute.txt
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.csproj.filelistabsolute.txt
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.csproj.filelistabsolute.txt
+++AntistaticApi.GeneratedMSBuildEditorConfig.editorconfig
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.generatedmsbuildeditorconfig.editorconfig
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.generatedmsbuildeditorconfig.editorconfig
+++AntistaticApi.genruntimeconfig.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.genruntimeconfig.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.genruntimeconfig.cache
+++AntistaticApi.MvcApplicationPartsAssemblyInfo.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.mvcapplicationpartsassemblyinfo.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.mvcapplicationpartsassemblyinfo.cache
+++AntistaticApi.RazorTargetAssemblyInfo.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\antistaticapi.razortargetassemblyinfo.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\antistaticapi.razortargetassemblyinfo.cache
+++apphost.exe
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\apphost.exe
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\apphost.exe
+++Microsoft.LiveUnitTesting.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.liveunittesting.props
+++Microsoft.NuGet.ImportBefore.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.nuget.importbefore.props
+++NuGet.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\common7\ide\commonextensions\microsoft\nuget\nuget.props
+++Microsoft.NET.Sdk.DefaultItems.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.props
+++Microsoft.NET.Sdk.ImportWorkloads.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.props
+++Microsoft.NET.SupportedTargetFrameworks.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.supportedtargetframeworks.props
+++Microsoft.NET.SupportedPlatforms.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.supportedplatforms.props
+++Microsoft.NET.WindowsSdkSupportedTargetPlatforms.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.windowssdksupportedtargetplatforms.props
+++Microsoft.NET.Sdk.CSharp.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.props
+++Microsoft.NET.ILLink.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.illink.props
+++Microsoft.NET.Compatibility.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.props
+++Microsoft.NET.PackTool.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.props
+++Microsoft.NET.PackProjectTool.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.props
+++Microsoft.NET.Sdk.WindowsDesktop.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.props
+++Microsoft.NET.Windows.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.windows.props
+++Sdk.Razor.StaticAssets.ProjectSystem.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\sdk\sdk.razor.staticassets.projectsystem.props
+++Microsoft.TypeScript.Default.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.default.props
+++Microsoft.NET.Sdk.Web.DefaultItems.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.defaultitems.props
+++Microsoft.NET.DefaultAssemblyInfo.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.defaultassemblyinfo.targets
+++Microsoft.NET.DefaultOutputPaths.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.defaultoutputpaths.targets
+++Microsoft.NET.Sdk.ImportPublishProfile.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importpublishprofile.targets
+++Microsoft.NET.TargetFrameworkInference.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.targetframeworkinference.targets
+++Microsoft.NET.Sdk.Razor.BeforeCommon.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.beforecommon.targets
+++Microsoft.NET.Sdk.ImportWorkloads.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.targets
+++Microsoft.NET.RuntimeIdentifierInference.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.runtimeidentifierinference.targets
+++Microsoft.NET.EolTargetFrameworks.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.eoltargetframeworks.targets
+++Microsoft.NET.NuGetOfflineCache.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.nugetofflinecache.targets
+++Microsoft.Managed.Before.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.managed.before.targets
+++Microsoft.CSharp.CurrentVersion.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.csharp.currentversion.targets
+++Microsoft.Managed.After.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.managed.after.targets
+++Microsoft.NET.Sdk.Common.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.common.targets
+++Microsoft.PackageDependencyResolution.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.packagedependencyresolution.targets
+++Microsoft.NET.Sdk.DefaultItems.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.targets
+++Microsoft.NET.Sdk.FrameworkReferenceResolution.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.frameworkreferenceresolution.targets
+++Microsoft.NET.Sdk.Shared.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.shared.targets
+++Microsoft.NET.DisableStandardFrameworkResolution.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.disablestandardframeworkresolution.targets
+++Microsoft.NET.DesignerSupport.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.designersupport.targets
+++Microsoft.NET.GenerateAssemblyInfo.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.generateassemblyinfo.targets
+++Microsoft.NET.GenerateGlobalUsings.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.generateglobalusings.targets
+++Microsoft.NET.GenerateSupportedRuntime.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.generatesupportedruntime.targets
+++Microsoft.NET.ComposeStore.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.composestore.targets
+++Microsoft.NET.CrossGen.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.crossgen.targets
+++Microsoft.NET.ObsoleteReferences.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.obsoletereferences.targets
+++Microsoft.NET.Publish.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.publish.targets
+++Microsoft.NET.PackTool.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.targets
+++Microsoft.NET.PackProjectTool.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.targets
+++Microsoft.NET.PreserveCompilationContext.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.preservecompilationcontext.targets
+++Microsoft.NET.ConflictResolution.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.conflictresolution.targets
+++Microsoft.NET.Sdk.CSharp.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.targets
+++Microsoft.NET.ILLink.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.illink.targets
+++Microsoft.NET.Sdk.Analyzers.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.analyzers.targets
+++Microsoft.NET.Windows.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.windows.targets
+++Microsoft.NET.Compatibility.Common.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.common.targets
+++Microsoft.NET.Sdk.Razor.Compilation.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.compilation.targets
+++Microsoft.NET.Sdk.Razor.Configuration.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.configuration.targets
+++Microsoft.NET.Sdk.Razor.CodeGeneration.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.codegeneration.targets
+++Microsoft.NET.Sdk.Razor.Component.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.component.targets
+++Microsoft.NET.Sdk.Razor.StaticWebAssets.5_0.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.staticwebassets.5_0.targets
+++Microsoft.NET.Sdk.Razor.GenerateAssemblyInfo.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.generateassemblyinfo.targets
+++Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.mvcapplicationpartsdiscovery.targets
+++Microsoft.NET.Sdk.Razor.DesignTime.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\razor\microsoft.net.sdk.razor.designtime.targets
+++Microsoft.TypeScript.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files (x86)\microsoft sdks\typescript\4.3\build\microsoft.typescript.targets
+++Microsoft.TypeScript.DotNetCore.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.dotnetcore.targets
+++Microsoft.Web.Designtime.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed.web\microsoft.web.designtime.targets
+++Default.pubxml
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\publishprofiles\default.pubxml
+++Microsoft.NET.Sdk.Publish.ComputeFiles.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\computetargets\microsoft.net.sdk.publish.computefiles.targets
+++Microsoft.NET.Sdk.Publish.FilterFiles.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.filterfiles.targets
+++Microsoft.NET.Sdk.Publish.CopyFiles.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.copyfiles.targets
+++Microsoft.NET.Sdk.Publish.TransformFiles.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\transformtargets\microsoft.net.sdk.publish.transformfiles.targets
+++Microsoft.NET.Sdk.Publish.FileSystem.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\publishtargets\microsoft.net.sdk.publish.filesystem.targets
+++Microsoft.NET.Sdk.DotNetCLITool.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.publish\targets\dotnetclitooltargets\microsoft.net.sdk.dotnetclitool.targets
+++win
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\runtimes\win\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\runtimes\win\
+++AntistaticApi.StaticWebAssets.Manifest.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\debug\netcoreapp3.1\staticwebassets\antistaticapi.staticwebassets.manifest.cache
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\obj\release\netcoreapp3.1\staticwebassets\antistaticapi.staticwebassets.manifest.cache
+++Microsoft.NuGet.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\nuget\17.0\microsoft.nuget.props
+++Microsoft.NETCoreSdk.BundledVersions.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\microsoft.netcoresdk.bundledversions.props
+++Microsoft.NET.Sdk.WindowsDesktop.WindowsForms.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.windowsforms.props
+++Microsoft.NET.Sdk.WindowsDesktop.WPF.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.wpf.props
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain)
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain\workloadmanifest.targets
+++Microsoft.CSharp.Core.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.csharp.core.targets
+++Microsoft.CSharp.DesignTime.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed\microsoft.csharp.designtime.targets
+++Microsoft.Common.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.common.targets
+++Microsoft.ServiceModel.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.servicemodel.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.servicemodel.targets
+++Microsoft.NET.Sdk.DefaultItems.Shared.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.shared.targets
+++Microsoft.NETCoreSdk.BundledCliTools.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\microsoft.netcoresdk.bundledclitools.props
+++Microsoft.NET.DefaultPackageConflictOverrides.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\targets\microsoft.net.defaultpackageconflictoverrides.targets
+++Microsoft.CodeAnalysis.NetAnalyzers.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.props
+++04.03.05.00.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files (x86)\microsoft sdks\typescript\versions\04.03.05.00.props
+++lib
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\runtimes\win\lib\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\runtimes\win\lib\
+++Microsoft.NET.ILLink.Tasks.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.illink.tasks\build\microsoft.net.illink.tasks.props
+++System.Windows.Forms.Analyzers.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.windowsdesktop\targets\system.windows.forms.analyzers.props
+++Microsoft.Managed.Core.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.managed.core.targets
+++Microsoft.Managed.DesignTime.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed\microsoft.managed.designtime.targets
+++Microsoft.Common.CurrentVersion.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.common.currentversion.targets
+++netstandard2.0
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\bin\release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\
+++Microsoft.Managed.Core.CurrentVersions.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.managed.core.currentversions.targets
+++Microsoft.LiveUnitTesting.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importbefore\microsoft.liveunittesting.targets
+++AntistaticApi.csproj.user
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\git\equipmanager\antistaticapi\antistaticapi.csproj.user
+++Microsoft.NET.props
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.net.props
+++Microsoft.CodeAnalysis.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\codeanalysis\microsoft.codeanalysis.targets
+++Microsoft.Xaml.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.xaml.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.xaml.targets
+++Microsoft.WorkflowBuildExtensions.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.workflowbuildextensions.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.workflowbuildextensions.targets
+++Microsoft.TeamTest.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\teamtest\microsoft.teamtest.targets
+++NuGet.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\common7\ide\commonextensions\microsoft\nuget\nuget.targets
+++Microsoft.Docker.ImportAfter.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.docker.importafter.targets
+++Microsoft.NET.Build.Extensions.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.net.build.extensions.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\microsoft.net.build.extensions\microsoft.net.build.extensions.targets
+++Microsoft.NuGet.ImportAfter.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.nuget.importafter.targets
+++Microsoft.QualityTools.Testing.Fakes.ImportAfter.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.qualitytools.testing.fakes.importafter.targets
+++Microsoft.Web.ImportAfter.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.web.importafter.targets
+++Microsoft.Docker.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\sdks\microsoft.docker.sdk\build\microsoft.docker.targets
+++Microsoft.QualityTools.Testing.Fakes.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\fakes\microsoft.qualitytools.testing.fakes.targets
+++Microsoft.Web.IISSupport.targets
+i:{62f68cad-23d7-44d3-b6df-7aec34d6e994}:d:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed.web\microsoft.web.iissupport.targets
+++UserRole.cs
+i:{df69c800-12f4-4884-a0dd-8e6ab3733815}:d:\git\equipmanager\usermanagement\usermanagement\userrole.cs

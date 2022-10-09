@@ -34,12 +34,16 @@
                             <ComboBox SelectedIndex="{Binding SaveType,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
                                 <ComboBoxItem>不保存</ComboBoxItem>
                                 <ComboBoxItem>外接设备类型(不保存)</ComboBoxItem>
-                                <ComboBoxItem>事件(保存)</ComboBoxItem>
-                                <ComboBoxItem>历史数据(保存)</ComboBoxItem>
+                                <ComboBoxItem Visibility="Collapsed">事件(保存)</ComboBoxItem>
+                                <ComboBoxItem>按变换率保存(保存历史)</ComboBoxItem>
+                                <ComboBoxItem>半小时保存一次(保存历史)</ComboBoxItem>
+                                <ComboBoxItem>一小时保存一次(保存历史)</ComboBoxItem>
                             </ComboBox>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                <DataGridTextColumn Header="变换率" Binding="{Binding Bhl,UpdateSourceTrigger=PropertyChanged,TargetNullValue=''}"></DataGridTextColumn>
+                <DataGridTextColumn Header="默认保存时间间隔(秒)" Binding="{Binding Mrjg,UpdateSourceTrigger=PropertyChanged,TargetNullValue=''}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

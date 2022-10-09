@@ -13,4 +13,7 @@
     <SourceRoot Include="D:\User\Nuget\" />
     <SourceRoot Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">D:\User\Nuget\awssdk.core\3.7.12.3</PkgAWSSDK_Core>
+  </PropertyGroup>
 </Project>

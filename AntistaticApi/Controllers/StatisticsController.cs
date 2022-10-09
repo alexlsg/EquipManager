@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Tools;
+using UserManagement;
 
 namespace AntistaticApi.Controllers
 {
@@ -33,7 +34,7 @@ namespace AntistaticApi.Controllers
         {
             try
             {
-                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType(paras.typeid, "");
+                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType(paras.user, paras.typeid, "");
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = _datas;
                 _httpResult.Status = true;
@@ -56,7 +57,7 @@ namespace AntistaticApi.Controllers
         {
             try
             {
-                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType("", paras.groupid);
+                List<EquipSstjData> _datas = DataPicker.Instance.GetEquipSstjDataByType(paras.user, "", paras.groupid);
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Message = "parametter:" + paras.groupid;
                 _httpResult.Data = _datas;
@@ -79,7 +80,7 @@ namespace AntistaticApi.Controllers
         {
             try
             {
-                IEnumerable<object> _cds = DataPicker.Instance.GetLssjcdlb(paras.groupid);
+                IEnumerable<object> _cds = DataPicker.Instance.GetLssjcdlb(paras.user, paras.groupid);
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = _cds;
                 _httpResult.Status = true;
@@ -120,7 +121,15 @@ namespace AntistaticApi.Controllers
             try
             {
                 HttpResult _httpResult = new HttpResult();
-                _httpResult.Data = DataPicker.Instance.dataCache.FindAll(n => n.EquipID.ToString() == paras.equipid);
+                lock (DataPicker.dataCachelockobj)
+                {
+                    _httpResult.Data = (from a in DataPicker.Instance.dataCache
+                                       from b in DataPicker.Instance.equips
+                                       where a.EquipID == b.ID
+                                       && a.EquipID.ToString() == paras.equipid
+                                       && EquipDataManager.Pub.CheckQx(paras.user, b.ID.ToString(), b.GroupID)
+                                       select a).ToList();
+                }
                 _httpResult.Status = true;
                 return new JsonResult(_httpResult);
             }
@@ -142,10 +151,14 @@ namespace AntistaticApi.Controllers
             try
             {
                 HttpResult _httpResult = new HttpResult();
-                _httpResult.Data = from a in DataPicker.Instance.dataCache
-                                   join b in DataPicker.Instance.equips on a.EquipID equals b.ID
-                                   where b.GroupID == paras.groupid
-                                   select a;
+                lock (DataPicker.dataCachelockobj)
+                {
+                    _httpResult.Data = (from a in DataPicker.Instance.dataCache
+                                       join b in DataPicker.Instance.equips on a.EquipID equals b.ID
+                                       where b.GroupID == paras.groupid
+                                       && EquipDataManager.Pub.CheckQx(paras.user, b.ID.ToString(), b.GroupID)
+                                       select a).ToList();
+                }
                 _httpResult.Status = true;
                 return new JsonResult(_httpResult);
             }
@@ -155,18 +168,24 @@ namespace AntistaticApi.Controllers
                 return new JsonResult(ex.Message);
             }
         }
-
         /// <summary>
         /// 获取历史数据
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult GetAllLsjl()
+        public IActionResult GetAllLsjl(Params paras)
         {
             try
             {
                 HttpResult _httpResult = new HttpResult();
-                _httpResult.Data = DataPicker.Instance.dataCache;
+                lock (DataPicker.dataCachelockobj)
+                {
+                _httpResult.Data = (from a in DataPicker.Instance.dataCache
+                                   from b in DataPicker.Instance.equips
+                                   where a.EquipID == b.ID
+                                  && EquipDataManager.Pub.CheckQx(paras.user, a.EquipID.ToString(), b.GroupID)
+                                   select a).ToList();
+                }
                 _httpResult.Status = true;
                 return new JsonResult(_httpResult);
             }
@@ -181,7 +200,24 @@ namespace AntistaticApi.Controllers
         {
             try
             {
-                object data = EquipDataDal.GetEvent(paras.groupid, paras.equiptypeid, paras.ksrq, paras.jsrq, paras.datatype, paras.eventkey);
+                object data = EquipDataDal.GetEvent(paras.user, paras.groupid, paras.equiptypeid, paras.ksrq, paras.jsrq, paras.eventkey, paras.equipid, paras.spotno, paras.eventlevel, paras.eventtype);
+                HttpResult _httpResult = new HttpResult();
+                _httpResult.Data = data;
+                _httpResult.Status = true;
+                return new JsonResult(_httpResult);
+            }
+            catch (Exception ex)
+            {
+                Log.Add(ex);
+                return new JsonResult(ex.Message);
+            }
+        }
+        [HttpPost]
+        public IActionResult GetCurrentEvent(Params paras)
+        {
+            try
+            {
+                object data = DataPicker.Instance.GetCurrentEvent(paras.user, paras.groupid, paras.equiptypeid, paras.ksrq, paras.jsrq, paras.eventkey, paras.equipid, paras.spotno, paras.eventlevel, paras.eventtype);
                 HttpResult _httpResult = new HttpResult();
                 _httpResult.Data = data;
                 _httpResult.Status = true;
